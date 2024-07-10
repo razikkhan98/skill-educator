@@ -1,44 +1,52 @@
 import React from "react";
-// import ServiceImg from "../../assets/images/home/home-1.jpg";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 import { FaComputer } from "react-icons/fa6";
 
 const Service = () => {
- const  ServiceCard = [
-{
-    title: "Special title treatment",
-    description: " With supporting text below as a natural lead-in to additional content."
-  },
-  {
-    title: "Special title treatment",
-    description: " With supporting text below as a natural lead-in to additional content."
-  },
-  {
-    title: "Special title treatment",
-    description: " With supporting text below as a natural lead-in to additional content."
-  },
-  {
-    title: "Special title treatment",
-    description: " With supporting text below as a natural lead-in to additional content."
-  },
-  {
-    title: "Special title treatment",
-    description: " With supporting text below as a natural lead-in to additional content."
-  },
-  {
-    title: "Special title treatment",
-    description: " With supporting text below as a natural lead-in to additional content."
-  },
-  {
-    title: "Special title treatment",
-    description: " With supporting text below as a natural lead-in to additional content."
-  },
-  {
-    title: "Special title treatment",
-    description: " With supporting text below as a natural lead-in to additional content."
-  },
-
-];
+  const ServiceCard = [
+    {
+      title: "Special title treatment",
+      description:
+        " With supporting text below as a natural lead-in to additional content.",
+    },
+    {
+      title: "Special title treatment",
+      description:
+        " With supporting text below as a natural lead-in to additional content.",
+    },
+    {
+      title: "Special title treatment",
+      description:
+        " With supporting text below as a natural lead-in to additional content.",
+    },
+    {
+      title: "Special title treatment",
+      description:
+        " With supporting text below as a natural lead-in to additional content.",
+    },
+    {
+      title: "Special title treatment",
+      description:
+        " With supporting text below as a natural lead-in to additional content.",
+    },
+    {
+      title: "Special title treatment",
+      description:
+        " With supporting text below as a natural lead-in to additional content.",
+    },
+    {
+      title: "Special title treatment",
+      description:
+        " With supporting text below as a natural lead-in to additional content.",
+    },
+    {
+      title: "Special title treatment",
+      description:
+        " With supporting text below as a natural lead-in to additional content.",
+    },
+  ];
   return (
     <>
       <div className="bg-service p-5">
@@ -53,75 +61,18 @@ const Service = () => {
           <div className="row">
             {ServiceCard.map((link, index) => (
               <div className="col-lg-3 col-md-6 gap-5 mb-5">
-                <div class="card" style={{width: "18rem"}}>
-                  <div class="card-body d-flex flex-column justify-content-center align-items-center rounded-5">
-                    <div>
-                    <FaComputer className="fs-1" />
-
-                    </div>
-                    <h5 class="card-title">{link.title}</h5>
-                    <p class="card-text text-center">
-                     {link.description}
-                    </p>
-                    <a href="#" class="btn btn-primary">
-                      Go somewhere
-                    </a>
-                  </div>
-                </div>
+                <Card className="d-flex flex-column justify-content-center align-items-center text-center" style={{ width: "18rem" }}>
+                  <FaComputer className="fs-1"/>
+                  <Card.Body>
+                    <Card.Title>{link.title}</Card.Title>
+                    <Card.Text>
+                    {link.description}
+                    </Card.Text>
+                    <Button variant="primary">Go somewhere</Button>
+                  </Card.Body>
+                </Card>
               </div>
             ))}
-
-            {/* <div className="col-lg-3 mt-5">
-              <div class="card border-success mb-3" style={{maxwidth: "18rem"}}>
-                <div class="card-header bg-transparent border-success">
-                  Header
-                </div>
-                <div class="card-body text-success">
-                  <h5 class="card-title">Success card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-                <div class="card-footer bg-transparent border-success">
-                  Footer
-                </div>
-              </div>
-            </div> */}
-            {/* <div className="col-lg-3 mb-5">
-              <div class="card border-success mb-3" style={{maxwidth: "18rem"}}>
-                <div class="card-header bg-transparent border-success">
-                  Header
-                </div>
-                <div class="card-body text-success">
-                  <h5 class="card-title">Success card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-                <div class="card-footer bg-transparent border-success">
-                  Footer
-                </div>
-              </div>
-            </div> */}
-            {/* <div className="col-lg-3 mt-5">
-              <div class="card border-success mb-3" style={{maxwidth: "18rem"}}>
-                <div class="card-header bg-transparent border-success">
-                  Header
-                </div>
-                <div class="card-body text-success">
-                  <h5 class="card-title">Success card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-                <div class="card-footer bg-transparent border-success">
-                  Footer
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
