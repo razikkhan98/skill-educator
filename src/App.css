@@ -1,0 +1,46 @@
+a{
+  text-decoration: none;
+  color: black;
+}
+.theme-btn{
+  font-size: 16px;
+  color: #cfe2a4;
+  padding: 12px 20px;
+  transition: all 0.5s;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  border-radius: 20px 0px 20px 0px;
+  background-color: #79A93B;
+  box-shadow: 0 3px 24px rgb(0 0 0 / 12%);
+}
+.theme-btn::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 2px solid #79A93B;
+  border-radius: 20px 0px 20px 0px;
+  top: 5px;
+  left: 5px;
+  transition: all 0.5s ease-in-out;
+}
+.theme-btn:hover::before {
+  left: 0;
+  top: 0;
+}
+.navbar{
+  background: rgba(207, 226, 164, 0.4);
+}
+.carousel-item{
+  height: 100vh;
+}
+.content{
+  z-index: 10;
+}
+.bg-service{
+  background-color: #cfe2a4;
+}
