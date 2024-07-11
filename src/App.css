@@ -2,9 +2,12 @@ a{
   text-decoration: none;
   color: black;
 }
+.bg{
+  background-color: #B39CC7;
+}
 .theme-btn{
   font-size: 16px;
-  color: #cfe2a4;
+  color: #EDEAF5;
   padding: 12px 20px;
   transition: all 0.5s;
   text-transform: uppercase;
@@ -14,7 +17,7 @@ a{
   text-align: center;
   border: none;
   border-radius: 20px 0px 20px 0px;
-  background-color: #79A93B;
+  background-color: #B39CC7;
   box-shadow: 0 3px 24px rgb(0 0 0 / 12%);
 }
 .theme-btn::before {
@@ -22,7 +25,7 @@ a{
   position: absolute;
   height: 100%;
   width: 100%;
-  border: 2px solid #79A93B;
+  border: 2px solid #B39CC7;
   border-radius: 20px 0px 20px 0px;
   top: 5px;
   left: 5px;
@@ -36,11 +39,19 @@ a{
   background: rgba(207, 226, 164, 0.4);
 }
 .carousel-item{
+  width: 100%;
   height: 100vh;
 }
+.carousel-item img{
+  width: 100%;
+  height: 100%;
+}
 .content{
+  width: 50%;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
 .bg-service{
-  background-color: #cfe2a4;
+  background-color: #EDEAF5;
 }
