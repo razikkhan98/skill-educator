@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Form from 'react-bootstrap/Form';
+import Form from "react-bootstrap/Form";
 
 import { FaComputer } from "react-icons/fa6";
 
@@ -55,6 +55,7 @@ const Service = () => {
     <>
       <div className="bg-service p-5">
         <Container>
+          {/* Heading Start */}
           <div className="text-center mb-5">
             <h1>Our Service</h1>
             <p>
@@ -62,13 +63,16 @@ const Service = () => {
               ratione accusantium, odio
             </p>
           </div>
+          {/* Heading End */}
+
           <Row>
             <Col>
+                {/* Card Start */}
               <Row>
                 {ServiceCard.map((link, index) => (
                   <Col>
                     <Card
-                      className="d-flex flex-column justify-content-center align-items-center text-center mb-5 py-3"
+                      className="shadow d-flex flex-column justify-content-center align-items-center text-center mb-5 py-3"
                       style={{ width: "18rem" }}
                     >
                       <FaComputer className="fs-1" />
@@ -81,25 +85,61 @@ const Service = () => {
                   </Col>
                 ))}
               </Row>
+                {/* Card Start */}
             </Col>
-            <Col className="bg">
+
+            {/* Form Start */}
+            <Col>
+              <div className="service-form bg p-5">
+                <h2 className="text-uppercase pb-3">Registration Form</h2> 
                 <Form>
                   <Form.Group
                     className="mb-3"
                     controlId="exampleForm.ControlInput1"
                   >
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="name@example.com" />
+                    <Form.Label>Your Name</Form.Label>
+                    <Form.Control type="text" placeholder="Enter Your Name" />
                   </Form.Group>
+
                   <Form.Group
                     className="mb-3"
-                    controlId="exampleForm.ControlTextarea1"
+                    controlId="exampleForm.ControlInput2"
                   >
-                    <Form.Label>Example textarea</Form.Label>
-                    <Form.Control as="textarea" rows={3} />
+                    <Form.Label>Email Address</Form.Label>
+                    <Form.Control type="email" placeholder="name@example.com" />
+                  </Form.Group>
+
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlInput3"
+                  >
+                    <Form.Label>Your Number</Form.Label>
+                    <Form.Control
+                      type="number"
+                      placeholder="Enter Your Mobile Number"
+                    />
+                  </Form.Group>
+
+                  <Form.Group>
+                    <Form.Label>Courses</Form.Label>
+                    <Form.Select
+                      className="mb-3"
+                      aria-label="Default select example"
+                    >
+                      <option>Choose Course</option>
+                      <option value="1">Web Development</option>
+                      <option value="2">App Development</option>
+                      <option value="3">Back-End Development</option>
+                    </Form.Select>
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="exampleForm.ControlInput4">
+                    <Form.Label>Address</Form.Label>
+                    <Form.Control placeholder="Enter Your Address"/>
                   </Form.Group>
                 </Form>
+              </div>
             </Col>
+            {/* Form End */}
           </Row>
         </Container>
       </div>
