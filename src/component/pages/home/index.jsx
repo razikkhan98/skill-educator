@@ -8,6 +8,7 @@ import Home3 from "../../assets/images/home/home-3.jpg";
 const Home = () => {
   return (
     <>
+    
       <Navbar />
       <Carousel
         fade
@@ -15,17 +16,19 @@ const Home = () => {
       >
         <Carousel.Item>
           {/* <ExampleCarouselImage text="First slide" /> */}
-          <img src={Home1} alt="" />
+          <img src={Home1} alt="Loading" />
         </Carousel.Item>
         <Carousel.Item>
           {/* <ExampleCarouselImage text="Second slide" /> */}
-          <img src={Home2} alt="" />
+          <img src={Home2} alt="Loading" />
         </Carousel.Item>
         <Carousel.Item>
           {/* <ExampleCarouselImage text="Third slide" /> */}
-          <img src={Home3} alt="" />
+          <img src={Home3} alt="Loading" />
         </Carousel.Item>
-        <div className="content text-light position-absolute top-50 start-50 translate-middle">
+      </Carousel>
+
+        <div className="content text-light position-absolute top-50 start-50 translate-middle rounded-3 border border-3">
           <h1 className="d-flex justify-content-center text-uppercase font-2xl">
             skill intelligence world
           </h1>
@@ -36,7 +39,6 @@ const Home = () => {
             recusandae quia libero accusantium cumque laborum!
           </p>
         </div>
-      </Carousel>
     </>
   );
 };

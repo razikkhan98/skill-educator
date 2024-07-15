@@ -6,7 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 const NavigationBar = () => {
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary p-4 sticky-top">
+      <Navbar collapseOnSelect expand="lg" className="bg-color p-3 sticky-top">
         <Container>
           <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
