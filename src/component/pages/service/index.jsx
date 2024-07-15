@@ -58,6 +58,7 @@ const Service = () => {
           {/* Heading Start */}
           <div className="text-center mb-5">
             <h1>Our Service</h1>
+            {/* <div className="h-25 w-25 p-2 bg-dark d-inline-block mb-2"></div> */}
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
               ratione accusantium, odio
@@ -103,14 +104,6 @@ const Service = () => {
 
                   <Form.Group
                     className="mb-3"
-                    controlId="exampleForm.ControlInput2"
-                  >
-                    <Form.Label>Email Address</Form.Label>
-                    <Form.Control type="email" placeholder="name@example.com" />
-                  </Form.Group>
-
-                  <Form.Group
-                    className="mb-3"
                     controlId="exampleForm.ControlInput3"
                   >
                     <Form.Label>Your Number</Form.Label>
@@ -118,6 +111,14 @@ const Service = () => {
                       type="number"
                       placeholder="Enter Your Mobile Number"
                     />
+                  </Form.Group>
+
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlInput2"
+                  >
+                    <Form.Label>Email Address</Form.Label>
+                    <Form.Control type="email" placeholder="name@example.com" />
                   </Form.Group>
 
                   <Form.Group>
@@ -132,10 +133,11 @@ const Service = () => {
                       <option value="3">Back-End Development</option>
                     </Form.Select>
                   </Form.Group>
-                  <Form.Group className="mb-3" controlId="exampleForm.ControlInput4">
+                  <button className="theme-btn mt-5" type="submit">Submit Now</button>
+                  {/* <Form.Group className="mb-3" controlId="exampleForm.ControlInput4">
                     <Form.Label>Address</Form.Label>
                     <Form.Control placeholder="Enter Your Address"/>
-                  </Form.Group>
+                  </Form.Group> */}
                 </Form>
               </div>
             </Col>
