@@ -28,7 +28,7 @@ const Home = () => {
         </Carousel.Item>
       </Carousel>
 
-        <div className="content text-light position-absolute top-50 start-50 translate-middle rounded-3 border border-3">
+        <div className="border-box content text-light position-absolute top-50 start-50 translate-middle rounded-3 border border-3">
           <h1 className="d-flex justify-content-center text-uppercase font-2xl">
             skill intelligence world
           </h1>
@@ -38,6 +38,9 @@ const Home = () => {
             maxime consectetur harum repellat ipsa possimus adipisci saepe
             recusandae quia libero accusantium cumque laborum!
           </p>
+          <div className="btn-frame text-center ">
+                <button class="custom-btn btn-9">Read More</button>
+              </div>
         </div>
     </>
   );
