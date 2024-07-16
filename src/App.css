@@ -5,6 +5,64 @@ a{
 .bg{
   background-color: #B39CC7;
 }
+
+
+/* Buttton Start */
+
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.btn-9 {
+  border: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-9:after {
+  position: absolute;
+  content: " ";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2e17ae;
+  background-image: linear-gradient(315deg, #7199EF 0%, #624FF2 74%);
+  transition: all 0.3s ease;
+}
+.btn-9:hover {
+  background: transparent;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+  color: #fff;
+}
+.btn-9:hover:after {
+  -webkit-transform: scale(2) rotate(180deg);
+  transform: scale(2) rotate(180deg);
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+}
+
+
+
 .theme-btn{
   font-size: 16px;
   color: #EDEAF5;
@@ -43,37 +101,13 @@ a{
     gap: 22px;
 }
 .bg-color{
-  background-color: rgba(12, 11, 11, 0.4);
+  background-color: rgba(8, 7, 7, 0.4);
 }
-
+.bg-color-transparent{
+  background-color: rgba(179, 156, 199,0.4);
+}
 /* About Start */
-/* #Box {
-  background:rgba(0,0,0,0.7)url("./component/assets/images/about/about-bg.jpg");
-  background-size: cover;
-  background-blend-mode: darken;
-  background-attachment: fixed;
-  background-position: center;
-}
-.aboutBox {
-  background: #B39CC7;
-  width: 68%;
-  margin-top: 140px;
-}
-.aboutImg {
-  border: 10px solid #cfc2d6;
-  border-radius: 50%;
-}
-.aboutImg img {
-  border-radius: 50%;
-  height: 300px;
-  width: 300px;
-}
 
-.aboutText h3 {
-  font-family: system-ui;
-  color: white;
-  font-size: 40px;
-} */
 #Box {
   background: rgba(0, 0, 0, 0.7)
     url("./component//assets//images/about/about-bg.jpg");
@@ -84,47 +118,7 @@ a{
   background-attachment: fixed;
   box-sizing: border-box;
 }
-.aboutBox {
-  display: flex;
-  background: #006BDF;
-  width: 58%;
-  margin: auto;
-  margin-top: 140px;
-}
-.aboutImg {
-  margin: -122px 0px 3px -94px;
-  border: 10px solid #6DCBD7;
-  border-radius: 50%;
-}
-.aboutImg img {
-  border-radius: 50%;
-}
-.aboutText {
-  margin: 28px 61px 35px 23px;
-}
-.aboutText h3 {
-  font-family: system-ui;
-  color: white;
-  font-size: 40px;
-}
-@media (max-width: 1200px) and (min-width: 992px) {
-  .aboutImg {
-    margin: -123px 0px 3px -137px;
-  }
-}
-@media (max-width: 992px) and (min-width: 768px) {
-  .aboutImg {
-    margin: -122px 26px 3px 29px;
-  }
-}
-@media (max-width: 767px) {
-  .aboutImg {
-    margin: -124px 0px 3px -73px;
-  }
-  .aboutText {
-    margin: 28px 100px 35px 23px;
-  }
-}
+
 
 
 /* Home Start */

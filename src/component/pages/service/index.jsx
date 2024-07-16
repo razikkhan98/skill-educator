@@ -6,50 +6,35 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 
-import { FaComputer } from "react-icons/fa6";
+import {FaGraduationCap, FaHome, FaGlobe, FaRegHandshake } from "react-icons/fa";
 
 const Service = () => {
   const ServiceCard = [
     {
-      title: "Special title treatment",
+      icon: <FaGraduationCap />,
+      title: "Skilled Instructors",
       description:
         " With supporting text below as a natural lead-in to additional content.",
     },
     {
-      title: "Special title treatment",
+      icon: <FaGlobe />,
+      title: "Online Classes",
       description:
         " With supporting text below as a natural lead-in to additional content.",
     },
     {
-      title: "Special title treatment",
+      icon: <FaHome />,
+      title: "Home Projects",
       description:
         " With supporting text below as a natural lead-in to additional content.",
     },
     {
-      title: "Special title treatment",
+      icon: <FaRegHandshake />,
+      title: "Life Time Support",
       description:
         " With supporting text below as a natural lead-in to additional content.",
     },
-    // {
-    //   title: "Special title treatment",
-    //   description:
-    //     " With supporting text below as a natural lead-in to additional content.",
-    // },
-    // {
-    //   title: "Special title treatment",
-    //   description:
-    //     " With supporting text below as a natural lead-in to additional content.",
-    // },
-    // {
-    //   title: "Special title treatment",
-    //   description:
-    //     " With supporting text below as a natural lead-in to additional content.",
-    // },
-    // {
-    //   title: "Special title treatment",
-    //   description:
-    //     " With supporting text below as a natural lead-in to additional content.",
-    // },
+    
   ];
   return (
     <>
@@ -67,7 +52,7 @@ const Service = () => {
           {/* Heading End */}
 
           <Row>
-            <Col>
+            <Col lg={6} md={12}>
                 {/* Card Start */}
               <Row>
                 {ServiceCard.map((link, index) => (
@@ -76,7 +61,9 @@ const Service = () => {
                       className="shadow d-flex flex-column justify-content-center align-items-center text-center mb-5 py-3"
                       style={{ width: "18rem" }}
                     >
-                      <FaComputer className="fs-1" />
+                      <div className="fs-1">
+                      {link.icon}
+                      </div>
                       <Card.Body>
                         <Card.Title>{link.title}</Card.Title>
                         <Card.Text>{link.description}</Card.Text>
@@ -90,7 +77,7 @@ const Service = () => {
             </Col>
 
             {/* Form Start */}
-            <Col>
+            <Col md={12} lg={6}>
               <div className="service-form bg p-5">
                 <h2 className="text-uppercase pb-3">Registration Form</h2> 
                 <Form>

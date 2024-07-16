@@ -19,11 +19,10 @@ const Course = () => {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
-        dots: true,
+        // dots: true,
         autoplay: true,
         speed: 2000,
         autoplaySpeed: 2000,
-        // cssEase: "linear",
         responsive: [
           {
             breakpoint: 1024,
@@ -57,42 +56,42 @@ const Course = () => {
     {
       bg: "bg-card1",
         image: Html,
-         title: "Card Title",
+         title: "Web-Development",
          description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
 
     },
     {
       bg: "bg-card2",
         image: Html,
-         title: "Card Title",
+         title: "Back-End-Development",
          description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
 
     },
     {
       bg: "bg-card3",
         image: Html,
-         title: "Card Title",
+         title: "Front-End-Development",
          description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
 
     },
     {
       bg: "bg-card4",
         image: Html,
-         title: "Card Title",
+         title: "Python",
          description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
 
     },
     {
       bg: "bg-card5",
         image: Html,
-         title: "Card Title",
+         title: "React Js",
          description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
 
     },
     {
       bg: "bg-card6",
         image: Html,
-         title: "Card Title",
+         title: "Javascript",
          description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
 
     },
