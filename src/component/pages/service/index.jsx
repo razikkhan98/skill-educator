@@ -6,7 +6,12 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 
-import {FaGraduationCap, FaHome, FaGlobe, FaRegHandshake } from "react-icons/fa";
+import {
+  FaGraduationCap,
+  FaHome,
+  FaGlobe,
+  FaRegHandshake,
+} from "react-icons/fa";
 
 const Service = () => {
   const ServiceCard = [
@@ -34,14 +39,13 @@ const Service = () => {
       description:
         " With supporting text below as a natural lead-in to additional content.",
     },
-    
   ];
   return (
     <>
-      <div className="bg-service p-5">
+      <div className="bg-animate gradient-overly-right ">
         <Container>
           {/* Heading Start */}
-          <div className="text-center mb-5">
+          <div className="text-center text-white py-5">
             <h1>Our Service</h1>
             {/* <div className="h-25 w-25 p-2 bg-dark d-inline-block mb-2"></div> */}
             <p>
@@ -53,17 +57,15 @@ const Service = () => {
 
           <Row>
             <Col lg={6} md={12}>
-                {/* Card Start */}
+              {/* Card Start */}
               <Row>
                 {ServiceCard.map((link, index) => (
-                  <Col>
+                  <Col className="d-flex align-items-center justify-content-center">
                     <Card
-                      className="shadow d-flex flex-column justify-content-center align-items-center text-center mb-5 py-3"
+                      className="shadow-lg d-flex flex-column justify-content-center align-items-center text-center mb-5 pb-3"
                       style={{ width: "18rem" }}
                     >
-                      <div className="fs-1">
-                      {link.icon}
-                      </div>
+                      <div className="fs-1">{link.icon}</div>
                       <Card.Body>
                         <Card.Title>{link.title}</Card.Title>
                         <Card.Text>{link.description}</Card.Text>
@@ -73,13 +75,13 @@ const Service = () => {
                   </Col>
                 ))}
               </Row>
-                {/* Card Start */}
+              {/* Card Start */}
             </Col>
 
             {/* Form Start */}
             <Col md={12} lg={6}>
-              <div className="service-form bg p-5">
-                <h2 className="text-uppercase pb-3">Registration Form</h2> 
+              <div className="bg-color-transparent border-animation border-primary border border-info service-form bg p-5 mb-5">
+                <h2 className="text-uppercase pb-3">Registration Form</h2>
                 <Form>
                   <Form.Group
                     className="mb-3"
@@ -88,7 +90,6 @@ const Service = () => {
                     <Form.Label>Your Name</Form.Label>
                     <Form.Control type="text" placeholder="Enter Your Name" />
                   </Form.Group>
-
                   <Form.Group
                     className="mb-3"
                     controlId="exampleForm.ControlInput3"
@@ -99,7 +100,6 @@ const Service = () => {
                       placeholder="Enter Your Mobile Number"
                     />
                   </Form.Group>
-
                   <Form.Group
                     className="mb-3"
                     controlId="exampleForm.ControlInput2"
@@ -107,7 +107,6 @@ const Service = () => {
                     <Form.Label>Email Address</Form.Label>
                     <Form.Control type="email" placeholder="name@example.com" />
                   </Form.Group>
-
                   <Form.Group>
                     <Form.Label>Courses</Form.Label>
                     <Form.Select
@@ -120,7 +119,9 @@ const Service = () => {
                       <option value="3">Back-End Development</option>
                     </Form.Select>
                   </Form.Group>
-                  <button className="theme-btn mt-5" type="submit">Submit Now</button>
+                  <div className="btn-frame pt-5 ">
+                    <button class="custom-btn btn-9">Submit</button>
+                  </div>
                   {/* <Form.Group className="mb-3" controlId="exampleForm.ControlInput4">
                     <Form.Label>Address</Form.Label>
                     <Form.Control placeholder="Enter Your Address"/>

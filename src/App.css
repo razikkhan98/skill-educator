@@ -1,3 +1,6 @@
+body{
+  overflow-x: hidden;
+}
 a{
   text-decoration: none;
   color: black;
@@ -5,11 +8,14 @@ a{
 .bg{
   background-color: #B39CC7;
 }
-
+.bg-color{
+  background-color:rgba(85, 77, 116,0.5);
+}
+.bg-color-transparent{
+  background-color: rgba(179, 156, 199,0.4);
+}
 
 /* Buttton Start */
-
-
 .custom-btn {
   width: 130px;
   height: 40px;
@@ -100,12 +106,7 @@ a{
     font-size: 19px;
     gap: 22px;
 }
-.bg-color{
-  background-color: rgba(8, 7, 7, 0.4);
-}
-.bg-color-transparent{
-  background-color: rgba(179, 156, 199,0.4);
-}
+
 /* About Start */
 
 #Box {
@@ -130,23 +131,62 @@ a{
   width: 100%;
   height: 100%;
 }
-.content{
-  width: 50%;
-  padding: 15px;
+.home-content{
+  width: 60%;
   background: rgba(0, 0, 0, 0.4);
   z-index: 10;
+
+}
+.border-animation{
+  /* border: 1px solid rgb(67, 187, 227); */
+  animation: mymove 5s infinite;
+}
+@keyframes mymove {
+  50% {box-shadow: 10px 20px 30px rgb(87, 184, 216);}
 }
 
 /* Service Start */
 .bg-service{
   background-color: #EDEAF5;
 }
+
+@keyframes shrink {
+  0% {
+    background-size: 110% 110%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+.bg-animate {
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  animation: shrink 3s infinite alternate;
+}
+
+.gradient-overly-right {
+  z-index: 1;
+  /* width: 100vw;
+  min-width: 100vw; */
+  position: relative;
+  background-image: url(./component/assets/images/home/bg-4.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+.gradient-overly-right:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(116, 125, 136, 0.2)
+}
 .service-form{
   border-radius: 0px 90px 0px 0px;
 }
-.shadow{
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
+
 
 .icon-social a {
   width: 35px;
@@ -184,4 +224,74 @@ a{
   background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);}
 .bg-card6{
   background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  /* width: 50%; */
+}
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 3px solid rgb(23, 20, 20);
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 30px;
+  }
+  
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  font-weight:700;    
+  color: rgb(30, 24, 24);
+}
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: blue;
+    font-weight:700;    
+  }
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, blue, red);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field{
+  &:required,&:invalid { box-shadow:none; }
 }

@@ -6,16 +6,16 @@ import Navbar from "react-bootstrap/Navbar";
 const NavigationBar = () => {
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" className="bg-color p-3 sticky-top">
+      <Navbar collapseOnSelect expand="lg" className="bg-color-transparent p-3 fixed-top">
         <Container>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Brand className="text-white" href="#home">React-Bootstrap</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto ">
-              <Nav.Link className="me-4" href="#Home">Home</Nav.Link>
-              <Nav.Link className="me-4" href="#About">About</Nav.Link>
-              <Nav.Link className="me-4" href="#Service">Service</Nav.Link>
-              <Nav.Link className="me-4" href="#contact">Contact</Nav.Link>
+              <Nav.Link className="me-4 text-white" href="#Home">Home</Nav.Link>
+              <Nav.Link className="me-4 text-white" href="#About">About</Nav.Link>
+              <Nav.Link className="me-4 text-white" href="#Service">Service</Nav.Link>
+              <Nav.Link className="me-4 text-white" href="#contact">Contact</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
