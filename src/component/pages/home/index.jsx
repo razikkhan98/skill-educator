@@ -1,11 +1,22 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Carousel from "react-bootstrap/Carousel";
 import Navbar from "../../common/navbar/index";
 // Images
-import Home1 from "../../assets/images/home/home-1.jpg";
-import Home2 from "../../assets/images/home/home-2.jpg";
-import Home3 from "../../assets/images/home/home-3.jpg";
+import Home1 from "../../assets/images/home/bg-1.jpg";
+import Home2 from "../../assets/images/home/bg-4.jpg";
+import Home3 from "../../assets/images/home/bg-animation.jpg";
+
+// AOS Animation
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Home = () => {
+//  AOS Animation 
+  useEffect(() => {
+    AOS.init({
+      
+    });
+  }, []);
+
   return (
     <>
     
@@ -28,8 +39,8 @@ const Home = () => {
         </Carousel.Item>
       </Carousel>
 
-        <div className="border-box content text-light position-absolute top-50 start-50 translate-middle rounded-3 border border-3">
-          <h1 className="d-flex justify-content-center text-uppercase font-2xl">
+        <div className="border-box border-animation p-4 home-content text-light d-flex flex-column align-items-center justify-content-center position-absolute top-50 start-50 translate-middle rounded border border-info" data-aos="zoom-in-up" data-aos-duration="1500">
+          <h1 className="text-center text-uppercase font-2xl">
             skill intelligence world
           </h1>
           <p className="text-center">
