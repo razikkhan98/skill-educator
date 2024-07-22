@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
+// import Form from "react-bootstrap/Form";
 
 import {
   FaGraduationCap,
@@ -39,13 +39,37 @@ const Service = () => {
       description:
         " With supporting text below as a natural lead-in to additional content.",
     },
+    {
+      icon: <FaHome />,
+      title: "Home Projects",
+      description:
+        " With supporting text below as a natural lead-in to additional content.",
+    },
+    {
+      icon: <FaRegHandshake />,
+      title: "Life Time Support",
+      description:
+        " With supporting text below as a natural lead-in to additional content.",
+    },
+    {
+      icon: <FaHome />,
+      title: "Home Projects",
+      description:
+        " With supporting text below as a natural lead-in to additional content.",
+    },
+    {
+      icon: <FaRegHandshake />,
+      title: "Life Time Support",
+      description:
+        " With supporting text below as a natural lead-in to additional content.",
+    },
   ];
   return (
     <>
-      <div className="bg-animate gradient-overly-right ">
+      <div className="bg">
         <Container>
           {/* Heading Start */}
-          <div className="text-center text-white py-5">
+          <div className="text-center  py-5">
             <h1>Our Service</h1>
             {/* <div className="h-25 w-25 p-2 bg-dark d-inline-block mb-2"></div> */}
             <p>
@@ -55,32 +79,37 @@ const Service = () => {
           </div>
           {/* Heading End */}
 
+          {/* <Row> */}
+          {/* <Col> */}
+          {/* Card Start */}
           <Row>
-            <Col lg={6} md={12}>
-              {/* Card Start */}
-              <Row>
-                {ServiceCard.map((link, index) => (
-                  <Col className="d-flex align-items-center justify-content-center">
-                    <Card
-                      className="shadow-lg d-flex flex-column justify-content-center align-items-center text-center mb-5 pb-3"
-                      style={{ width: "18rem" }}
-                    >
-                      <div className="fs-1">{link.icon}</div>
-                      <Card.Body>
-                        <Card.Title>{link.title}</Card.Title>
-                        <Card.Text>{link.description}</Card.Text>
-                        <button className="theme-btn">Go somewhere</button>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                ))}
-              </Row>
-              {/* Card Start */}
-            </Col>
+            {ServiceCard.map((link, index) => (
+              <Col className="d-flex align-items-center justify-content-center">
+                <Card
+                  className=" shadow-lg d-flex flex-column justify-content-center align-items-center text-center mb-5 pb-3"
+                  data-aos="flip-left"
+                  data-aos-easing="ease-out-cubic"
+                  data-aos-duration="2000"
+                  style={{ width: "18rem" }}
+                >
+                  <div className="fs-1">{link.icon}</div>
+                  <Card.Body>
+                    <Card.Title>{link.title}</Card.Title>
+                    <Card.Text>{link.description}</Card.Text>
+                    <div className="btn-frame mt-4">
+                      <button class="custom-btn btn-9">Read More</button>
+                    </div>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+          {/* Card Start */}
+          {/* </Col> */}
 
-            {/* Form Start */}
-            <Col md={12} lg={6}>
-              <div className="bg-color-transparent border-animation border-primary border border-info service-form bg p-5 mb-5">
+          {/* Form Start */}
+          {/* <Col md={12} lg={6}>
+              <div className="bg-color-transparent bg-border-animation border-primary border border-info service-form bg p-5 mb-5">
                 <h2 className="text-uppercase pb-3">Registration Form</h2>
                 <Form>
                   <Form.Group
@@ -122,15 +151,11 @@ const Service = () => {
                   <div className="btn-frame pt-5 ">
                     <button class="custom-btn btn-9">Submit</button>
                   </div>
-                  {/* <Form.Group className="mb-3" controlId="exampleForm.ControlInput4">
-                    <Form.Label>Address</Form.Label>
-                    <Form.Control placeholder="Enter Your Address"/>
-                  </Form.Group> */}
                 </Form>
               </div>
-            </Col>
-            {/* Form End */}
-          </Row>
+            </Col> */}
+          {/* Form End */}
+          {/* </Row> */}
         </Container>
       </div>
     </>
