@@ -63,7 +63,6 @@ const Footer = () => {
                   <li className="mb-2">App-Development</li>
                   <li className="mb-2">UI-Development</li>
                   <li>Back-End-Development</li>
-
                 </ul>
               </div>
             </Col>
@@ -112,9 +111,9 @@ const Footer = () => {
                         class="form-control"
                         placeholder="Your Email"
                       />
-                      <button class="theme-btn mt-4" type="submit">
-                        Subscribe Now <i class="fa-solid fa-paper-plane"></i>
-                      </button>
+                      <div className="btn-frame my-5">
+                        <button class="custom-btn btn-9">Subscribe Now</button>
+                      </div>
                     </form>
                   </div>
                 </div>

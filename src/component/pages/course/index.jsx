@@ -66,28 +66,28 @@ const Course = () => {
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
     },
     {
-      bg: "bg-card3",
+      bg: "bg-card1",
       image: Html,
       title: "Front-End-Development",
       description:
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
     },
     {
-      bg: "bg-card4",
+      bg: "bg-card2",
       image: Html,
       title: "Python",
       description:
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
     },
     {
-      bg: "bg-card5",
+      bg: "bg-card1",
       image: Html,
       title: "React Js",
       description:
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
     },
     {
-      bg: "bg-card6",
+      bg: "bg-card2",
       image: Html,
       title: "Javascript",
       description:
@@ -110,7 +110,7 @@ const Course = () => {
               {CourseData.map((link, index) => (
                 <div className="course-card  pb-5">
                   <div className=" d-flex justify-content-around">
-                    <Card style={{ width: "18rem" }}>
+                    <Card className="m-3" style={{ width: "18rem" }}>
                       {/* <Card.Img variant="top" src={link.image} /> */}
                       <div
                         className={`p-3 ${link.bg} border-bottom m-1 d-flex justify-content-center align-items-center`}
