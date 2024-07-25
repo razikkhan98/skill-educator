@@ -31,7 +31,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <Carousel fade className="parent position-relative">
+      <Carousel controls={false} fade className="parent position-relative">
         <Carousel.Item interval={1000}>
           {/* <ExampleCarouselImage text="First slide" /> */}
           <img src={Home1} alt="Loading" />

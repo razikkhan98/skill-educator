@@ -101,86 +101,13 @@ const Team = () => {
                 data-aos="zoom-in-up"
                 data-aos-duration="1500"
               >
-                <div class="col-2 tile active">
-                  <a href="#m1" className="card-block">
-                    <img
-                      src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?q=80&w=105&auto=format&fit=crop"
-                      alt="Loading"
-                    />
-                  </a>
-                </div>
-                <div class="col-2 tile">
-                  <a href="#m2" className="card-block">
-                    <img
-                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop"
-                      alt="Loading"
-                    />
-                  </a>
-                </div>
-                <div class="col-2 tile">
-                  <a href="#m3" className="card-block">
-                    <img
-                      src="https://images.unsplash.com/photo-1639149888905-fb39731f2e6c?q=80&w=100&auto=format&fit=crop"
-                      alt="Loading"
-                    />
-                  </a>
-                </div>
-                <div class="col-2 tile">
-                  <a href="#m4" className="card-block">
-                    <img
-                      src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=100&auto=format&fit=crop"
-                      alt="Loading"
-                    />
-                  </a>
-                </div>
-                <div class="col-2 tile">
-                  <a href="#m5" className="card-block">
-                    <img
-                      src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=150&auto=format&fit=crop"
-                      alt="Loading"
-                    />
-                  </a>
-                </div>
-                <div class="col-2 tile">
-                  <a href="#m6" className="card-block">
-                    <img
-                      src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=100&auto=format&fit=crop"
-                      alt="Loading"
-                    />
-                  </a>
-                </div>
-                <div class="col-2 tile">
-                  <a href="#m7" className="card-block">
-                    <img
-                      src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=100&auto=format&fit=crop"
-                      alt="Loading"
-                    />
-                  </a>
-                </div>
-                <div class="col-2 tile">
-                  <a href="#m8" className="card-block">
-                    <img
-                      src="https://images.unsplash.com/photo-1569913486515-b74bf7751574?q=80&w=100&auto=format&fit=crop"
-                      alt="Loading"
-                    />
-                  </a>
-                </div>
-                <div class="col-2 tile">
-                  <a href="#m9" className="card-block">
-                    <img
-                      src="https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=100&auto=format&fit=crop"
-                      alt="Loading"
-                    />
-                  </a>
-                </div>
-                <div class="col-2 tile">
-                  <a href="#m10" className="card-block">
-                    <img
-                      src="https://images.unsplash.com/photo-1639149888905-fb39731f2e6c?q=80&w=100&auto=format&fit=crop"
-                      alt="Loading"
-                    />
-                  </a>
-                </div>
+                {cardData.map((item) => (
+                  <div key={item.id} className="col-2 tile">
+                    <a href={`#${item.id}`} className="card-block">
+                      <img src={item.image} alt={item.name} />
+                    </a>
+                  </div>
+                ))}
               </div>
             </Col>
             {/* <div class="divider"></div> */}
