@@ -1,7 +1,9 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 const Team = () => {
+  const [currentCard, setCurrentCard] = useState("m1");
+
   const cardData = [
     {
       id: "m1",
@@ -84,6 +86,10 @@ const Team = () => {
       bio: " Visionary founder and CEO of EcoTech Innovations a trailblazing enterprise dedicated to sustainable technology solutions. With over 15 years of experience in environmental engineering John has been at the forefront of innovation driving the companys mission to revolutionize renewable energy sources.",
     },
   ];
+  useEffect(() => {
+    setCurrentCard("m1");
+  }, []);
+
   return (
     <>
       <section className="team py-5 bg">
@@ -102,21 +108,25 @@ const Team = () => {
                 data-aos-duration="1500"
               >
                 {cardData.map((item) => (
-                  <div key={item.id} className="col-2 tile">
-                    <a href={`#${item.id}`} className="card-block">
-                      <img src={item.image} alt={item.name} />
-                    </a>
-                  </div>
-                ))}
+                <div key={item.id} 
+                className={`col-2 tile ${currentCard === item.id ? "active" : ""}`}
+                onClick={() => setCurrentCard(item.id)}
+>
+                <a href={`#${item.id}`} className="card-block">
+                    <img src={item.image} alt={item.name} />
+                  </a>
+                </div>
+              ))}
               </div>
             </Col>
             {/* <div class="divider"></div> */}
             <Col lg={12}>
               {cardData.map((link, index) => (
                 <div
-                  className="card-section bg-black p-4 rounded mt-lg-5"
-                  data-aos="zoom-in-up"
-                  data-aos-duration="1500"
+                className={`card-section bg-black p-4 rounded mt-lg-5 ${currentCard === link.id ? "d-block" : "d-none"}`}
+
+                  // data-aos="zoom-in-up"
+                  // data-aos-duration="1500"
                   id={link.id}
                   key={index}
                 >

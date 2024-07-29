@@ -20,19 +20,20 @@ const Contact = () => {
 
   return (
     <>
-      <div className="background-img">
+      <div className="background-img" id="contact">
         <Container className="py-5">
           <div className="team-head text-white text-center pb-2">
             <h1>Contact Us</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
           <Row className="g-5">
-            <Col lg={5}
-             data-aos="flip-left"
-             data-aos-easing="ease-out-cubic"
-             data-aos-duration="2000"
+            <Col
+              lg={5}
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
             >
-              <div className="bg-white p-4 rounded-3">
+              <div className="bg-white p-3 rounded-3">
                 <ul class="footer-contact list-unstyled">
                   <li className="mb-3 ">
                     <a
@@ -83,17 +84,19 @@ const Contact = () => {
                 </div> */}
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-                  frameborder="0" title="Map-Link"
-                    style={{border: "0" , width:"100%", height: " 290px"}}
+                  frameborder="0"
+                  title="Map-Link"
+                  style={{ border: "0", width: "100%", height: " 290px" }}
                   allowfullscreen
                 ></iframe>
               </div>
             </Col>
             <Col lg={7}>
-              <div className="bg-color-transparent bg-border-animation border border-info p-4" 
-               data-aos="flip-right"
-               data-aos-easing="ease-out-cubic"
-               data-aos-duration="2000"
+              <div
+                className="bg-white bg-border-animation border border-info rounded-3 p-5"
+                data-aos="flip-right"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
               >
                 <h1>Registration Form</h1>
                 <form
@@ -104,7 +107,7 @@ const Contact = () => {
                     <div className="col-lg-6 col-sm-12">
                       <div className="form-group">
                         <label className="mb-2 fw-bold" for="input-1">
-                          Name :
+                          Full Name :
                         </label>
                         <input
                           type="text"
@@ -162,7 +165,7 @@ const Contact = () => {
                     <div className="col-lg-6 col-sm-12">
                       <div className="form-group">
                         <label className="mb-2 fw-bold" for="input-2">
-                          Previous Education :
+                          Qualification :
                         </label>
                         <input
                           type="text"
@@ -176,46 +179,22 @@ const Contact = () => {
                     <div className="col-lg-6 col-sm-12">
                       <div className="form-group">
                         <label className="mb-2 fw-bold" for="input-2">
-                          {" "}
-                          Target Education :
+                          Choose Course :
                         </label>
-                        <input
-                          type="text"
-                          className="form-control form-control-input mb-3"
-                          id="input-2"
-                          placeholder="Enter Your Target Education"
-                        />
+                        <br />
+
+                        <select className="form-control form-control-input mb-3">
+                          <option selected>Select</option>
+
+                          <option value="female">Web-development</option>
+                          <option value="male">Python</option>
+                          <option value="other">Automation</option>
+                          <option value="other">Machine Learning</option>
+                        </select>
                       </div>
                     </div>
 
-                    <div className="col-lg-6 col-sm-12">
-                      <div className="form-group">
-                        <label className="mb-2 fw-bold" for="input-2">
-                          Address :
-                        </label>
-                        <input
-                          type="text"
-                          className="form-control form-control-input mb-3"
-                          id="input-2"
-                          placeholder="Enter Your Address"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-sm-12">
-                      <div className="form-group ">
-                        <label className="mb-2 fw-bold" for="input-2">
-                          Id :
-                        </label>
-                        <input
-                          type="text"
-                          className="form-control form-control-input mb-3"
-                          id="input-2"
-                          placeholder="Enter Your Id"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="col-lg-6 col-sm-12">
+                    {/* <div className="col-lg-6 col-sm-12">
                       <div class="mb-3">
                         <label
                           for="exampleFormControlTextarea1"
@@ -229,13 +208,39 @@ const Contact = () => {
                           rows="3"
                         ></textarea>
                       </div>
+                    </div> */}
+                    <div className="col-lg-6 col-sm-12">
+                      <div className="form-group">
+                        <label className="mb-2 fw-bold" for="input-3">
+                          Visit :
+                        </label>
+                        <input
+                          type="date"
+                          className="form-control form-control-input mb-3"
+                          id="input-3"
+                          placeholder="Enter Your Mobile Number"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-6 col-sm-12">
+                      <div className="form-group">
+                        <label className="mb-2 fw-bold" for="input-2">
+                          Address :
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control form-control-input mb-3"
+                          id="input-2"
+                          placeholder="Enter Your Address"
+                        />
+                      </div>
                     </div>
                   </div>
 
-                  <div className="form-group">
+                  <div className="form-group mt-5">
                     <button
                       type="submit"
-                      className="btn btn-light px-5 form-control-input form-control-re"
+                      className="btn btn-primary px-5 form-control-input form-control-re"
                     >
                       <i className="icon-lock"></i> Submit
                     </button>
