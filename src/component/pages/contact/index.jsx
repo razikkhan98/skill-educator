@@ -20,11 +20,11 @@ const Contact = () => {
 
   return (
     <>
-      <div className="background-img" id="contact">
+      <div className="background-img bg-image2" id="contact">
         <Container className="py-5">
           <div className="team-head text-white text-center pb-2">
             <h1>Contact Us</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p>Contact us today to learn more about our courses and services.</p>
           </div>
           <Row className="g-5">
             <Col

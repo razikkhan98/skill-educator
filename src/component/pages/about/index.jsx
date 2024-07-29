@@ -12,7 +12,7 @@ import { FaCheckCircle } from "react-icons/fa";
 const About = () => {
   return (
     <>
-      <div className="bg-image" id="About">
+      <div className="bg-image1 background-img" id="About">
         <Container className="p-3">
           <Row className="bg-color-transparent rounded-3 my-5 py-4 g-5 ">
             <Col lg={6}>
@@ -22,26 +22,28 @@ const About = () => {
                 data-aos-duration="1500"
               >
                 <h2>About Us</h2>
-                <h3> sit amet consectetur</h3>
+                <h4>Our target is to build your skills </h4>
                 <p className="mb-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-                  ea consequuntur eum illum fugit quos ab aut perspiciatis
-                  tempora nulla. Quisquam tenetur minima ut rerum atque. Nam
-                  tenetur blanditiis quaerat.Quisquam tenetur minima ut rerum
-                  atque. Nam tenetur blanditiis quaerat.
+                  At SIW (Skill Intelligence World), we believe that mastering
+                  web development skills is the key to unlocking countless
+                  opportunities in the tech industry. Our courses are
+                  meticulously designed to help you develop the necessary skills
+                  and knowledge to excel in web development, whether you're a
+                  complete beginner or an experienced professional looking to
+                  enhance your expertise.
                 </p>
                 <ul className="list-unstyled ">
                   <li className="d-flex align-items-center mb-3">
                     <FaCheckCircle className="me-3 " />
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Build Real Projects.
                   </li>
                   <li className="d-flex align-items-center mb-3">
                     <FaCheckCircle className="me-3" />
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Explore Data Science.
                   </li>
                   <li className="d-flex align-items-center mb-3">
                     <FaCheckCircle className="me-3" />
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Develop Web Apps.
                   </li>
                 </ul>
 
@@ -95,7 +97,6 @@ const About = () => {
                   />
                 </Col>
               </Row>
-
             </Col>
           </Row>
         </Container>

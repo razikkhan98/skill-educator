@@ -27,9 +27,9 @@ const Footer = () => {
                   <img className="h-50 w-50" src={logo} alt="Loading" />
                 </a>
                 <p class="mb-4">
-                  We are many variations of passages available but the majority
-                  have suffered alteration in some form by injected humour words
-                  believable.
+                We offer specialized courses to enhance your skills and career
+              prospects, Gain valuable knowledge and skills through our tailored
+              educational programs.
                 </p>
                 <ul class="icon-social d-flex list-unstyled">
                   <li>

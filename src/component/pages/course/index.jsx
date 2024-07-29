@@ -4,16 +4,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Card from "react-bootstrap/Card";
 
-// Images
-import Html from "../../assets/images/courses/html.png";
-// import Css from "../../assets/images/courses/css.jpg";
-// import Js from "../../assets/images/courses/js.jpg";
-// import Angular from "../../assets/images/courses/angular.png";
-
 // Icons
-import { FaHtml5 } from "react-icons/fa";
 import { GrSystem } from "react-icons/gr";
-import { SiPython, SiJavascript, SiReact, SiMachinelearning } from "react-icons/si"; // Add necessary icons
+import { SiPython, SiReact } from "react-icons/si"; // Add necessary icons
+import { IoLogoJavascript } from "react-icons/io";
+import { FcServices, FcDataConfiguration } from "react-icons/fc";
 
 const Course = () => {
   const settings = {
@@ -55,56 +50,57 @@ const Course = () => {
   const CourseData = [
     {
       bg: "bg-card1",
-      icon: <GrSystem  className="h-50 w-50"/> ,
+      icon: <GrSystem className="h-50 w-50" />,
       title: "Web-Development",
       description:
-        "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "web-Development is to creating, building, and maintaining websites and web applications that run online on a browser",
     },
     {
       bg: "bg-card2",
-      icon: <FaHtml5 className="h-50 w-50" />,
+      icon: <FcServices className="h-50 w-50" />,
       title: "Automation Testing",
       description:
-        "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    },
-    {
-      bg: "bg-card1",
-      icon: <FaHtml5 className="h-50 w-50"/>,
-      title: "Machine Learning",
-      description:
-        "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "Automated testing is a software testing technique that automates the process of validating the functionality of software ",
     },
     {
       bg: "bg-card2",
-      icon:<SiPython className="h-50 w-50" />,
+      icon: <SiPython className="h-50 w-50" />,
       title: "Python",
       description:
-        "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "Python is an interpreted, object-oriented, high-level programming language with dynamic semantics.",
     },
     {
       bg: "bg-card1",
-      icon: <SiReact className="h-50 w-50" />,
+      icon: <FcDataConfiguration className="h-50 w-50" />,
+      title: "Machine Learning",
+      description:
+        "Machine learning is a branch of artificial intelligence and computer science that focuses on the using data and algorithms.",
+    },
+
+    {
+      bg: "bg-card1",
+      icon: <SiReact className="h-50 w-50 text-primary" />,
       title: "React Js",
       description:
-        "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "React.js, a frontend-focused JS library used mainly for building single-page and multi-page interfaces.",
     },
     {
       bg: "bg-card2",
-      icon: <SiJavascript className="h-50 w-50" />,
+      icon: <IoLogoJavascript className="h-50 w-50 text-warning" />,
       title: "Javascript",
       description:
-        "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods.",
     },
   ];
   return (
     <>
-      <div className="bg-image">
+      <div className="bg-image1 background-img">
         <div className="container p-5">
           <div className="text-center text-white mb-5">
             <h1>Our Courses</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              ratione accusantium, odio
+              Our programs are crafted to help you achieve your professional
+              goals.
             </p>
           </div>
           <div className="slider-container">
@@ -122,8 +118,10 @@ const Course = () => {
                       </div>
                       <Card.Body>
                         <Card.Title>{link.title}</Card.Title>
-                        <Card.Text>{link.description}</Card.Text>
-                        <div className="btn-frame pt-5 ">
+                        <Card.Text className="text-justify">
+                          {link.description}
+                        </Card.Text>
+                        <div className="btn-frame pt-3 ">
                           <button class="custom-btn btn-9">Read More</button>
                         </div>
                       </Card.Body>
