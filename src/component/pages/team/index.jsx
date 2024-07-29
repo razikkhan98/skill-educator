@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 const Team = () => {
@@ -98,7 +98,7 @@ const Team = () => {
             <Col lg={12} md={12}>
               <div className="team-head  text-center">
                 <h1>Our Team</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <h6>Meet our skilled professionals who bring a wealth of experience to your learning journey.</h6>
               </div>
             </Col>
             <Col lg={12} md={6}>
@@ -108,53 +108,59 @@ const Team = () => {
                 data-aos-duration="1500"
               >
                 {cardData.map((item) => (
-                <div key={item.id} 
-                className={`col-2 tile ${currentCard === item.id ? "active" : ""}`}
-                onClick={() => setCurrentCard(item.id)}
->
-                <a href={`#${item.id}`} className="card-block">
-                    <img src={item.image} alt={item.name} />
-                  </a>
-                </div>
-              ))}
+                  <div
+                    key={item.id}
+                    className={`col-2 tile ${
+                      currentCard === item.id ? "active" : ""
+                    }`}
+                    onClick={() => setCurrentCard(item.id)}
+                  >
+                    <a href={`#${item.id}`} className="card-block">
+                      <img src={item.image} alt={item.name} />
+                    </a>
+                  </div>
+                ))}
               </div>
             </Col>
             {/* <div class="divider"></div> */}
             <Col lg={12}>
               {cardData.map((link, index) => (
-                <div
-                className={`card-section bg-black p-4 rounded mt-lg-5 ${currentCard === link.id ? "d-block" : "d-none"}`}
-
-                  // data-aos="zoom-in-up"
-                  // data-aos-duration="1500"
-                  id={link.id}
-                  key={index}
-                >
-                  <Row>
-                    <Col lg={4} md={12}>
-                      <div class="card-img m-auto">
-                        <img
-                          src={link.image}
-                          alt="Loading"
-                          className="rounded "
-                        />
-                      </div>
-                    </Col>
-                    <Col lg={8} md={12}>
-                      <div class="info px-4 ">
-                        <div class="name fs-4 fw-bold text-light">
-                          {link.name}
+                <div className="d-flex">
+                  <div
+                    className={`card-section bg-black p-4 rounded mt-lg-3 ${
+                      currentCard === link.id ? "d-block" : "d-none"
+                    }`}
+                    // data-aos="zoom-in-up"
+                    // data-aos-duration="1500"
+                    id={link.id}
+                    key={index}
+                  >
+                    <Row>
+                      <Col lg={4} md={12}>
+                        <div class="card-img m-auto">
+                          <img
+                            src={link.image}
+                            alt="Loading"
+                            className="rounded "
+                          />
                         </div>
-                        <div class="title fs-5 fw-medium text-warning">
-                          {link.title}
+                      </Col>
+                      <Col lg={8} md={12}>
+                        <div class="info px-4 ">
+                          <div class="name fs-4 fw-bold text-light">
+                            {link.name}
+                          </div>
+                          <div class="title fs-5 fw-medium text-warning">
+                            {link.title}
+                          </div>
+                          <div class="bio fs-5 fw-light text-light">
+                            <p>{link.bio}</p>
+                            <p>{link.bio}</p>
+                          </div>
                         </div>
-                        <div class="bio fs-5 fw-light text-light">
-                          <p>{link.bio}</p>
-                          <p>{link.bio}</p>
-                        </div>
-                      </div>
-                    </Col>
-                  </Row>
+                      </Col>
+                    </Row>
+                  </div>
                 </div>
               ))}
             </Col>
