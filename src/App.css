@@ -78,7 +78,7 @@ a{
 }
 
 /* About Start */
-#Box {
+.bg-image {
   background: rgba(0, 0, 0, 0.7)
     url("./component//assets//images/about/about-bg.jpg");
   background-size: cover;
@@ -87,6 +87,14 @@ a{
   padding: 5px 0;
   background-attachment: fixed;
   box-sizing: border-box;
+}
+.background-img {
+  z-index: 1;
+  position: relative;
+  background-image: url(./component/assets/images/home/bg-4.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 /* Home Start */
 .carousel-item{
@@ -138,14 +146,7 @@ a{
   50% {box-shadow: 10px 10px 15px 20px rgb(87, 184, 216);}
 }
 
-.background-img {
-  z-index: 1;
-  position: relative;
-  background-image: url(./component/assets/images/home/bg-4.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-}
+
 
 /*Footer Icons  */
 .icon-social a {

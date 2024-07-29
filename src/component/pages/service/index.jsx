@@ -66,7 +66,7 @@ const Service = () => {
   ];
   return (
     <>
-      <div className="bg">
+      <div className="bg" id="Service">
         <Container>
           {/* Heading Start */}
           <div className="text-center  py-5">

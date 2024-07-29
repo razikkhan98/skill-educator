@@ -12,6 +12,8 @@ import Html from "../../assets/images/courses/html.png";
 
 // Icons
 import { FaHtml5 } from "react-icons/fa";
+import { GrSystem } from "react-icons/gr";
+import { SiPython, SiJavascript, SiReact, SiMachinelearning } from "react-icons/si"; // Add necessary icons
 
 const Course = () => {
   const settings = {
@@ -53,42 +55,42 @@ const Course = () => {
   const CourseData = [
     {
       bg: "bg-card1",
-      image: Html,
+      icon: <GrSystem  className="h-50 w-50"/> ,
       title: "Web-Development",
       description:
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
     },
     {
       bg: "bg-card2",
-      image: Html,
-      title: "Back-End-Development",
+      icon: <FaHtml5 className="h-50 w-50" />,
+      title: "Automation Testing",
       description:
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
     },
     {
       bg: "bg-card1",
-      image: Html,
-      title: "Front-End-Development",
+      icon: <FaHtml5 className="h-50 w-50"/>,
+      title: "Machine Learning",
       description:
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
     },
     {
       bg: "bg-card2",
-      image: Html,
+      icon:<SiPython className="h-50 w-50" />,
       title: "Python",
       description:
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
     },
     {
       bg: "bg-card1",
-      image: Html,
+      icon: <SiReact className="h-50 w-50" />,
       title: "React Js",
       description:
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
     },
     {
       bg: "bg-card2",
-      image: Html,
+      icon: <SiJavascript className="h-50 w-50" />,
       title: "Javascript",
       description:
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
@@ -96,7 +98,7 @@ const Course = () => {
   ];
   return (
     <>
-      <div id="Box">
+      <div className="bg-image">
         <div className="container p-5">
           <div className="text-center text-white mb-5">
             <h1>Our Courses</h1>
@@ -110,12 +112,13 @@ const Course = () => {
               {CourseData.map((link, index) => (
                 <div className="course-card  pb-5">
                   <div className=" d-flex justify-content-around">
-                    <Card className="m-3" style={{ width: "18rem" }}>
+                    <Card className="m-3">
                       {/* <Card.Img variant="top" src={link.image} /> */}
                       <div
                         className={`p-3 ${link.bg} border-bottom m-1 d-flex justify-content-center align-items-center`}
                       >
-                        <FaHtml5 className="h-50 w-50" />
+                        {link.icon}
+                        {/* <FaHtml5 className="h-50 w-50" /> */}
                       </div>
                       <Card.Body>
                         <Card.Title>{link.title}</Card.Title>
