@@ -12,7 +12,7 @@ import { FaCheckCircle } from "react-icons/fa";
 const About = () => {
   return (
     <>
-      <div className="bg-image1 background-img" id="About">
+      <section className="bg-image1 background-img" id="About">
         <Container className="p-3">
           <Row className="bg-color-transparent rounded-3 my-5 py-4 g-5 ">
             <Col lg={6}>
@@ -100,7 +100,7 @@ const About = () => {
             </Col>
           </Row>
         </Container>
-      </div>
+      </section>
     </>
   );
 };

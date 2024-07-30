@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 // import GoogleMapReact from "google-map-react";
 
 // Icons
 import { FaPhoneAlt, FaRegEnvelope } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+
 const Contact = () => {
   // const LocationPin = ({ text }) => (
   //   <div className="pin">
@@ -18,13 +20,127 @@ const Contact = () => {
   //   lng: -122.08427,
   // };
 
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+  });
+
+  const [errors, setErrors] = useState({});
+  const [currentStep, setCurrentStep] = useState(1);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+    // Clear previous error when the user starts typing
+    setErrors({
+      ...errors,
+      [name]: "",
+    });
+  };
+
+  const validateStep1 = () => {
+    const step1Errors = {};
+    if (!formData.firstName.trim()) {
+      step1Errors.firstName = "First Name is required";
+    }
+    if (!formData.lastName.trim()) {
+      step1Errors.lastName = "Last Name is required";
+    }
+    return step1Errors;
+  };
+
+  const validateStep2 = () => {
+    const step2Errors = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^\d{10}$/;
+
+    if (!formData.email.trim() || !emailRegex.test(formData.email)) {
+      step2Errors.email = "Enter a valid email address";
+    }
+    if (
+      !formData.phoneNumber.trim() ||
+      !phoneRegex.test(formData.phoneNumber)
+    ) {
+      step2Errors.phoneNumber = "Enter a valid phone number";
+    }
+    return step2Errors;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const step1Errors = validateStep1();
+    if (Object.keys(step1Errors).length > 0) {
+      setErrors(step1Errors);
+      return;
+    }
+
+    const step2Errors = validateStep2();
+    if (Object.keys(step2Errors).length > 0) {
+      setErrors(step2Errors);
+      return;
+    }
+
+    // Perform further actions with the form data
+    console.log("Form submitted:", formData);
+  };
+
+  const nextStep = () => {
+    if (currentStep === 1) {
+      const step1Errors = validateStep1();
+      if (Object.keys(step1Errors).length === 0) {
+        setCurrentStep((prevStep) => prevStep + 1);
+        setPercent((prevPercent) => Math.min(prevPercent + 40, 100));
+      } else {
+        setErrors(step1Errors);
+      }
+    } else if (currentStep === 2) {
+      const step2Errors = validateStep2();
+      if (Object.keys(step2Errors).length === 0) {
+        setCurrentStep((prevStep) => prevStep + 1);
+        setPercent((prevPercent) => Math.min(prevPercent + 40, 100));
+      } else {
+        setErrors(step2Errors);
+      }
+    } else if (currentStep === 3) {
+      setCurrentStep((prevStep) => prevStep + 1);
+    }
+  };
+
+  const StepBack = () => {
+    setCurrentStep((prevStep) => prevStep - 1);
+    setPercent((prevPercent) => Math.max(prevPercent - 40, 0));
+  };
+
+  const BckFrm = () => {
+    setCurrentStep((prevStep) => prevStep - 4);
+    setPercent((prevPercent) => Math.max(prevPercent - 100, 0));
+  };
+
+  const FormSubmit = () => {
+    setPercent((prevPercent) => Math.min(prevPercent + 40, 100));
+    setTimeout(() => {
+      setCurrentStep((prevStep) => prevStep + 1);
+    }, 3000);
+  };
+
+  const [percent, setPercent] = useState(0);
+  const circumference = 30 * 2 * Math.PI;
+
   return (
     <>
-      <div className="background-img bg-image2" id="contact">
+      <section className="background-img bg-image2" id="contact">
         <Container className="py-5">
           <div className="team-head text-white text-center pb-2">
             <h1>Contact Us</h1>
-            <p>Contact us today to learn more about our courses and services.</p>
+            <p>
+              Contact us today to learn more about our courses and services.
+            </p>
           </div>
           <Row className="g-5">
             <Col
@@ -98,227 +214,214 @@ const Contact = () => {
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="2000"
               >
-                <h1>Registration Form</h1>
-                <form
-                  className="border-top-3"
-                  // onSubmit={handleSubmit(onSubmit)}
-                >
-                  <div className="row mt-3">
-                    <div className="col-lg-6 col-sm-12">
-                      <div className="form-group">
-                        <label className="mb-2 fw-bold" for="input-1">
-                          Full Name :
-                        </label>
+                <h1 className="mb-5">Registration Form</h1>
+
+                <div className="bg-info p-4 rounded-3">
+                  <form onSubmit={handleSubmit} className="text-left">
+                    {/* Step 1: First and Last Name */}
+                    {currentStep === 1 && (
+                      <>
+                        <div className="row">
+                          <div className="col-md-6 mb-3">
+                            <label htmlFor="firstName" className="form-label">
+                              First Name :
+                            </label>
+                            <input
+                              type="text"
+                              id="firstName"
+                              name="firstName"
+                              value={formData.firstName}
+                              onChange={handleInputChange}
+                              className="form-control"
+                              required
+                            />
+                            {errors.firstName && (
+                              <div className="text-danger">
+                                {errors.firstName}
+                              </div>
+                            )}
+                          </div>
+
+                          <div className="col-md-6 mb-3">
+                            <label htmlFor="lastName" className="form-label">
+                              Last Name :
+                            </label>
+                            <input
+                              type="text"
+                              id="lastName"
+                              name="lastName"
+                              value={formData.lastName}
+                              onChange={handleInputChange}
+                              className="form-control"
+                              required
+                            />
+                            {errors.lastName && (
+                              <div className="text-danger">
+                                {errors.lastName}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </>
+                    )}
+
+                    {/* Step 2: Email and Phone Number */}
+                    {currentStep === 2 && (
+                      <>
+                        <div className="row">
+                          <div className="col-md-6 mb-3">
+                            <label htmlFor="email" className="form-label">
+                              Email :
+                            </label>
+                            <input
+                              type="email"
+                              id="email"
+                              name="email"
+                              value={formData.email}
+                              onChange={handleInputChange}
+                              className="form-control"
+                              required
+                            />
+                            {errors.email && (
+                              <div className="text-danger">{errors.email}</div>
+                            )}
+                          </div>
+
+                          <div className="col-md-6 mb-3">
+                            <label htmlFor="phoneNumber" className="form-label">
+                              Phone Number :
+                            </label>
+                            <input
+                              type="tel"
+                              id="phoneNumber"
+                              name="phoneNumber"
+                              value={formData.phoneNumber}
+                              onChange={handleInputChange}
+                              className="form-control"
+                              required
+                            />
+                            {errors.phoneNumber && (
+                              <div className="text-danger">
+                                {errors.phoneNumber}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </>
+                    )}
+                    {currentStep === 3 && (
+                      <>
+                        <div className="mb-3">
+                          <label htmlFor="Message" className="form-label">
+                            Message :
+                          </label>
+                          <textarea
+                            name=""
+                            id=""
+                            cols="30"
+                            rows="5"
+                            placeholder="Enter Your Message"
+                            className="form-control"
+                          ></textarea>
+                        </div>
+                      </>
+                    )}
+                    {currentStep === 4 && (
+                      <>
                         <input
-                          type="text"
-                          className="form-control form-control-input mb-3"
-                          id="input-1"
-                          placeholder="Enter Your Full Name"
+                          className="d-none"
+                          onClick={FormSubmit}
+                          type="checkbox"
+                          id="send"
                         />
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-sm-12">
-                      <div className="form-group">
-                        <label className="mb-2 fw-bold" for="input-3">
-                          Mobile :
-                        </label>
-                        <input
-                          type="number"
-                          className="form-control form-control-input mb-3"
-                          id="input-3"
-                          placeholder="Enter Your Mobile Number"
-                        />
-                      </div>
-                    </div>
 
-                    <div className="col-lg-6 col-sm-12">
-                      <div className="form-group">
-                        <label className="mb-2 fw-bold" for="input-2">
-                          Email :
-                        </label>
-                        <input
-                          type="email"
-                          className="form-control form-control-input mb-3"
-                          id="input-2"
-                          placeholder="Enter Your Email Address"
-                        />
-                      </div>
-                    </div>
+                        <div className="submit-btn w-100 text-center mt-4">
+                          <svg className="plane" height="120" width="200">
+                            <polyline points="160,20 40,60 150,80 160,20 88,68 88,95 110,73" />
+                          </svg>
 
-                    <div className="col-lg-6 col-sm-12">
-                      <div class="form-group">
-                        <label className="mb-2 fw-bold" for="input-2">
-                          Gender :
-                        </label>
-                        <br />
-
-                        <select className="form-control form-control-input mb-3">
-                          <option selected>Gender</option>
-
-                          <option value="female">Female</option>
-                          <option value="male">Male</option>
-                          <option value="other">other</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div className="col-lg-6 col-sm-12">
-                      <div className="form-group">
-                        <label className="mb-2 fw-bold" for="input-2">
-                          Qualification :
-                        </label>
-                        <input
-                          type="text"
-                          className="form-control form-control-input mb-3"
-                          id="input-2"
-                          placeholder="Enter Your Previous Education"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="col-lg-6 col-sm-12">
-                      <div className="form-group">
-                        <label className="mb-2 fw-bold" for="input-2">
-                          Choose Course :
-                        </label>
-                        <br />
-
-                        <select className="form-control form-control-input mb-3">
-                          <option selected>Select</option>
-
-                          <option value="female">Web-development</option>
-                          <option value="male">Python</option>
-                          <option value="other">Automation</option>
-                          <option value="other">Machine Learning</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    {/* <div className="col-lg-6 col-sm-12">
-                      <div class="mb-3">
+                          <svg className="mail" height="120" width="200">
+                            <polyline points="20,20 180,20 180,100 20,100 20,20 100,70 180,20" />
+                          </svg>
+                        </div>
                         <label
-                          for="exampleFormControlTextarea1"
-                          class="form-label mb-2 fw-bold  "
+                          className="submit-label btn btn-primary text-white d-inline-block mt-2 fw-bold cursor-pointer"
+                          htmlFor="send"
                         >
-                          Message :
+                          SUBMIT
                         </label>
-                        <textarea
-                          class="form-control mb-3"
-                          id="exampleFormControlTextarea1"
-                          rows="3"
-                        ></textarea>
-                      </div>
-                    </div> */}
-                    <div className="col-lg-6 col-sm-12">
-                      <div className="form-group">
-                        <label className="mb-2 fw-bold" for="input-3">
-                          Visit :
-                        </label>
-                        <input
-                          type="date"
-                          className="form-control form-control-input mb-3"
-                          id="input-3"
-                          placeholder="Enter Your Mobile Number"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-sm-12">
-                      <div className="form-group">
-                        <label className="mb-2 fw-bold" for="input-2">
-                          Address :
-                        </label>
-                        <input
-                          type="text"
-                          className="form-control form-control-input mb-3"
-                          id="input-2"
-                          placeholder="Enter Your Address"
-                        />
-                      </div>
-                    </div>
-                  </div>
+                      </>
+                    )}
+                    {currentStep === 5 && (
+                      <>
+                        <button
+                          type="button"
+                          onClick={BckFrm}
+                          className="btn btn-primary"
+                        >
+                          Reset
+                        </button>
+                      </>
+                    )}
+                  </form>
 
-                  <div className="form-group mt-5">
+                  <div className="d-flex justify-content-center align-items-center p-4">
                     <button
-                      type="submit"
-                      className="btn btn-primary px-5 form-control-input form-control-re"
+                      type="button"
+                      onClick={StepBack}
+                      disabled={currentStep === 1}
+                      className={`btn btn-primary mx-2 ${
+                        currentStep === 1 ? "disabled" : ""
+                      }`}
                     >
-                      <i className="icon-lock"></i> Submit
+                      {/* <FontAwesomeIcon icon={faAngleLeft} /> */}
+                      <IoIosArrowBack />
+                    </button>
+                    <div className="position-relative d-inline-flex align-items-center justify-content-center">
+                      <svg className="w-25 h-25">
+                        <circle
+                          className="text-primary"
+                          strokeWidth="5"
+                          stroke="currentColor"
+                          fill="transparent"
+                          r="30"
+                          cx="40"
+                          cy="40"
+                        />
+                        <circle
+                          className="text-light"
+                          strokeWidth="5"
+                          strokeDasharray={circumference}
+                          strokeDashoffset={
+                            circumference - (percent / 100) * circumference
+                          }
+                          strokeLinecap="round"
+                          stroke="currentColor"
+                          fill="transparent"
+                          r="30"
+                          cx="40"
+                          cy="40"
+                        />
+                      </svg>
+                      <span className="position-absolute text-dark pb-3 fs-4 fw-bold mb-5">{`${percent}%`}</span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={nextStep}
+                      disabled={currentStep === 4}
+                      className={`btn btn-primary text-white mx-2 ${
+                        currentStep === 4 ? "disabled" : ""
+                      }`}
+                    >
+                      <IoIosArrowForward />
                     </button>
                   </div>
-                </form>
-                {/* <Row>
-                  <Col md={6}>
-                    <div class="form__group field">
-                      <input
-                        type="input"
-                        class="form__field"
-                        placeholder="Name"
-                        name="name"
-                        id="name"
-                        required
-                      />
-                      <label for="name" class="form__label">
-                        * Name
-                      </label>
-                    </div>
-                  </Col>
-                  <Col md={6}>
-                    <div class="form__group field">
-                      <input
-                        type="email"
-                        class="form__field"
-                        placeholder="Email"
-                        name="email"
-                        id="email"
-                        required
-                      />
-                      <label for="email" class="form__label">
-                        * E-mail
-                      </label>
-                    </div>
-                  </Col>
-                  <Col md={6}>
-                    <div class="form__group field">
-                      <input
-                        type="number"
-                        class="form__field"
-                        placeholder="Number"
-                        name="number"
-                        id="number"
-                        required
-                      />
-                      <label for="number" class="form__label">
-                        * Mobile Number
-                      </label>
-                    </div>
-                  </Col>
-                  <Col md={6}>
-                    <div class="form__group field ">
-                      <select
-                      className="form__field form__label"
-                      name="gender"
-                      id="gender"
-                      required
-                      aria-label="Default select example"
-                    >
-                      <option selected>Select</option>
-                      <option value="1">Male</option>
-                      <option value="2">Female</option>
-                    </select>
-                    <label htmlFor="gender" className="form__label">
-                        * Gender
-                      </label>
-                      <br />
-
-
-                    </div>
-                  </Col>
-                </Row> */}
+                </div>
               </div>
             </Col>
           </Row>
         </Container>
-      </div>
+      </section>
     </>
   );
 };

@@ -68,7 +68,7 @@ const Service = () => {
   ];
   return (
     <>
-      <div className="bg" id="Service">
+      <section className="bg" id="Service">
         <Container>
           {/* Heading Start */}
           <div className="text-center  py-5">
@@ -103,7 +103,7 @@ const Service = () => {
             ))}
           </Row>
         </Container>
-      </div>
+      </section>
     </>
   );
 };

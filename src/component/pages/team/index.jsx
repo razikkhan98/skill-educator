@@ -11,7 +11,7 @@ const Team = () => {
         "https://images.unsplash.com/photo-1628157588553-5eeea00af15c?q=80&w=400&auto=format&fit=crop",
       name: "Jhone Deo",
       title: "Founder",
-      bio: " Visionary founder and CEO of EcoTech Innovations. With over 15 years of experience in environmental engineering John has been at the forefront of innovation driving the companys mission to revolutionize renewable energy sources.",
+      bio: " Visionary founder and CEO of EcoTech Innovations a trailblazing enterprise dedicated to sustainable technology solutions. With over 15 years of experience in environmental engineering John has been at the forefront of innovation driving the companys mission to revolutionize renewable energy sources.",
     },
     {
       id: "m2",
@@ -103,7 +103,7 @@ const Team = () => {
             </Col>
             <Col lg={12} md={6}>
               <div
-                class="members row scrolling-wrapper flex-row flex-nowrap mt-4 pb-4 pt-2"
+                class="members row scrolling-wrapper flex-row flex-nowrap mt-2 pb-4 pt-2"
                 data-aos="zoom-in-up"
                 data-aos-duration="1500"
               >
@@ -115,9 +115,9 @@ const Team = () => {
                     }`}
                     onClick={() => setCurrentCard(item.id)}
                   >
-                    <a href={`#${item.id}`} className="card-block">
+                    {/* <a href={`#${item.id}`} className="card-block"> */}
                       <img src={item.image} alt={item.name} />
-                    </a>
+                    {/* </a> */}
                   </div>
                 ))}
               </div>
@@ -137,7 +137,7 @@ const Team = () => {
                   >
                     <Row>
                       <Col lg={4} md={12}>
-                        <div class="card-img m-auto">
+                        <div class="card-img ">
                           <img
                             src={link.image}
                             alt="Loading"
