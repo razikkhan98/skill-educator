@@ -67,7 +67,7 @@ const Course = () => {
       icon: <SiPython className="h-50 w-50" />,
       title: "Python",
       description:
-        "Python is an interpreted, object-oriented, high-level programming language with dynamic semantics.",
+        "Python is a high-level, general-purpose programming language. It supports multiple programming paradigms, including structured.",
     },
     {
       bg: "bg-card1",
@@ -94,7 +94,8 @@ const Course = () => {
   ];
   return (
     <>
-      <div className="bg-image1 background-img">
+
+      <section className="bg-image1 background-img">
         <div className="container p-5">
           <div className="text-center text-white mb-5">
             <h1>Our Courses</h1>
@@ -108,7 +109,7 @@ const Course = () => {
               {CourseData.map((link, index) => (
                 <div className="course-card  pb-5">
                   <div className=" d-flex justify-content-around">
-                    <Card className="m-3">
+                    <Card className="m-3" style={{height: "26rem"}}>
                       {/* <Card.Img variant="top" src={link.image} /> */}
                       <div
                         className={`p-3 ${link.bg} border-bottom m-1 d-flex justify-content-center align-items-center`}
@@ -118,7 +119,7 @@ const Course = () => {
                       </div>
                       <Card.Body>
                         <Card.Title>{link.title}</Card.Title>
-                        <Card.Text className="text-justify">
+                        <Card.Text >
                           {link.description}
                         </Card.Text>
                         <div className="btn-frame pt-3 ">
@@ -132,7 +133,7 @@ const Course = () => {
             </Slider>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

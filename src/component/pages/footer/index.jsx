@@ -18,6 +18,7 @@ const Footer = () => {
   return (
     <>
       {/* <!-- footer Start --> */}
+      <section>
       <footer class="bg p-3">
         <Container>
           <Row class="footer-wrapper">
@@ -123,6 +124,7 @@ const Footer = () => {
           <hr />
         </Container>
       </footer>
+      </section>
       {/* <!-- footer End --> */}
     </>
   );
