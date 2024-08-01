@@ -167,7 +167,7 @@ a{
   content: "";
   width: 100%;
   height: 100%;
-  background: linear-gradient(#0dcaf0, rgb(130, 30, 77));
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
   position: absolute;
   left: 0%;
   top: -98%;
@@ -256,3 +256,23 @@ a{
     width: 100%;
     height: 400px;
   }
+
+  .plane {
+    position: absolute;
+    fill: none;
+    stroke-width: 2px;
+    stroke: #fff;
+    stroke-linecap: square;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transform: translate(0, 0);
+}
+.mail {
+  position: absolute;
+  fill: none;
+  stroke-width: 2px;
+  stroke: #fff;
+  stroke-linecap: square;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+}
