@@ -109,7 +109,7 @@ const Course = () => {
               {CourseData.map((link, index) => (
                 <div className="course-card  pb-5">
                   <div className=" d-flex justify-content-around">
-                    <Card className="m-3" style={{height: "26rem"}}>
+                    <Card className="m-3" style={{height: "24rem"}}>
                       {/* <Card.Img variant="top" src={link.image} /> */}
                       <div
                         className={`p-3 ${link.bg} border-bottom m-1 d-flex justify-content-center align-items-center`}

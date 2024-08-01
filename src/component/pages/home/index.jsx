@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { Carousel } from "react-bootstrap";
 import Navbar from "../../common/navbar/index";
 // Images
-import Home1 from "../../assets/images/home/bg-1.jpg";
-import Home2 from "../../assets/images/home/bg-4.jpg";
-import Home3 from "../../assets/images/home/bg-animation.jpg";
+import Home1 from "../../assets/images/home/home1.jpg";
+import Home2 from "../../assets/images/home/home2.jpg";
+import Home3 from "../../assets/images/home/home3.jpg";
 
 // AOS Animation
 import AOS from "aos";

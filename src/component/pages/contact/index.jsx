@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 // import GoogleMapReact from "google-map-react";
 
@@ -216,8 +216,8 @@ const Contact = () => {
               >
                 <h1 className="mb-5">Registration Form</h1>
 
-                <div className="bg-info p-4 rounded-3">
-                  <form onSubmit={handleSubmit} className="text-left">
+                <div className="bg-card1 p-4 rounded-3">
+                  <form onSubmit={handleSubmit} className="text-center d-flex flex-column justify-content-center align-items-center ">
                     {/* Step 1: First and Last Name */}
                     {currentStep === 1 && (
                       <>
@@ -311,7 +311,7 @@ const Contact = () => {
                     )}
                     {currentStep === 3 && (
                       <>
-                        <div className="mb-3">
+                        <div className="mb-3 w-100">
                           <label htmlFor="Message" className="form-label">
                             Message :
                           </label>
@@ -329,13 +329,13 @@ const Contact = () => {
                     {currentStep === 4 && (
                       <>
                         <input
-                          className="d-none"
+                          className=" text-white ratio ratio-1x1 p-2 my-5 d-none rounded-3 send-btn"
                           onClick={FormSubmit}
                           type="checkbox"
                           id="send"
                         />
 
-                        <div className="submit-btn w-100 text-center mt-4">
+                        <div className="submit-btn w-25 rounded d-flex align-items-center justify-content-center text-center my-4">
                           <svg className="plane" height="120" width="200">
                             <polyline points="160,20 40,60 150,80 160,20 88,68 88,95 110,73" />
                           </svg>
@@ -345,7 +345,7 @@ const Contact = () => {
                           </svg>
                         </div>
                         <label
-                          className="submit-label btn btn-primary text-white d-inline-block mt-2 fw-bold cursor-pointer"
+                          className="submit-label btn btn-primary text-white d-inline-block mt-5 fw-bold cursor-pointer"
                           htmlFor="send"
                         >
                           SUBMIT
@@ -403,7 +403,7 @@ const Contact = () => {
                           cy="40"
                         />
                       </svg>
-                      <span className="position-absolute text-dark pb-3 fs-4 fw-bold mb-5">{`${percent}%`}</span>
+                      <span className="position-absolute text-dark pb-3 fs-5 fw-bold mb-5">{`${percent}%`}</span>
                     </div>
                     <button
                       type="button"
