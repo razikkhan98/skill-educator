@@ -25,11 +25,11 @@ const NavigationBar = () => {
       >
         <Container>
           <Navbar.Brand className="text-white" href="#home">
-            Skill Intelligence World
+            Intelligence Educator
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ms-auto ">
+            <Nav className="ms-auto d-flex align-items-center ">
               <Nav.Link className="me-4 fw-bold" href="#Home">
                 Home
               </Nav.Link>

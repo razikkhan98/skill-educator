@@ -216,7 +216,7 @@ const Contact = () => {
               >
                 <h1 className="mb-5">Registration Form</h1>
 
-                <div className="bg-card1 py-4 rounded-3">
+                <div className="bg-card1 py-4 px-2 rounded-3">
                   <form onSubmit={handleSubmit} className="text-center d-flex flex-column justify-content-center align-items-center ">
                     {/* Step 1: First and Last Name */}
                     {currentStep === 1 && (
@@ -377,8 +377,8 @@ const Contact = () => {
                       {/* <FontAwesomeIcon icon={faAngleLeft} /> */}
                       <IoIosArrowBack />
                     </button>
-                    <div className="position-relative d-inline-flex align-items-center justify-content-center pt-5">
-                      <svg className="w-25 h-25">
+                    <div className="position-relative d-inline-flex align-items-center justify-content-center">
+                      <svg className="w-25 h-25 pt-5  ">
                         <circle
                           className="text-primary"
                           strokeWidth="5"
@@ -403,7 +403,7 @@ const Contact = () => {
                           cy="40"
                         />
                       </svg>
-                      <span className="position-absolute text-dark fs-5 fw-bold pb-3 mb-5 ">{`${percent}%`}</span>
+                      <span className="position-absolute text-dark fs-5 fw-bold mb-4 ">{`${percent}%`}</span>
                     </div>
                     <button
                       type="button"
