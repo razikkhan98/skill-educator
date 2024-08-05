@@ -18,10 +18,10 @@ a{
   background-color: #cbbbda;
 }
 .bg-color{
-  background-color:rgba(85, 77, 116,0.5);
+  background-color:rgba(64, 56, 95, 0.5);
 }
 .bg-color-transparent{
-  background-color: rgba(179, 156, 199,0.4);
+  background-color: rgba(179, 156, 199,0.5);
 }
 
 /* Buttton Start */
@@ -94,11 +94,11 @@ a{
 /* About Start */
 .bg-image1 {
   background: rgba(0, 0, 0, 0.7)
-    url("./component//assets//images/about/about-bg.jpg");
-  background-blend-mode: darken;
+    url("./component/assets/images/home/home3.jpg");
 }
 .bg-image2{
-  background-image: url(./component/assets/images/home/bg-4.jpg);
+  background:  rgba(0, 0, 0, 0.7) url("./component/assets/images/home/home2.jpg");
+
 }
 .background-img {
   z-index: 1;
@@ -107,6 +107,8 @@ a{
   background-position: center;
   background-size: cover;
   box-sizing: border-box;
+  background-blend-mode: darken;
+
 }
 
 /* Home Start */
