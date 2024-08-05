@@ -130,8 +130,8 @@ const Team = () => {
                     className={`card-section bg-black p-4 rounded mt-lg-3 ${
                       currentCard === link.id ? "d-block" : "d-none"
                     }`}
-                    // data-aos="zoom-in-up"
-                    // data-aos-duration="1500"
+                    data-aos="zoom-in-up"
+                    data-aos-duration="1500"
                     id={link.id}
                     key={index}
                   >

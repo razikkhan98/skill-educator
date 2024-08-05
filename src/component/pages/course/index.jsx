@@ -53,21 +53,21 @@ const Course = () => {
       icon: <GrSystem className="h-50 w-50" />,
       title: "Web-Development",
       description:
-        "web-Development is to creating, building, and maintaining websites and web applications that run online on a browser",
+        "web-Development is to creating, building, and maintaining websites and web applications that run online on a browser.",
     },
     {
       bg: "bg-card2",
       icon: <FcServices className="h-50 w-50" />,
-      title: "Automation Testing",
+      title: "Automation-Testing",
       description:
-        "Automated testing is a software testing technique that automates the process of validating the functionality of software ",
+        "Automated testing is a software testing technique that automates the process of validating the functionality of software. ",
     },
     {
       bg: "bg-card2",
       icon: <SiPython className="h-50 w-50" />,
       title: "Python",
       description:
-        "Python is a high-level, general-purpose programming language. It supports multiple programming paradigms, including structured.",
+        "Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its high-level built in data structures",
     },
     {
       bg: "bg-card1",
@@ -82,19 +82,18 @@ const Course = () => {
       icon: <SiReact className="h-50 w-50 text-primary" />,
       title: "React Js",
       description:
-        "React.js, a frontend-focused JS library used mainly for building single-page and multi-page interfaces.",
+        "React.js, a popular JS library used for building single-page & multi-page interfaces. Its used for creating dynamic web applications.",
     },
     {
       bg: "bg-card2",
       icon: <IoLogoJavascript className="h-50 w-50 text-warning" />,
       title: "Javascript",
       description:
-        "JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods.",
+        "JavaScript is a dynamic programming language that's used for web development, in web applications, for game development, and more.",
     },
   ];
   return (
     <>
-
       <section className="bg-image1 background-img">
         <div className="container p-5">
           <div className="text-center text-white mb-5">
@@ -107,22 +106,23 @@ const Course = () => {
           <div className="slider-container">
             <Slider {...settings}>
               {CourseData.map((link, index) => (
-                <div className="course-card  pb-5">
-                  <div className=" d-flex justify-content-around">
-                    <Card className="m-3" style={{height: "25rem"}}>
+                <div className="course-card ">
+                  <div
+                    className=" d-flex justify-content-around ms-3"
+                    style={{ height: "24rem" }}
+                  >
+                    <Card>
                       {/* <Card.Img variant="top" src={link.image} /> */}
                       <div
-                        className={`p-3 ${link.bg} border-bottom m-1 d-flex justify-content-center align-items-center`}
+                        className={`p-1 ${link.bg} border-bottom m-1 d-flex justify-content-center align-items-center`}
                       >
                         {link.icon}
                         {/* <FaHtml5 className="h-50 w-50" /> */}
                       </div>
                       <Card.Body>
                         <Card.Title>{link.title}</Card.Title>
-                        <Card.Text >
-                          {link.description}
-                        </Card.Text>
-                        <div className="btn-frame pt-3 ">
+                        <Card.Text className="text-justify">{link.description}</Card.Text>
+                        <div className="btn-frame my-3 ">
                           <button class="custom-btn btn-9">Read More</button>
                         </div>
                       </Card.Body>
