@@ -68,10 +68,10 @@ const Service = () => {
   ];
   return (
     <>
-      <section className="bg" id="Service">
-        <Container>
+      <section className="bg pt-4 pb-5" id="Service">
+        <Container className="pt-5">
           {/* Heading Start */}
-          <div className="text-center  py-5">
+          <div className="text-center py-2">
             <h1>Our Service</h1>
             <p>
             We provide exclusive services for your Future
@@ -84,7 +84,7 @@ const Service = () => {
             {ServiceCard.map((link, index) => (
               <Col className="d-flex align-items-center justify-content-center">
                 <Card
-                  className="service-card shadow-lg d-flex flex-column justify-content-center align-items-center text-center mb-5 pb-3"
+                  className="service-card shadow-lg d-flex flex-column justify-content-center align-items-center text-center mb-4 "
                   data-aos="flip-left"
                   data-aos-easing="ease-out-cubic"
                   data-aos-duration="2000"
@@ -94,7 +94,7 @@ const Service = () => {
                   <Card.Body>
                     <Card.Title>{link.title}</Card.Title>
                     <Card.Text>{link.description}</Card.Text>
-                    <div className="btn-frame mt-4">
+                    <div className="btn-frame">
                       <button class="custom-btn btn-9">Read More</button>
                     </div>
                   </Card.Body>

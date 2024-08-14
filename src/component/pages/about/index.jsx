@@ -13,8 +13,8 @@ const About = () => {
   return (
     <>
       <section className="bg-image1 background-img" id="About">
-        <Container className="p-3">
-          <Row className="bg-color-transparent rounded-3 my-5 py-4 g-5 ">
+        <Container className="p-5">
+          <Row className="bg-color-transparent rounded-3 my-5 py-4">
             <Col lg={6}>
               <div
                 className="bg-color bg-border-animation text-white border rounded-3 border-info p-3"
