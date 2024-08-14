@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { Carousel } from "react-bootstrap";
 import Navbar from "../../common/navbar/index";
 // Images
-import Home1 from "../../assets/images/home/home1.jpg";
-import Home2 from "../../assets/images/home/home2.jpg";
-import Home3 from "../../assets/images/home/home3.jpg";
+import Home1 from "../../assets/images/home/home-bg-1.png";
+import Home2 from "../../assets/images/home/home-bg-2.png";
+import Home3 from "../../assets/images/home/home-bg-3.png";
 
 // AOS Animation
 import AOS from "aos";
@@ -35,7 +35,7 @@ const Home = () => {
         </Carousel>
 
         <div
-          className="border-box  p-1 home-content text-light d-flex flex-column align-items-center justify-content-center position-absolute top-50 start-50 translate-middle rounded"
+          className="border-box p-1 home-content text-light d-flex flex-column align-items-center justify-content-center position-absolute top-50 start-50 translate-middle rounded"
           data-aos="zoom-in-up"
           data-aos-duration="3000"
         >
