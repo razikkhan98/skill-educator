@@ -96,7 +96,7 @@ const Course = () => {
     <>
       <section className="bg-image1 background-img">
         <div className="container p-5">
-          <div className="text-center text-white mb-5">
+          <div className="text-center text-white mb-5 pt-5">
             <h1>Our Courses</h1>
             <p>
               Our programs are crafted to help you achieve your professional
