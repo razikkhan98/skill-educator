@@ -134,7 +134,7 @@ const Contact = () => {
 
   return (
     <>
-      <section className="background-img bg-image2" id="contact">
+      <section className="background-img bg-image2" id="Contact">
         <Container className="py-5">
           <div className="team-head text-white text-center pb-2">
             <h1>Contact Us</h1>
