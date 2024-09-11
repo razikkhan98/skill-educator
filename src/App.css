@@ -1,0 +1,58 @@
+:root{
+    --cream-color:#b69d7f;
+     --brown-color:#403133;
+     --light-brown-color:#655847;
+     --dark-color:#191516; 
+}
+/* Common Class */
+.background-color-cream{
+    background: var(--cream-color);
+}
+.background-color-brown{
+    background-color: var(--brown-color);
+}
+.background-color-dark{
+ background-color: var(--dark-color);
+}
+.background-color-light-brown{
+    background-color: var(--light-brown-color);
+}
+.text-color-light{
+    color: var(--cream-color);
+}
+.text-color-dark{
+    color: var(--dark-color);
+}
+
+/* =============== Header Start ================= */
+.header-logo img{
+    height: 120px;
+}
+.header-bottom-line{
+    height: 5px;
+    width: 100%;
+}
+
+/* =========== Footer Start   ============ */
+.logo img {
+  height: 70px;
+}
+.bg-body-tertiary {
+    background-color: var(--dark-color) !important;
+}
+.navbar-brand, .nav-link{
+    letter-spacing: 3px;
+    color: var(--cream-color) !important;
+}
+.nav-link:hover{
+    color: var(--light-brown-color) !important;
+}
+.social-icon {
+  background:var(--cream-color);
+  color: var(--dark-color);
+  padding: 5px;
+}
+.social-icon:hover {
+  color: var(--light-brown-color);
+}
+/* =========== Footer End   ============ */
