@@ -1,58 +1,292 @@
-:root{
-    --cream-color:#b69d7f;
-     --brown-color:#403133;
-     --light-brown-color:#655847;
-     --dark-color:#191516; 
+:root {
+  --cream-color: #b69d7f;
+  --brown-color: #403133;
+  --light-brown-color: #655847;
+  --dark-color: #191516;
 }
 /* Common Class */
-.background-color-cream{
-    background: var(--cream-color);
+.background-color-cream {
+  background: var(--cream-color);
 }
-.background-color-brown{
-    background-color: var(--brown-color);
+.background-color-brown {
+  background-color: var(--brown-color);
 }
-.background-color-dark{
- background-color: var(--dark-color);
+.background-color-dark {
+  background-color: var(--dark-color);
 }
-.background-color-light-brown{
-    background-color: var(--light-brown-color);
+.background-color-light-brown {
+  background-color: var(--light-brown-color);
 }
-.text-color-light{
-    color: var(--cream-color);
+.text-color-light {
+  color: var(--cream-color);
 }
-.text-color-dark{
-    color: var(--dark-color);
+.text-color-dark {
+  color: var(--dark-color);
+}
+.page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(19, 9, 9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease, visibility 1s ease;
+  opacity: 1;
+  visibility: visible;
+  z-index: 9999;
+}
+.loader {
+  animation: rotate 2s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.page-loader.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 /* =============== Header Start ================= */
 .header-logo img{
-    height: 120px;
+  height: 100px;
+  /* width: auto; */
 }
-.header-bottom-line{
-    height: 5px;
+.header-bottom-line {
+  height: 5px;
+  width: 100%;
+  /* max-width: 100%; */
+}
+@media (max-width: 768px) {
+  .header-logo img{
+    height: 60px;
+  }
+  .nav-text {
+    font-size: small;
+  }
+
+  h2 {
+    font-size: 1rem; /* Adjust font size on smaller screens */
+  }
+}
+/* =============== Home Page Start ============ */
+/* .home-img1{
+    background: url("./component/assets/img/home/1.jpg");
+    height: 100%;
     width: 100%;
 }
-
+.home-img2{
+    background-image: url("./component/assets/img/home/2.jpg");
+}.home-img3{
+    background-image: url("././component/assets/img/home/3.jpg");
+}.home-img4{
+    background-image: url("././component/assets/img/home/4.jpg");
+}.home-img5{
+    background-image: url("././component/assets/img/home/5.jpg");
+}.home-img6{
+    background-image: url("././component/assets/img/home/6.jpg");
+}.home-img7{
+    background-image: url("././component/assets/img/home/7.jpg");
+} */
 /* =========== Footer Start   ============ */
 .logo img {
   height: 70px;
 }
 .bg-body-tertiary {
-    background-color: var(--dark-color) !important;
+  background-color: var(--dark-color) !important;
 }
-.navbar-brand, .nav-link{
-    letter-spacing: 3px;
-    color: var(--cream-color) !important;
+.navbar-brand,
+.nav-link {
+  letter-spacing: 3px;
+  color: var(--cream-color) !important;
 }
-.nav-link:hover{
-    color: var(--light-brown-color) !important;
+.nav-link:hover {
+  color: var(--light-brown-color) !important;
 }
 .social-icon {
-  background:var(--cream-color);
+  background: var(--cream-color);
   color: var(--dark-color);
   padding: 5px;
 }
 .social-icon:hover {
   color: var(--light-brown-color);
 }
+
 /* =========== Footer End   ============ */
+
+/* ======== Menu Button Start ======== */
+.fixed-button {
+  position: fixed;
+  right: 0;
+  bottom: 5%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.fixed-button .btn {
+  /* background: var(--cream-color); */
+  /* color: var(--brown-color); */
+  border-radius: 30px 0px 0px 30px;
+  text-decoration: none;
+  pointer-events: all;
+}
+.btn:hover{
+    background-color: var(--brown-color);
+    color: var(--cream-color);
+}
+
+.fixed-button .additional-buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: ease-in-out;
+}
+
+.fixed-button .additional-buttons .btn {
+  position: absolute;
+  border-radius: 25px;
+  padding: 15px;
+}
+
+.fixed-button .additional-buttons .btn.top {
+  right: 5px;
+  top: -105px;
+}
+
+.fixed-button .additional-buttons .btn.right {
+  right: 45px;
+  top: -35px;
+}
+
+.fixed-button .additional-buttons .btn.bottom {
+  right: 1px;
+  top: 40px;
+}
+/* ======== Menu Button End   ========= */
+
+/* ============ What We Do Start =========== */  
+/* Styles for .top-section */
+.top-section {
+  text-align: center;
+  padding: 4rem 0;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.top-section h1 {
+  color: var(--color-blue);
+  font-weight: 600;
+}
+
+/* Styles for .timeline */
+.timeline {
+  position: relative;
+  min-height: 15rem;
+}
+
+/* Styles for .line */
+.line {
+  background-color: var(--color-black);
+  position: absolute;
+  z-index: 2;
+  left: calc(50% - 1px);
+  width: 2px;
+  top: -5rem;
+  bottom: -5rem;
+  display: none;
+}
+
+.line::before,
+.line::after {
+  background-color: var(--color-black);
+  position: absolute;
+  display: block;
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.line::after {
+  bottom: 0;
+}
+
+/* Styles for .section */
+.section {
+  display: flex;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: 600ms ease;
+  position: relative;
+  z-index: 1;
+  margin: 5rem 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: transparent;
+  align-items: center;
+  min-height: 30rem;
+}
+
+.section h4 {
+  color: var(--color-blue);
+  font-weight: 400;
+}
+
+/* Styles for odd and even .section */
+.section:nth-child(odd) {
+  flex-direction: row-reverse;
+  transform: translateX(100%);
+  /* text-align: left; */
+}
+
+.section:nth-child(even) {
+  text-align: right;
+}
+
+/* Styles for .bead */
+.bead {
+  position: absolute;
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: var(--color-black);
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+}
+
+/* Styles for .content */
+.content {
+  width: calc(50% - 2rem);
+}
+
+/* Styles for .show-me */
+.show-me:nth-child(n) {
+  transform: none;
+  opacity: 1;
+}
+
+/* Styles for h1 globally */
+h1 {
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+/* ============ What We Do End =========== */
