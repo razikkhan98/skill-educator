@@ -1,54 +1,58 @@
-:root{
-    --cream-color:#b69d7f;
-     --brown-color:#403133;
-     --light-brown-color:#655847;
-     --dark-color:#191516; 
+:root {
+  --cream-color: #b69d7f;
+  --brown-color: #403133;
+  --light-brown-color: #655847;
+  --dark-color: #191516;
 }
 /* Common Class */
-.background-color-cream{
-    background: var(--cream-color);
+.background-color-cream {
+  background: var(--cream-color);
 }
-.background-color-brown{
-    background-color: var(--brown-color);
+.background-color-brown {
+  background-color: var(--brown-color);
 }
-.background-color-dark{
- background-color: var(--dark-color);
+.background-color-dark {
+  background-color: var(--dark-color);
 }
-.background-color-light-brown{
-    background-color: var(--light-brown-color);
+.background-color-light-brown {
+  background-color: var(--light-brown-color);
 }
-.text-color-light{
-    color: var(--cream-color);
+.text-color-light {
+  color: var(--cream-color);
 }
-.text-color-dark{
-    color: var(--dark-color);
+.text-color-dark {
+  color: var(--dark-color);
 }
 
 /* =============== Header Start ================= */
-.header-logo img{
-    height: 120px;
+.header-logo img {
+  height: 120px;
 }
-.header-bottom-line{
-    height: 5px;
-    width: 100%;
+.header-bottom-line {
+  height: 5px;
+  width: 100%;
 }
+/* =============== Header End ================= */
 
 /* =========== Footer Start   ============ */
+/* @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap"); */
+
 .logo img {
   height: 70px;
 }
 .bg-body-tertiary {
-    background-color: var(--dark-color) !important;
+  background-color: var(--dark-color) !important;
 }
-.navbar-brand, .nav-link{
-    letter-spacing: 3px;
-    color: var(--cream-color) !important;
+.navbar-brand,
+.nav-link {
+  letter-spacing: 3px;
+  color: var(--cream-color) !important;
 }
-.nav-link:hover{
-    color: var(--light-brown-color) !important;
+.nav-link:hover {
+  color: var(--light-brown-color) !important;
 }
 .social-icon {
-  background:var(--cream-color);
+  background: var(--cream-color);
   color: var(--dark-color);
   padding: 5px;
 }
@@ -56,3 +60,60 @@
   color: var(--light-brown-color);
 }
 /* =========== Footer End   ============ */
+
+/* =============== Team Start ================= */
+.background {
+  background-color: var(--light-brown-color);
+  /* height: 100vh; */
+}
+.tagline {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--dark-color);
+  letter-spacing: 4px;
+  text-align: center;
+}
+.team-card {
+  background-color: var(--dark-color);
+  border-radius: 30px;
+  position: absolute;
+}
+.team-card:hover {
+  border-radius: 30px;
+  z-index: 2;
+  transform: translate(-300px);
+}
+.team-image {
+  width: 290px;
+  height: 380px;
+}
+.team-card-img {
+  width: 300px;
+  object-fit: cover;
+}
+.team-card-data {
+  background-color: var(--dark-color);
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 30px;
+  color: var(--cream-color);
+}
+/* =============== Team End ================= */
+
+/* =============== Feedback End ================= */
+
+.feedback-box {
+  background-color: var(--dark-color);
+  opacity: 0.5;
+}
+.profile {
+  background-color: var(--cream-color);
+  color: var(--cream-color);
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+}
+.feedback-content {
+  color: #ffffff;
+}
+/* =============== Feedback End ================= */
