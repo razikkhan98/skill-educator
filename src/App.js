@@ -7,8 +7,9 @@ function App() {
   return (
     <>
       <Home />
-      {/* <WhatWeDo/> */}
+      <WhatWeDo/>
     </>
+
   );
 }
 

@@ -1,46 +1,24 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import Logo from "../../assets/img/logo/2.png";
+import Logo from "../../assets/img/logo/2-nd-logo.png";
 import { IoCall } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
 const Footer = () => {
   return (
     <>
-      {/* <Navbar expand="lg" className="fixed-bottom">
-        <Container>
-          <Navbar.Brand href="#home">
-            <img
-              alt="Loading"
-              src="/img/logo.svg"
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-            />{" "}
-            React-Bootstrap
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar> */}
-
-
       <Navbar expand="lg" className="bg-body-tertiary fixed-bottom">
         <Container fluid>
           <Navbar.Brand
             className="d-flex align-items-center nav-text text-uppercase"
             href="#"
           >
-              <img src={Logo}
-               alt="Loading"
-                width="50"
-              height="50"
+            <img
+              src={Logo}
+              alt="Loading"
+              // width="40"
+              height="40"
               className="d-inline-block align-top"
-                />{" "}
+            />{" "}
             INTELLIGENCE EDUCATOR
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />

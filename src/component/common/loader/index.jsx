@@ -12,7 +12,7 @@ const Loader = () => {
   });
   return (
     <>
-      <div class="page-loader">
+      <div class="page-loader position-fixed top-0 start-0 d-flex align-items-center justify-content-center w-100 h-100">
         <div class="loader">
           <img src={Logo} alt="Loading" />
         </div>
