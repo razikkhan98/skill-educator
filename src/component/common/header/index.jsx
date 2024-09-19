@@ -1,10 +1,10 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Logo from "../../assets/img/logo/2.png";
+import Logo from "../../assets/img/logo/2-nd-logo.png";
 const Header = ({ title }) => {
   return (
     <>
-      <Container fluid className="d-flex align-items-center justify-content-center py-1 text-center background-color-light-brown">
+      <Container fluid className="d-flex align-items-center justify-content-center py-3">
           <div className="header-logo">
             <img src={Logo} alt="Loading" />
             </div>
