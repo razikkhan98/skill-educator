@@ -20,7 +20,6 @@ function App() {
   return (
     <React.Fragment>
       {loading ? <Loading /> : <CompanyName />}
-      <div>Hello</div>
     </React.Fragment>
   );
 }
