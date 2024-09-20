@@ -1,9 +1,15 @@
 import React from "react";
+
+// Bootstrap
 import { Container } from "react-bootstrap";
+
+// Images
 import Logo from "../../assets/img/logo/2-nd-logo.png";
+
+
 const Header = ({ title }) => {
   return (
-    <>
+    <React.Fragment>
       <Container fluid className="d-flex align-items-center justify-content-center py-3">
           <div className="header-logo">
             <img src={Logo} alt="Loading" />
@@ -15,7 +21,7 @@ const Header = ({ title }) => {
           </div>
 
       </Container>
-    </>
+    </React.Fragment>
   );
 };
 export default Header;

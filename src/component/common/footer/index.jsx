@@ -1,8 +1,15 @@
 import React from "react";
+// Bootstrap
 import { Container, Nav, Navbar } from "react-bootstrap";
+
+// Images
 import Logo from "../../assets/img/logo/2-nd-logo.png";
+
+// Icons
 import { IoCall } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
+
+
 const Footer = () => {
   return (
     <>

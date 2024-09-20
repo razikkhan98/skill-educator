@@ -1,22 +1,26 @@
-// import logo from './logo.svg';
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import CompanyName from "./component/common/company-name";
-import Footer from "./component/common/footer";
-import Loader from "./component/common/loader";
-import Home from "./component/pages/home";
-import WhatWeDo from "./component/pages/what-we-do";
+import Loading from "./component/common/loader";
+
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const datat = () => {
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
+    };
+
+    datat();
+  }, []);
+
   return (
-    <>
-    <Loader/>
-      <CompanyName/>
-      <Home />
-      <WhatWeDo/>
-    <Footer/>
-    </>
-
-
+    <React.Fragment>
+      {loading ? <Loading /> : <CompanyName />}
+    </React.Fragment>
   );
 }
 

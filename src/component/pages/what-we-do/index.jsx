@@ -1,7 +1,12 @@
 import React,{useEffect} from "react";
+
+// Bootstrap
 import { Container } from "react-bootstrap";
 
+// Components
 import Header from "../../common/header/index";
+
+
 const WhatWeDo = () => {
   const CardsData = [
     {
