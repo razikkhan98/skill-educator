@@ -9,8 +9,8 @@ import Home3 from "../../assets/img/home/3.jpg";
 import Home4 from "../../assets/img/home/4.jpg";
 import Home5 from "../../assets/img/home/5.jpg";
 import Home6 from "../../assets/img/home/6.jpg";
-import Home7 from "../../assets/img/home/7.jpg";
-import Home8 from "../../assets/img/home/8.jpg";
+// import Home7 from "../../assets/img/home/7.jpg";
+// import Home8 from "../../assets/img/home/8.jpg";
 
 import Footer from "../../common/footer";
 // import Header from "../../common/header";
@@ -47,18 +47,7 @@ const Home = () => {
 
   return (
     <>
-      {/* Loader Starts */}
-      {/* <Loader /> */}
-      {/* Loader End */}
-
-      {/* CompanyName Start */}
-      {/* <CompanyName /> */}
-      {/* CompanyName End */}
-
-      {/* Header start */}
-      {/* <Header title="w e@e d u c a t o r : ~ $" /> */}
-      {/* Header End */}
-
+    
       {/* Menu Button Start */}
       <Menu />
       {/* Menu Button End */}
@@ -142,9 +131,7 @@ const Home = () => {
       </main>
       {/* Carousel End */}
 
-      {/* Footer Start */}
-      <Footer />
-      {/* Footer End */}
+   
     </>
   );
 };

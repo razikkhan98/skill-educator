@@ -53,12 +53,81 @@ body {
 }
 /* =============== Loader End ==================== */
 
+/* =========== Company Name Start ============ */
 .bg-gif{
   height: 100vh;
+  width: auto;
   background-image: url(././component/assets/img/background/Free\ Universe\ Stars\ Video\ Gif\ Animated\ Zoom\ Virtual\ Background.gif);
+  background-size: cover;
+}
+.bg-gif::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, rgba(182, 157, 127, 0.6), rgba(101, 88, 71,0.6), rgba(64, 49, 51, 0.6));
+  z-index: 1;
+}
+.company-logo img{
+  height: 120px;
+  filter: drop-shadow(15px 10px 4px var(--cream-color));
+}
+.animated-text{
+  font-size: 7vw;
+  text-shadow: 10px 10px 10px var(--cream-color);
+}
+/* text animation */
+.cursor{
+  position: relative;
+  /* width: 24em; */
+  border-right: 2px solid rgba(255,255,255,.75);
+  font-size: 3vw;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);    
+}
+/* Animation */
+.typewriter-animation {
+animation: 
+  typewriter 5s steps(50) 1s 1 normal both, 
+  blinkingCursor 500ms steps(50) infinite normal;
+}
+@keyframes typewriter {
+from { width: 0; }
+to { width: 75%; }
+}
+@keyframes blinkingCursor{
+from { border-right-color: rgba(255,255,255,.75); }
+to { border-right-color: transparent; }
 }
 
+@media (max-width: 768px) {
+  .company-logo img{
+    height: 90px;
+  }
+  .animated-text {
+    font-size: 10vw;
+  }
 
+  .cursor {
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-logo img{
+    height: 70px;
+  }
+  .animated-text {
+    font-size: 9vw;
+  }
+  .cursor {
+    font-size: 4vw; 
+  }
+}
+/* =========== Company Name Start ============ */
 
 /* =============== Header Start ================= */
 .header-logo img {
@@ -233,6 +302,7 @@ main {
     left: calc(50% + 420px);
     opacity: 0;
   }
+  
 }
 /* =============== Home Page End ============ */
 
@@ -245,7 +315,7 @@ main {
 }
 .navbar-brand,
 .nav-link {
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   color: var(--cream-color) !important;
 }
 .nav-link:hover {
@@ -278,18 +348,21 @@ main {
   pointer-events: all;
 }
 .btn:hover {
-  background-color: var(--brown-color);
-  color: var(--cream-color);
+  background-color: var(--cream-color);
 }
 .fixed-button .additional-buttons {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0);
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: ease-in-out;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.fixed-button .additional-buttons.show {
+  transform: translate(-50%, -50%) scale(1); /* Scale to normal size */
+  opacity: 1; /* Make visible */
 }
 .fixed-button .additional-buttons .btn {
   position: absolute;
@@ -301,7 +374,7 @@ main {
   top: -105px;
 }
 .fixed-button .additional-buttons .btn.right {
-  right: 45px;
+  right: 47px;
   top: -35px;
 }
 
@@ -309,12 +382,21 @@ main {
   right: 1px;
   top: 40px;
 }
+.fixed-logo {
+  animation:spin 4s linear infinite;
+}
+@keyframes spin { 
+  100% { 
+      -webkit-transform: rotate(360deg); 
+      transform:rotate(360deg); 
+  } 
+}
 /* ======== Menu Button End   ========= */
 
 /* ============ What-We-Do Start =========== */
 
 .gradient-bg {
-  background-image: linear-gradient(to right, #b69d7f, #655847, #403133);
+  background-image: linear-gradient(to right, hwb(33 50% 29%), #655847, #403133);
 }
 .side-img-bg{
   background-image: url(././component/assets/img/about/14.png);
@@ -340,6 +422,7 @@ main {
 }
 .timeline ul li div {
   width: 400px;
+  height: auto;
 }
 .timeline ul li div::before {
   content: "";
