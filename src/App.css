@@ -29,7 +29,7 @@ body {
 
 /* =============== Loader Start ==================== */
 .page-loader {
-  background: rgb(19, 9, 9);
+  /* background: rgb(19, 9, 9); */
   transition: opacity 1s ease, visibility 1s ease;
   opacity: 1;
   visibility: visible;
@@ -37,6 +37,8 @@ body {
 }
 .loader {
   animation: rotate 2s infinite;
+  z-index: 9999;
+
 }
 
 @keyframes rotate {
@@ -57,7 +59,11 @@ body {
 .bg-gif{
   height: 100vh;
   width: auto;
-  background-image: url(././component/assets/img/background/Free\ Universe\ Stars\ Video\ Gif\ Animated\ Zoom\ Virtual\ Background.gif);
+  /* background-image: url(././component/assets/img/background/Free\ Universe\ Stars\ Video\ Gif\ Animated\ Zoom\ Virtual\ Background.gif); */
+  background-image: url(./component/assets/img/background/backgroung-img.gif);
+  /* background-image: url(./component/assets/img/background/backimg.gif); */
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 .bg-gif::before {

@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-// import { Button, ButtonGroup, OverlayTrigger, Tooltip } from 'react-bootstrap';
+
+// Icon
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaHandSparkles } from "react-icons/fa";
 import { TfiWrite } from "react-icons/tfi";
 import { FaLocationDot } from "react-icons/fa6";
+
+
 const Menu = () => {
   const [showButtons, setShowButtons] = useState(false);
 

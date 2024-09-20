@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 
-// import Carousel from "react-bootstrap/Carousel";
+// Icons
+import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 
 // Images
 import Home1 from "../../assets/img/home/1.jpg";
@@ -9,16 +10,10 @@ import Home3 from "../../assets/img/home/3.jpg";
 import Home4 from "../../assets/img/home/4.jpg";
 import Home5 from "../../assets/img/home/5.jpg";
 import Home6 from "../../assets/img/home/6.jpg";
-// import Home7 from "../../assets/img/home/7.jpg";
-// import Home8 from "../../assets/img/home/8.jpg";
 
-import Footer from "../../common/footer";
-// import Header from "../../common/header";
-import Loader from "../../common/loader";
+// Components
 import Menu from "../../common/menu";
 
-import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
-import CompanyName from "../../common/company-name";
 
 const Home = () => {
   const sliderRef = useRef(null);
@@ -46,7 +41,7 @@ const Home = () => {
   }, []);
 
   return (
-    <>
+    <React.Fragment>
     
       {/* Menu Button Start */}
       <Menu />
@@ -132,7 +127,7 @@ const Home = () => {
       {/* Carousel End */}
 
    
-    </>
+    </React.Fragment>
   );
 };
 export default Home;
