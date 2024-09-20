@@ -17,7 +17,7 @@ const Footer = () => {
               alt="Loading"
               // width="40"
               height="40"
-              className="d-inline-block align-top"
+              className="d-inline-block align-top me-1"
             />{" "}
             INTELLIGENCE EDUCATOR
           </Navbar.Brand>
@@ -29,17 +29,17 @@ const Footer = () => {
               navbarScroll
             >
               <Nav.Link
-                className="nav-link fs-4 nav-text me-4"
+                className="nav-link fs-5 nav-text"
                 href="tel:+21236547898"
               >
-                <IoCall className="social-icon rounded-circle fs-1 me-3" />
+                <IoCall className="social-icon rounded-circle fs-2 me-2" />
                 +2 123 654 7898
               </Nav.Link>
               <Nav.Link
-                class="nav-link nav-text fs-4 me-4"
+                class="nav-link nav-text fs-5"
                 href="mailto:info@example.com"
               >
-                <IoIosMail className="social-icon rounded-circle fs-1 me-3" />
+                <IoIosMail className="social-icon rounded-circle fs-2 me-2" />
                 info123@gmail.com
               </Nav.Link>
             </Nav>

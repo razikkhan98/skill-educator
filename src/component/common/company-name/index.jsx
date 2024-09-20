@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Logo from "../../assets/img/logo/2-nd-logo.png";
 const CompanyName = () => {
   const binary = "010101010101010101";
-  const targetText = "intelligence Eductor";
+  const targetText = "intelligence Educator";
   const [displayedText, setDisplayedText] = useState(binary);
  
   useEffect(() => {
@@ -31,11 +31,14 @@ const CompanyName = () => {
  
   return (
     <>
-      <div className="bg-gif d-flex justify-content-center align-items-center">
-        <div className="company-logo">
+      <div className="bg-gif position-relative d-flex justify-content-center align-items-center">
+        <div className="company-logo z-3 mb-5 mx-2">
             <img src={Logo} alt="Loading" />
         </div>
-        <div className="animated-text fs-1 text-white text-uppercase">{displayedText}</div>
+        <div className="z-3">
+        <div className="animated-text text-color-dark text-uppercase">{displayedText}</div>
+        <p className="cursor typewriter-animation text-color-dark mt-2">From Hello World !! to complex programs</p>
+        </div>
       </div>
     </>
   );
