@@ -10,24 +10,19 @@ import Header from "../../common/header/index";
 const WhatWeDo = () => {
   const CardsData = [
     {
-      // heading: "Name",
-      text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.",
+      text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi,  efficitur vel neque vitae, rhoncus commodo mi",
     },
     {
-      // heading: "Name",
-      text: "Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi, Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. ",
+      text: "Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi, Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi  efficitur vel neque vitae, rhoncus commodo mi",
     },
     {
-      // heading: "Name",
-      text: "Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.",
+      text: "Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi  efficitur vel neque vitae, rhoncus commodo mi",
     },
     {
-      // heading: "Name",
-      text: "In mattis elit vitae odio posuere, nec maximus massa varius. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.",
+      text: "In mattis elit vitae odio posuere, nec maximus massa varius. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi",
     },
     {
-      // heading: "Name",
-      text: "In mattis elit vitae odio posuere, nec maximus massa varius. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.",
+      text: "In mattis elit vitae odio posuere, nec maximus massa varius. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi",
     },
   ];
 
@@ -40,7 +35,6 @@ const WhatWeDo = () => {
         }
       });
     };
-
     const isElementInViewport = (el) => {
       const rect = el.getBoundingClientRect();
       return (
@@ -69,7 +63,6 @@ const WhatWeDo = () => {
                 className="pt-5 position-relative background-color-brown text-color-light"
               >
                 <div className="position-relative bottom-0 background-color-brown p-3">
-                  {/* <p className="background-color-cream text-color-dark fs-4 fw-bold">{item.heading}</p> */}
                   <p> {item.text}</p>
                 </div>
               </li>
