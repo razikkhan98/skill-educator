@@ -316,8 +316,13 @@ main {
 .logo img {
   height: 70px;
 }
+.bg-body-tertiary.show {
+  transform: rotateY(0deg) scale(1);
+}
 .bg-body-tertiary {
   background-color: var(--dark-color) !important;
+  transform: rotateY(360deg) scale(0);
+  transition: transform 0.8s ease-in-out;
 }
 .navbar-brand,
 .nav-link {
@@ -367,20 +372,19 @@ main {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .fixed-button .additional-buttons.show {
-  transform: translate(-50%, -50%) scale(1); /* Scale to normal size */
-  opacity: 1; /* Make visible */
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
 }
 .fixed-button .additional-buttons .btn {
   position: absolute;
   border-radius: 25px;
-  padding: 15px;
 }
 .fixed-button .additional-buttons .btn.top {
   right: 5px;
-  top: -105px;
+  top: -100px;
 }
 .fixed-button .additional-buttons .btn.right {
-  right: 47px;
+  right: 53px;
   top: -35px;
 }
 
@@ -512,63 +516,29 @@ main {
     border-color: transparent var(--brown-color) transparent transparent;
   }
 }
-/* EXTRA/CLIP PATH STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.timeline-clippy ul li::after {
-  width: 40px;
-  height: 40px;
-  border-radius: 0;
-}
-
-.timeline-rhombus ul li::after {
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-}
-
-.timeline-rhombus ul li div::before {
-  bottom: 12px;
-}
-
-.timeline-star ul li::after {
-  clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
-}
-
-.timeline-heptagon ul li::after {
-  clip-path: polygon(
-    50% 0%,
-    90% 20%,
-    100% 60%,
-    75% 100%,
-    25% 100%,
-    0% 60%,
-    10% 20%
-  );
-}
-
-.timeline-infinite ul li::after {
-  animation: scaleAnimation 2s infinite;
-}
-
-@keyframes scaleAnimation {
-  0% {
-    transform: translateX(-50%) scale(1);
-  }
-  50% {
-    transform: translateX(-50%) scale(1.25);
-  }
-  100% {
-    transform: translateX(-50%) scale(1);
-  }
-}
 
 /* ============ What-We-Do End =========== */
+
+/* SOcial-Icons Start */
+.social-btn {
+  cursor: pointer;
+  color: var(--brown-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 30%;
+  background-color: var(--cream-color);
+  border: 2px solid #2d2e32;
+  transition: all 0.45s;
+}
+
+.social-btn:hover {
+  transform: rotate(360deg);
+  transform-origin: center center;
+  color: var(--light-brown-color);
+}
+
+.social-btn:hover .btn-icon {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg)
+    brightness(103%) contrast(103%);
+}
+/* Social-Icons End */
