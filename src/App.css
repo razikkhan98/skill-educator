@@ -159,157 +159,42 @@ to { border-right-color: transparent; }
 /* =============== Header End ================= */
 
 /* =============== Home Page Start ============ */
-main {
-  height: 100vh;
-  width: 100%;
-  background: #202227;
-}
-.slider {
-  position: relative;
-  width: 100%;
+.item img {
   height: 100%;
-  display: flex;
-  align-items: center;
+  border-radius: 10px;
 }
 .item {
-  display: flex;
+  height: 140px;
+  transform: scale(0.7, 0.7);
+  display: flex !important;
+  text-align: center;
   align-items: center;
-  width: 220px;
-  /* height: calc(220px * 1.5); */
-  position: absolute;
-  z-index: 1;
-  border-radius: 0.25rem;
-  box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 1);
-  transition: left 500ms ease-out, width 500ms ease-out, height 500ms ease-out,
-    border-radius 500ms ease-out, opacity 500ms ease-out;
-  outline: 1px solid rgba(255, 255, 255, 0.25);
-  transform-origin: center;
-  overflow: hidden;
-  will-change: left, width, height, border-radius, opacity;
+  justify-content: center;
+  opacity: 0.7;
+  transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
-.item::after {
-  content: "";
-  display: block;
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: rgba(122, 118, 118, 0.4);
-  box-shadow: 0px 0px 50px 25px rgba(0, 0, 0, 0.25) inset;
-  transition: box-shadow 500ms;
-  will-change: transform, opacity;
-}
-
-.item img {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-}
-
-.item:nth-child(1),
-.item:nth-child(2) {
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 0;
-  box-shadow: none;
+.slick-center > div > div {
+  transform: scale(0.9, 1);
   opacity: 1;
-  filter: blur(0);
+  transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.slick-slide {
+  height: 140px;
+}
+.image-container img {
+  width: 100%;
+  height: auto;
+  /* border-radius: 10px; */
+  opacity: 1;
+  transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.scrollable-slider {
+  height: 100%; /* Adjust height as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+  position: relative; /* Necessary for positioning scrollbar */
+  cursor: pointer; /* Change cursor to pointer */
 }
 
-.item:nth-child(1)::after,
-.item:nth-child(2)::after {
-  box-shadow: 0px -50px 150px 50px rgba(0, 0, 0, 0.75) inset;
-}
-
-.item:nth-child(3) {
-  left: 50%;
-}
-
-.item:nth-child(4) {
-  left: calc(50% + 220px + 1rem);
-  transition-delay: calc(500 * 0.2);
-}
-
-.item:nth-child(5) {
-  left: calc(50% + calc(220px * 2) + calc(1rem * 2));
-  transition-delay: calc(500 * 0.4);
-}
-
-.item:nth-child(6) {
-  left: calc(50% + calc(220px * 3) + calc(1rem * 3));
-  opacity: 0;
-  transition-delay: calc(500 * 0.6);
-}
-
-.nav {
-  display: flex;
-  gap: 0.5rem;
-  position: absolute;
-  bottom: 7rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
-  user-select: none;
-  border-radius: 100vw;
-  outline: 1px solid rgba(255, 255, 255, 0.25);
-  padding: 0.25rem;
-}
-.nav .btn {
-  background-color: rgba(255, 255, 255, 0.9);
-  color: rgba(0, 0, 0, 0.9);
-  padding: 0.75rem;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 100;
-  transition: background 500ms, color 500ms;
-}
-.nav .btn:hover {
-  background-color: rgba(0, 0, 0, 0.9);
-  color: rgba(255, 255, 255, 0.9);
-}
-
-@media (min-width > 650px) and (max-width < 900px) {
-  .item {
-    width: 160px;
-    height: 270px;
-  }
-  .item:nth-child(3) {
-    left: 50%;
-  }
-  .item:nth-child(4) {
-    left: calc(50% + 170px);
-  }
-  .item:nth-child(5) {
-    left: calc(50% + 340px);
-  }
-  .item:nth-child(6) {
-    left: calc(50% + 510px);
-    opacity: 0;
-  }
-}
-
-@media (max-width < 650px) {
-  .item {
-    width: 130px;
-    height: 220px;
-  }
-  .item:nth-child(3) {
-    left: 50%;
-  }
-  .item:nth-child(4) {
-    left: calc(50% + 140px);
-  }
-  .item:nth-child(5) {
-    left: calc(50% + 280px);
-  }
-  .item:nth-child(6) {
-    left: calc(50% + 420px);
-    opacity: 0;
-  }
-  
-}
 /* =============== Home Page End ============ */
 
 /* =========== Footer Start   ============ */
@@ -406,7 +291,7 @@ main {
 /* ============ What-We-Do Start =========== */
 
 .gradient-bg {
-  background-image: linear-gradient(to right, hwb(33 50% 29%), #655847, #403133);
+  background-image: linear-gradient(to bottom right, hwb(33 50% 29%), #655847, #403133);
 }
 .side-img-bg{
   background-image: url(././component/assets/img/about/14.png);
@@ -542,3 +427,102 @@ main {
     brightness(103%) contrast(103%);
 }
 /* Social-Icons End */
+
+/* ----------- Technologies Start ------------ */
+.flexcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* width: 20%;/ */
+  align-items: baseline;
+  height: 350px;
+  border-radius: 20px;
+}
+
+.flexcardNumber {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin: 10px 0px;
+  border-radius: 0px 50px 50px 0px;
+  font-family: 'Jost', sans-serif;
+  color: white;
+  text-shadow: 0px 3px 5px black;
+  font-weight: 500;
+  font-size: 20px;
+  position: relative;
+}
+
+.flexcardTitle {
+  font-family: 'Jost', sans-serif;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.flexcardText {
+  font-family: 'Jost', sans-serif;
+  text-align: center;
+  font-weight: 300;
+}
+
+.flexcardNumber:before {
+  content: '';
+  width: 34px;
+  height: 90px;
+  position: absolute;
+  left: -28px;
+  top: 0px;
+  border-radius: 50px 0px 0px 50px;
+  z-index: -1;
+  background: -moz-linear-gradient(bottom, #95B7A2, #AED2BC);
+}
+
+.flexcardNumber:after {
+  content: "";
+  width: 25px;
+  height: 40px;
+  position: absolute;
+  left: -30px;
+  bottom: 50px;
+  border-radius: 50px 0px 0px 50px;
+  z-index: -1;
+}
+
+.flexx {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 10px auto;
+}
+
+img.flexcardimgItem {
+  width: 50%;
+}
+
+/* GREEN CARD */
+
+.flexcardGreen {
+  background: #f9fbfa;
+  box-shadow: 4px 4px 4px #AED2BC;
+}
+
+.flexcardNumberGreen {
+  background: #FCFCFC;
+  background: -webkit-linear-gradient(right, #FCFCFC, #AED2BC);
+  background: -moz-linear-gradient(right, #FCFCFC, #AED2BC);
+  background: linear-gradient(to left, #FCFCFC, #AED2BC);
+  box-shadow: 0px 2px 2px #AED2BC;
+}
+
+.flexcardNumberGreen:before {
+  background: #AED2BC;
+}
+
+.flexcardNumberGreen:after {
+  background: #95b7a2;
+}
+
+/* ----------- Technologies End ------------ */
