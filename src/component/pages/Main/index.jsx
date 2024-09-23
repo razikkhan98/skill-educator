@@ -4,6 +4,7 @@ import React from 'react';
 import Home from '../home';
 import Footer from '../../common/footer';
 import WhatWeDo from '../what-we-do';
+import Technologies from '../technologies';
 
 
 const Main = () => {
@@ -11,6 +12,7 @@ const Main = () => {
         <React.Fragment>
            <Home/>
            <WhatWeDo/>
+           <Technologies/>
            <Footer/>
         </React.Fragment>
     )

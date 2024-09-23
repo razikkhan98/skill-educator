@@ -73,7 +73,7 @@ const Footer = () => {
               class="social-btn d-flex align-items-center justify-content-center me-4"
               href="/#"
             >
-              <FaFacebookF className="social-icon fs-4" />
+              <FaFacebookF className="btn-icon fs-4" />
             </a>
             <a
               class="social-btn d-flex align-items-center justify-content-center me-4"
