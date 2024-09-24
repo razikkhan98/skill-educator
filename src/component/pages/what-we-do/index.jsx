@@ -4,7 +4,7 @@ import React,{useEffect} from "react";
 import { Container } from "react-bootstrap";
 
 // Components
-import Header from "../../common/header/index";
+// import Header from "../../common/header/index";
 
 
 const WhatWeDo = () => {
@@ -52,8 +52,8 @@ const WhatWeDo = () => {
   }, []);
 
   return (
-    <div className="timeline gradient-bg">
-      <Header title="w e@e d u c a t o r : ~ $ w h a t w e d o" />
+    <div className="timeline gradient-bg" id="WhatWeDo">
+      {/* <Header title="w e@e d u c a t o r : ~ $ w h a t w e d o" /> */}
       <div className="side-img-bg">
         <Container fluid className="py-5">
           <ul className="list-unstyled">
