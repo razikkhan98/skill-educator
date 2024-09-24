@@ -136,6 +136,9 @@ to { border-right-color: transparent; }
 /* =========== Company Name Start ============ */
 
 /* =============== Header Start ================= */
+.spacing-title{
+  letter-spacing: 5px;
+}
 .header-logo img {
   height: 60px;
   /* width: auto; */
@@ -143,6 +146,14 @@ to { border-right-color: transparent; }
 .header-bottom-line {
   height: 5px;
   width: 100%;
+}
+.header.show {
+  transform: scaleY(1);
+}
+.header {
+  /* background-color: var(--brown-color) !important; */
+  transform: scaleY(0);
+  transition: transform 0.8s ease-in-out;
 }
 @media (max-width: 768px) {
   .header-logo img {
@@ -429,100 +440,172 @@ to { border-right-color: transparent; }
 /* Social-Icons End */
 
 /* ----------- Technologies Start ------------ */
-.flexcard {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  /* width: 20%;/ */
-  align-items: baseline;
-  height: 350px;
+/* #Technologies{
+  height: 100vh;
+} */
+.tecnology-card {
+  width: 90%;
+  /* height: 350px; */
   border-radius: 20px;
 }
 
 .flexcardNumber {
   width: 70%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: end; */
+  /* align-items: center; */
   height: 50px;
   margin: 10px 0px;
   border-radius: 0px 50px 50px 0px;
-  font-family: 'Jost', sans-serif;
-  color: white;
-  text-shadow: 0px 3px 5px black;
-  font-weight: 500;
-  font-size: 20px;
-  position: relative;
 }
-
-.flexcardTitle {
-  font-family: 'Jost', sans-serif;
-  text-transform: uppercase;
-  font-size: 26px;
-  font-weight: 400;
+.techno-logo img{
+  height: 45px;
 }
-
-.flexcardText {
-  font-family: 'Jost', sans-serif;
-  text-align: center;
-  font-weight: 300;
-}
-
-.flexcardNumber:before {
-  content: '';
-  width: 34px;
+.flexcardNumber::before{
+  content: "";
+  width: 35px;
   height: 90px;
   position: absolute;
-  left: -28px;
+  left: -33px;
   top: 0px;
   border-radius: 50px 0px 0px 50px;
-  z-index: -1;
-  background: -moz-linear-gradient(bottom, #95B7A2, #AED2BC);
+  z-index: 1;
+  background: -moz-linear-gradient(bottom, var(--brown-color), var(--cream-color));
 }
 
-.flexcardNumber:after {
+.flexcardNumber::after {
   content: "";
   width: 25px;
-  height: 40px;
+  height: 35px;
   position: absolute;
-  left: -30px;
-  bottom: 50px;
+  left: -22px;
+  top: 50px;
   border-radius: 50px 0px 0px 50px;
-  z-index: -1;
+  z-index: 1;
 }
-
-.flexx {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 10px auto;
-}
-
 img.flexcardimgItem {
   width: 50%;
 }
-
 /* GREEN CARD */
-
 .flexcardGreen {
-  background: #f9fbfa;
-  box-shadow: 4px 4px 4px #AED2BC;
+  background: var(--cream-color);
+  box-shadow: 4px 4px 4px var(--brown-color);
 }
-
 .flexcardNumberGreen {
-  background: #FCFCFC;
-  background: -webkit-linear-gradient(right, #FCFCFC, #AED2BC);
-  background: -moz-linear-gradient(right, #FCFCFC, #AED2BC);
-  background: linear-gradient(to left, #FCFCFC, #AED2BC);
-  box-shadow: 0px 2px 2px #AED2BC;
+  background: #a7947b;
+  background: -webkit-linear-gradient(right,#8c7d69, var(--brown-color));
+  background: -moz-linear-gradient(right, #8f7f69,var(--brown-color));
+  background: linear-gradient(to left, #9c8a72,var(--brown-color));
+  box-shadow: 0px 2px 2px var(--brown-color);
 }
 
-.flexcardNumberGreen:before {
-  background: #AED2BC;
+.flexcardNumberGreen::before {
+  background: var(--brown-color);
 }
 
-.flexcardNumberGreen:after {
-  background: #95b7a2;
+.flexcardNumberGreen::after {
+  background: #554547;
 }
 
+.techno-btn {
+  background-color: var(--brown-color);
+  border: 2px solid var(--brown-color);
+  background-color: transparent;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+}
+
+.techno-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: var(--brown-color);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.techno-btn:hover::before {
+  scale: 3;
+}
+
+.techno-btn:hover {
+  color: var(--cream-color);
+  scale: 1.1;
+  box-shadow: 0 0px 20px rgba(119, 106, 78, 0.4);
+}
+
+.techno-btn:active {
+  scale: 1;
+}
 /* ----------- Technologies End ------------ */
+
+/* ---------- Terminal Button Start  ------------*/
+.lexendmega {
+  font-family: "Lexend Mega", sans-serif;
+}
+
+.terminal-icon{
+  font-size: 60px;
+}
+.terminal-btn {
+  position: fixed;
+  bottom: 10%;
+  right: 4%;
+}
+/* .material-symbols-outlined:hover {
+  color: white;
+} */
+/* .company-logo-terminal img {
+  height: 40px;
+  width: 40px;
+} */
+
+.modal-header {
+  background-color: #736552;
+  border-radius: 10px;
+}
+/* .btn.btn-light.d-flex.align-items-end, button{
+  height: 80px;
+  width: 80px;
+  background-color: #191516;
+  border-color: #191516;
+  --bs-btn-hover-bg: #b69d7f;
+} */
+/* .color-red {
+  color: #ff3131;
+} */
+/* .color-yellow {
+  color: #fbaf04;
+} */
+.form-floating > {
+  left: 10px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden !important;
+}
+.modal-body,
+.list-group-item.d-flex,
+.input-group-text,
+.modal-content {
+  background-color: #191516 !important;
+  padding: 5px;
+}
+@media screen and (max-width : 2757px) and (min-width: 920px) {
+  .modal-dialog {
+    position: fixed;
+    max-width: 600px;
+    top: calc(20%);
+    left: calc(55%);
+    margin-right: 30px;
+  }
+  .lexendmega {
+    font-size: 12px!important;
+  }
+
+}
+/* Terminal Button End */

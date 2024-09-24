@@ -17,6 +17,7 @@ import Home5 from "../../assets/img/home/5.jpg";
 import Home6 from "../../assets/img/home/6.jpg";
 import Home7 from "../../assets/img/home/7.jpg";
 import Home8 from "../../assets/img/home/8.jpg";
+import Terminal from "../../common/terminal";
 
 const slides = [
   { src: Home1, alt: "Slide 0" },
@@ -85,8 +86,8 @@ const Home = () => {
       {/* Menu Button Start */}
       <Menu />
       {/* Menu Button End */}
-
-      <div className="gradient-bg">
+            <Terminal/>
+      <div className="gradient-bg" id="Home">
         <div className="row">
           <div className="col-lg-10">
             <div
