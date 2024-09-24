@@ -53,12 +53,10 @@ body {
 }
 /* =============== Loader End ==================== */
 
-.bg-gif{
+.bg-gif {
   height: 100vh;
   background-image: url(././component/assets/img/background/Free\ Universe\ Stars\ Video\ Gif\ Animated\ Zoom\ Virtual\ Background.gif);
 }
-
-
 
 /* =============== Header Start ================= */
 .header-logo img {
@@ -78,7 +76,7 @@ body {
   }
 
   h2 {
-    font-size: 1rem; 
+    font-size: 1rem;
   }
 }
 /* =============== Header End ================= */
@@ -316,7 +314,7 @@ main {
 .gradient-bg {
   background-image: linear-gradient(to right, #b69d7f, #655847, #403133);
 }
-.side-img-bg{
+.side-img-bg {
   background-image: url(././component/assets/img/about/14.png);
   background-repeat: no-repeat;
 }
@@ -401,7 +399,7 @@ main {
   .timeline ul li div {
     width: 250px;
   }
-  .timeline ul li:nth-child(even) div{
+  .timeline ul li:nth-child(even) div {
     left: -289px;
     /*250+45-6*/
   }
@@ -483,3 +481,88 @@ main {
 }
 
 /* ============ What-We-Do End =========== */
+
+/* ==========Terminal Modal Start========*/
+body {
+  background-image: linear-gradient(to right, #403133, #655847);
+}
+.lexendmega {
+  font-family: "Lexend Mega", sans-serif;
+}
+.material-symbols-outlined, button {
+  color: #191516;
+  font-size: 80px;
+  position: fixed;
+  bottom: 10%;
+  right: 3%;
+}
+.material-symbols-outlined:hover {
+  color: white;
+}
+.company-logo-terminal img {
+  height: 40px;
+  width: 40px;
+}
+.space {
+  letter-spacing: 5px;
+}
+.modal-header {
+  background-color: #736552;
+  border-radius: 10px;
+}
+.btn.btn-light{
+  height: 80px;
+  width: 80px;
+  background-color: #191516;
+  border-color: #191516;
+  --bs-btn-hover-bg: #b69d7f;
+}
+.color-red {
+  color: #ff3131;
+}
+.color-yellow {
+  color: #fbaf04;
+}
+.form-floating > {
+  left: 10px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden !important;
+}
+.modal-body,
+.list-group-item.d-flex,
+.input-group-text,
+.modal-content {
+  background-color: #191516 !important;
+  padding: 5px;
+}
+.btn-close {
+  float: right;
+  font-size: 18px;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: 1;
+}
+@media screen and (max-width : 2757px) and (min-width: 920px) {
+  .modal-dialog {
+    position: fixed;
+    top: calc(15%);
+    left: calc(55%);
+    margin-right: 30px;
+  }
+  .lexendmega {
+    font-size: 12px!important;
+  }
+}
+
+/* ==========Terminal Modal End========*/
+
+/* ==========About Us Start========*/
+.about-space{
+  word-spacing: 5px;
+}
+.about-card-header{
+  border-bottom: #191516;
+  border-radius: 5px;
+}
+/* ==========About Us End========*/
