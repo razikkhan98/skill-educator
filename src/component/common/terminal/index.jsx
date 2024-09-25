@@ -26,7 +26,7 @@ function Terminal() {
       >
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
-            <div className="modal-header d-flex justify-content-evenly">
+            <div className="modal-header background-color-cream d-flex justify-content-evenly">
               <div className="techno-logo">
                 <img src={Logo} alt="Loading" />
               </div>
@@ -40,61 +40,55 @@ function Terminal() {
                 aria-label="Close"
               ></button>
             </div>
-            <div className="modal-body">
+            <div className="modal-body background-color-dark">
               <p
-                className="modal-title spacing-title text-color-light lexendmega py-3"
+                className="modal-title spacing-title text-color-light py-3"
                 id="staticBackdropLabel"
               >
                 To explore us use navigation!
                 <br />
                 to begin, type :
               </p>
-              {/* <h2 className="modal-title fs-6 text-color-light lexendmega">
-                to begin, type :
-              </h2> */}
-              <ul className="list-group list-group-flush">
-                <li className="list-group-item d-flex align-items-center">
+              <ul>
+                <li className="d-flex align-items-center my-2">
                   <div className="text-warning me-3">[1] </div>
-                  <div className="text-danger spacing-title lexendmega">
+                  <a href="/" className="text-danger spacing-title text-decoration-none">
                     Who are we?
-                  </div>
+                  </a>
                 </li>
-                <li className="list-group-item d-flex align-items-center">
+                <li className="d-flex align-items-center mb-2">
                   <div className="text-warning me-3">[2]</div>
-                  <div className="text-danger spacing-title lexendmega">
+                  <a href="/" className="text-danger spacing-title text-decoration-none">
                  What we do ?
-                  </div>
+                  </a>
                 </li>
-                <li className="list-group-item d-flex align-items-center">
+                <li className="d-flex align-items-center mb-2">
                   <div className="text-warning me-3">[3]</div>
-                  <div>
-                    <a href="./instructors" className="text-danger spacing-title lexendmega text-decoration-none">
+                    <a href="./instructors" className="text-danger spacing-title text-decoration-none">
                       Instructors !
                     </a>
-                  </div>
                 </li>
-                <li className="list-group-item d-flex align-items-center">
+                <li className="d-flex align-items-center mb-2">
                   <div className="text-warning me-3">[4]</div>
                   <div>
-                    <a href="./Courses" className="text-danger fs-3 spacing-title lexendmega text-decoration-none">
+                    <a href="./Courses" className="text-danger spacing-title text-decoration-none">
                       Courses !
                     </a>
                   </div>
                 </li>
-                <li className="list-group-item d-flex align-items-center">
+                <li className="d-flex align-items-center mb-2">
                   <div className="text-warning me-3">[5]</div>
-                  <div className="text-danger spacing-title lexendmega">
+                  <a href="/" className="text-danger text-decoration-none spacing-title">
                     Let us know you !
-                  </div>
+                  </a>
                 </li>
               </ul>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer background-color-dark">
               <div className="input-group mb-3">
-                <div className="input-group-text spacing-title text-color-light">
+                <div className="input-group-text spacing-title background-color-dark text-color-light">
                   We@Educators :~ 
                 </div>
-                <div className="form-floating">
                   <div className="form-floating">
                     <input
                       type="text"
@@ -105,7 +99,6 @@ function Terminal() {
                     <label for="Command">Type Command</label>
                   </div>
                 </div>
-              </div>
             </div>
           </div>
         </div>
