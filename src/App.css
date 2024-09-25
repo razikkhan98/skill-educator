@@ -5,7 +5,8 @@
   --dark-color: #191516;
 }
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  padding-right: 0px !important;
 }
 /* Common Class */
 .background-color-cream {
@@ -200,10 +201,10 @@ to { border-right-color: transparent; }
   transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .scrollable-slider {
-  height: 100%; /* Adjust height as needed */
-  overflow-y: auto; /* Enable vertical scrolling */
-  position: relative; /* Necessary for positioning scrollbar */
-  cursor: pointer; /* Change cursor to pointer */
+  height: 100%; 
+  overflow-y: auto; 
+  position: relative; 
+  cursor: pointer; 
 }
 
 /* =============== Home Page End ============ */
@@ -440,20 +441,16 @@ to { border-right-color: transparent; }
 /* Social-Icons End */
 
 /* ----------- Technologies Start ------------ */
-/* #Technologies{
-  height: 100vh;
-} */
+
 .tecnology-card {
   width: 90%;
-  /* height: 350px; */
   border-radius: 20px;
 }
-
-.flexcardNumber {
+.technology-title{
+line-break: normal;
+}
+.tecnology-card-logo {
   width: 70%;
-  /* display: flex; */
-  /* justify-content: end; */
-  /* align-items: center; */
   height: 50px;
   margin: 10px 0px;
   border-radius: 0px 50px 50px 0px;
@@ -461,7 +458,7 @@ to { border-right-color: transparent; }
 .techno-logo img{
   height: 45px;
 }
-.flexcardNumber::before{
+.tecnology-card-logo::before{
   content: "";
   width: 35px;
   height: 90px;
@@ -473,7 +470,7 @@ to { border-right-color: transparent; }
   background: -moz-linear-gradient(bottom, var(--brown-color), var(--cream-color));
 }
 
-.flexcardNumber::after {
+.tecnology-card-logo::after {
   content: "";
   width: 25px;
   height: 35px;
@@ -483,30 +480,27 @@ to { border-right-color: transparent; }
   border-radius: 50px 0px 0px 50px;
   z-index: 1;
 }
-img.flexcardimgItem {
-  width: 50%;
+img.technocardimgItem {
+  width: 40%;
 }
 /* GREEN CARD */
-.flexcardGreen {
+.technology-card-bg {
   background: var(--cream-color);
   box-shadow: 4px 4px 4px var(--brown-color);
 }
-.flexcardNumberGreen {
+.tecnology-logo-bg {
   background: #a7947b;
   background: -webkit-linear-gradient(right,#8c7d69, var(--brown-color));
   background: -moz-linear-gradient(right, #8f7f69,var(--brown-color));
   background: linear-gradient(to left, #9c8a72,var(--brown-color));
   box-shadow: 0px 2px 2px var(--brown-color);
 }
-
-.flexcardNumberGreen::before {
+.tecnology-logo-bg::before {
   background: var(--brown-color);
 }
-
-.flexcardNumberGreen::after {
+.tecnology-logo-bg::after {
   background: #554547;
 }
-
 .techno-btn {
   background-color: var(--brown-color);
   border: 2px solid var(--brown-color);
@@ -514,7 +508,6 @@ img.flexcardimgItem {
   transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
   overflow: hidden;
 }
-
 .techno-btn::before {
   content: '';
   position: absolute;
@@ -528,27 +521,20 @@ img.flexcardimgItem {
   background-color: var(--brown-color);
   transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
-
 .techno-btn:hover::before {
   scale: 3;
 }
-
 .techno-btn:hover {
   color: var(--cream-color);
   scale: 1.1;
   box-shadow: 0 0px 20px rgba(119, 106, 78, 0.4);
 }
-
 .techno-btn:active {
   scale: 1;
 }
 /* ----------- Technologies End ------------ */
 
 /* ---------- Terminal Button Start  ------------*/
-.lexendmega {
-  font-family: "Lexend Mega", sans-serif;
-}
-
 .terminal-icon{
   font-size: 60px;
 }
@@ -557,55 +543,20 @@ img.flexcardimgItem {
   bottom: 10%;
   right: 4%;
 }
-/* .material-symbols-outlined:hover {
-  color: white;
-} */
-/* .company-logo-terminal img {
-  height: 40px;
-  width: 40px;
-} */
-
-.modal-header {
-  background-color: #736552;
-  border-radius: 10px;
-}
-/* .btn.btn-light.d-flex.align-items-end, button{
-  height: 80px;
-  width: 80px;
-  background-color: #191516;
-  border-color: #191516;
-  --bs-btn-hover-bg: #b69d7f;
-} */
-/* .color-red {
-  color: #ff3131;
-} */
-/* .color-yellow {
-  color: #fbaf04;
-} */
-.form-floating > {
+/* .form-floating > {
   left: 10px;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden !important;
-}
-.modal-body,
-.list-group-item.d-flex,
-.input-group-text,
-.modal-content {
-  background-color: #191516 !important;
-  padding: 5px;
-}
+} */
 @media screen and (max-width : 2757px) and (min-width: 920px) {
   .modal-dialog {
     position: fixed;
     max-width: 600px;
-    top: calc(20%);
-    left: calc(55%);
+    top: calc(8%);
+    left: calc(60%);
     margin-right: 30px;
+    background-color: none !important;
   }
-  .lexendmega {
-    font-size: 12px!important;
-  }
-
 }
 /* Terminal Button End */
