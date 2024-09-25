@@ -5,26 +5,28 @@ import Logo from "../../assets/img/logo/2-nd-logo.png";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+import Header from "../../common/header/index";
 function Aboutuscard() {
   return (
     <>
       <Container>
+      <Header title="w e@e d u c a t o r : ~ $ w h a t w e d o" />
         <Row>
-          <Col sm={6}></Col>
+          <Col sm={6}>
 
+          </Col>
           <Col
             className="d-flex align-items-center justify-content-center"
-            sm={5}
+            sm={6}
           >
             <Card className="text-center max-width about-space" border="dark">
               <Card.Header className="background-color-cream about-card-header d-flex align-items-center">
                 <div className="header-logo company-logo-terminal">
                   <img src={Logo} alt="Loading" />
                 </div>
-                <h2> WHAT WE ARE</h2>
               </Card.Header>
               <Card.Body>
-                <Card.Text className="text-align-left">
+                <Card.Text className="align-left">
                   <h5> AIM & MISSION</h5>
                   We aim to Craft A person in such a way that he/ she shall be
                   able to master the desired skills. These courses involve
