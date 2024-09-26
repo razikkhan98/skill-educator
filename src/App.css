@@ -327,6 +327,10 @@ body {
 .timeline ul li {
   width: 6px;
   margin: 0 auto;
+  background-color: var(--cream-color);
+}
+.timeline ul li.in-view{
+  background-color: var(--brown-color);
 }
 .timeline ul li::after {
   content: "";
@@ -339,6 +343,7 @@ body {
   border-radius: 50%;
   background: inherit;
   z-index: 1;
+  transition: background 0.8s ease-in-out;
 }
 .timeline ul li div {
   width: 400px;
@@ -352,11 +357,9 @@ body {
   height: 0;
   border-style: solid;
 }
-
 .timeline ul li:nth-child(odd) div {
   left: 45px;
 }
-
 .timeline ul li:nth-child(odd) div::before {
   left: -15px;
   border-width: 8px 16px 8px 0;
@@ -366,7 +369,6 @@ body {
 .timeline ul li:nth-child(even) div {
   left: -439px;
 }
-
 .timeline ul li:nth-child(even) div::before {
   right: -15px;
   border-width: 8px 0 8px 16px;
@@ -375,11 +377,8 @@ body {
 /* EFFECTS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.timeline ul li::after {
-  transition: background 0.5s ease-in-out;
-}
 .timeline ul li.in-view::after {
-  background: var(--brown-color);
+  background: var(--cream-color);
 }
 .timeline ul li div {
   visibility: hidden;
@@ -587,3 +586,8 @@ img.technocardimgItem {
   }
 }
 /* Terminal Button End */
+
+/* ----------------- Couses Start ----------------- */
+/* .dropdown-bg{
+  max-width: 500px;
+} */

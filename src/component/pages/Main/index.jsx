@@ -6,6 +6,7 @@ import Footer from "../../common/footer";
 import WhatWeDo from "../what-we-do";
 import Technologies from "../technologies";
 import Header from "../../common/header";
+import Courses from "../courses";
 
 const Main = () => {
   return (
@@ -14,6 +15,7 @@ const Main = () => {
       <Header />
       <WhatWeDo />
       <Technologies />
+      <Courses/>
       <Footer />
     </React.Fragment>
   );
