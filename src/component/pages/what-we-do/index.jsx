@@ -59,7 +59,7 @@ const WhatWeDo = () => {
             {CardsData.map((item, index) => (
               <li
                 key={index}
-                className="position-relative background-color-brown text-color-light"
+                className="position-relative text-color-light pt-4"
               >
                 <div className="position-relative bottom-0 background-color-brown p-3">
                   <p> {item.text}</p>

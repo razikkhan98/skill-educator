@@ -64,14 +64,14 @@ function Terminal() {
                 </li>
                 <li className="d-flex align-items-center mb-2">
                   <div className="text-warning me-3">[3]</div>
-                    <a href="./instructors" className="text-danger spacing-title text-decoration-none">
+                    <a href="#Instructor" className="text-danger spacing-title text-decoration-none">
                       Instructors !
                     </a>
                 </li>
                 <li className="d-flex align-items-center mb-2">
                   <div className="text-warning me-3">[4]</div>
                   <div>
-                    <a href="#Technologies" className="text-danger spacing-title text-decoration-none">
+                    <a href="#Courses" className="text-danger spacing-title text-decoration-none">
                       Courses !
                     </a>
                   </div>

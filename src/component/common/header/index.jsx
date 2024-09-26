@@ -15,7 +15,11 @@ const Header = () => {
     const sections = [
       { id: "about", title: "About" },
       { id: "Technologies", title: " $technologies" },
-      { id: "WhatWeDo", title: " $whatwedo" }
+      { id: "WhatWeDo", title: " $whatwedo" },
+      { id: "Courses", title: " $Courses" },
+      { id: "Instructor", title: " $Instructor" },
+
+
     ];
 
     // Check which section is currently in view
