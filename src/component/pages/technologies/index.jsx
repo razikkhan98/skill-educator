@@ -37,7 +37,7 @@ const Technologies = () => {
   return (
     <>
       <div
-        className="gradient-bg py-5 d-flex align-items-center justify-content-center"
+        className="node-bg-img py-5 d-flex align-items-center justify-content-center"
         id="Technologies"
       >
         <Container>
