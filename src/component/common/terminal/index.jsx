@@ -12,7 +12,7 @@ function Terminal() {
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
       >
-        <MdOutlineTerminal  className="text-center terminal-icon text-color-light"/>
+        <MdOutlineTerminal  className="text-center terminal-icon text-color-brown"/>
       </button>
       {/* <!-- Modal --> */}
       <div
@@ -52,13 +52,13 @@ function Terminal() {
               <ul>
                 <li className="d-flex align-items-center my-2">
                   <div className="text-warning me-3">[1] </div>
-                  <a href="/" className="text-danger spacing-title text-decoration-none">
+                  <a href="#" className="text-danger spacing-title text-decoration-none">
                     Who are we?
                   </a>
                 </li>
                 <li className="d-flex align-items-center mb-2">
                   <div className="text-warning me-3">[2]</div>
-                  <a href="/" className="text-danger spacing-title text-decoration-none">
+                  <a href="#WhatWeDo" className="text-danger spacing-title text-decoration-none">
                  What we do ?
                   </a>
                 </li>
@@ -71,7 +71,7 @@ function Terminal() {
                 <li className="d-flex align-items-center mb-2">
                   <div className="text-warning me-3">[4]</div>
                   <div>
-                    <a href="./Courses" className="text-danger spacing-title text-decoration-none">
+                    <a href="#Technologies" className="text-danger spacing-title text-decoration-none">
                       Courses !
                     </a>
                   </div>
