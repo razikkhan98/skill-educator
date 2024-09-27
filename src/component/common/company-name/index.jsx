@@ -30,7 +30,7 @@ const CompanyName = () => {
       } else {
         clearInterval(interval);
       }
-    }, 200); // Transition time between each character change
+    }, 100); // Transition time between each character change
 
     return () => clearInterval(interval); // Clean up interval on unmount
   }, []);
@@ -61,9 +61,9 @@ const CompanyName = () => {
             </p>
           </div>
         </div>
-       ) : (
-         <Main /> 
-       )} 
+      ) : (
+        <Main />
+      )}
 
       {/* {loading ? <Loading /> : <Main />} */}
     </React.Fragment>

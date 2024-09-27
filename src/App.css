@@ -1,10 +1,17 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 :root {
   --cream-color: #b69d7f;
   --brown-color: #403133;
   --light-brown-color: #655847;
   --dark-color: #191516;
 }
+html,
 body {
+  width: 100%;
   overflow-x: hidden !important;
   padding-right: 0px !important;
 }
@@ -73,9 +80,9 @@ body {
   bottom: 0;
   background-image: linear-gradient(
     to right,
-    rgba(182, 157, 127, 0.6),
-    rgba(101, 88, 71, 0.6),
-    rgba(64, 49, 51, 0.6)
+    rgba(182, 157, 127, 0.4),
+    rgba(101, 88, 71, 0.4),
+    rgba(64, 49, 51, 0.4)
   );
   z-index: 1;
 }
@@ -129,13 +136,22 @@ body {
   h2 {
     font-size: 1rem;
   }
+  .item {
+    height: 100px; /* Further reduce height */
+  }
+
+  .scrollable-slider {
+    height: auto; /* Allow height to adjust */
+  }
   .company-logo img {
     height: 90px;
   }
   .animated-text {
     font-size: 10vw;
   }
-
+  .footer-title {
+    font-size: 15px;
+  }
   .cursor {
     font-size: 5vw;
   }
@@ -145,6 +161,9 @@ body {
 }
 
 @media (max-width: 480px) {
+  .item {
+    height: 80px; /* Adjust height for mobile */
+  }
   .company-logo img {
     height: 70px;
   }
@@ -183,12 +202,12 @@ body {
 .item img {
   height: 100%;
   border-radius: 10px;
+  object-fit: cover;
 }
 .item {
   height: 140px;
   transform: scale(0.7, 0.7);
   display: flex !important;
-  text-align: center;
   align-items: center;
   justify-content: center;
   opacity: 0.7;
@@ -329,7 +348,7 @@ body {
   margin: 0 auto;
   background-color: var(--cream-color);
 }
-.timeline ul li.in-view{
+.timeline ul li.in-view {
   background-color: var(--brown-color);
 }
 .timeline ul li::after {
@@ -453,7 +472,7 @@ body {
 /* Social-Icons End */
 
 /* ----------- Technologies Start ------------ */
-.node-bg-img{
+.node-bg-img {
   background-image: url(./component/assets/img/background/node-bg.png);
   background-position: center;
   background-size: cover;
@@ -561,6 +580,32 @@ img.technocardimgItem {
 
 /* ---------- Terminal Button Start  ------------*/
 
+.animated-text-2 {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  /* border-right: 2px solid var(--cream-color); 
+  padding-right: 5px; */
+  animation: type steps(50) 1.5s 1 normal both, cursor 1s step-end infinite;
+}
+@keyframes type {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+@keyframes cursor {
+  50% {
+    border-color: var(--cream-color);
+  }
+}
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
 .terminal-icon {
   font-size: 60px;
 }
@@ -588,6 +633,3 @@ img.technocardimgItem {
 /* Terminal Button End */
 
 /* ----------------- Couses Start ----------------- */
-/* .dropdown-bg{
-  max-width: 500px;
-} */
