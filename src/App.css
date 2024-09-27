@@ -39,7 +39,6 @@ body {
 .loader {
   animation: rotate 2s infinite;
   z-index: 9999;
-
 }
 
 @keyframes rotate {
@@ -57,61 +56,80 @@ body {
 /* =============== Loader End ==================== */
 
 /* =========== Company Name Start ============ */
-.bg-gif{
+.bg-gif {
   height: 100vh;
   width: auto;
-  /* background-image: url(././component/assets/img/background/Free\ Universe\ Stars\ Video\ Gif\ Animated\ Zoom\ Virtual\ Background.gif); */
   background-image: url(./component/assets/img/background/backgroung-img.gif);
-  /* background-image: url(./component/assets/img/background/backimg.gif); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg-gif::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: linear-gradient(to right, rgba(182, 157, 127, 0.6), rgba(101, 88, 71,0.6), rgba(64, 49, 51, 0.6));
+  background-image: linear-gradient(
+    to right,
+    rgba(182, 157, 127, 0.6),
+    rgba(101, 88, 71, 0.6),
+    rgba(64, 49, 51, 0.6)
+  );
   z-index: 1;
 }
-.company-logo img{
+.company-logo img {
   height: 120px;
   filter: drop-shadow(15px 10px 4px var(--cream-color));
 }
-.animated-text{
+.animated-text {
   font-size: 7vw;
   text-shadow: 10px 10px 10px var(--cream-color);
 }
 /* text animation */
-.cursor{
+.cursor {
   position: relative;
   /* width: 24em; */
-  border-right: 2px solid rgba(255,255,255,.75);
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
   font-size: 3vw;
   white-space: nowrap;
   overflow: hidden;
-  transform: translateY(-50%);    
+  transform: translateY(-50%);
 }
 /* Animation */
 .typewriter-animation {
-animation: 
-  typewriter 5s steps(50) 1s 1 normal both, 
-  blinkingCursor 500ms steps(50) infinite normal;
+  animation: typewriter 5s steps(50) 1s 1 normal both,
+    blinkingCursor 500ms steps(50) infinite normal;
 }
 @keyframes typewriter {
-from { width: 0; }
-to { width: 75%; }
+  from {
+    width: 0;
+  }
+  to {
+    width: 75%;
+  }
 }
-@keyframes blinkingCursor{
-from { border-right-color: rgba(255,255,255,.75); }
-to { border-right-color: transparent; }
+@keyframes blinkingCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
 
 @media (max-width: 768px) {
-  .company-logo img{
+  .header-logo img {
+    height: 60px;
+  }
+  .nav-text {
+    font-size: small;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .company-logo img {
     height: 90px;
   }
   .animated-text {
@@ -121,23 +139,26 @@ to { border-right-color: transparent; }
   .cursor {
     font-size: 5vw;
   }
+  .technology-title {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
 }
 
 @media (max-width: 480px) {
-  .company-logo img{
+  .company-logo img {
     height: 70px;
   }
   .animated-text {
     font-size: 9vw;
   }
   .cursor {
-    font-size: 4vw; 
+    font-size: 4vw;
   }
 }
 /* =========== Company Name Start ============ */
 
 /* =============== Header Start ================= */
-.spacing-title{
+.spacing-title {
   letter-spacing: 5px;
 }
 .header-logo img {
@@ -152,22 +173,10 @@ to { border-right-color: transparent; }
   transform: scaleY(1);
 }
 .header {
-  /* background-color: var(--brown-color) !important; */
   transform: scaleY(0);
   transition: transform 0.8s ease-in-out;
 }
-@media (max-width: 768px) {
-  .header-logo img {
-    height: 60px;
-  }
-  .nav-text {
-    font-size: small;
-  }
 
-  h2 {
-    font-size: 1rem; 
-  }
-}
 /* =============== Header End ================= */
 
 /* =============== Home Page Start ============ */
@@ -196,15 +205,14 @@ to { border-right-color: transparent; }
 .image-container img {
   width: 100%;
   height: auto;
-  /* border-radius: 10px; */
   opacity: 1;
   transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .scrollable-slider {
-  height: 100%; 
-  overflow-y: auto; 
-  position: relative; 
-  cursor: pointer; 
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+  cursor: pointer;
 }
 
 /* =============== Home Page End ============ */
@@ -290,22 +298,27 @@ to { border-right-color: transparent; }
   top: 40px;
 }
 .fixed-logo {
-  animation:spin 4s linear infinite;
+  animation: spin 4s linear infinite;
 }
-@keyframes spin { 
-  100% { 
-      -webkit-transform: rotate(360deg); 
-      transform:rotate(360deg); 
-  } 
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 /* ======== Menu Button End   ========= */
 
 /* ============ What-We-Do Start =========== */
 
 .gradient-bg {
-  background-image: linear-gradient(to bottom right, hwb(33 50% 29%), #655847, #403133);
+  background-image: linear-gradient(
+    to bottom right,
+    hwb(33 50% 29%),
+    #655847,
+    #403133
+  );
 }
-.side-img-bg{
+.side-img-bg {
   background-image: url(././component/assets/img/about/14.png);
   background-repeat: no-repeat;
 }
@@ -314,6 +327,10 @@ to { border-right-color: transparent; }
 .timeline ul li {
   width: 6px;
   margin: 0 auto;
+  background-color: var(--cream-color);
+}
+.timeline ul li.in-view{
+  background-color: var(--brown-color);
 }
 .timeline ul li::after {
   content: "";
@@ -326,6 +343,7 @@ to { border-right-color: transparent; }
   border-radius: 50%;
   background: inherit;
   z-index: 1;
+  transition: background 0.8s ease-in-out;
 }
 .timeline ul li div {
   width: 400px;
@@ -339,11 +357,9 @@ to { border-right-color: transparent; }
   height: 0;
   border-style: solid;
 }
-
 .timeline ul li:nth-child(odd) div {
   left: 45px;
 }
-
 .timeline ul li:nth-child(odd) div::before {
   left: -15px;
   border-width: 8px 16px 8px 0;
@@ -353,7 +369,6 @@ to { border-right-color: transparent; }
 .timeline ul li:nth-child(even) div {
   left: -439px;
 }
-
 .timeline ul li:nth-child(even) div::before {
   right: -15px;
   border-width: 8px 0 8px 16px;
@@ -362,11 +377,8 @@ to { border-right-color: transparent; }
 /* EFFECTS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.timeline ul li::after {
-  transition: background 0.5s ease-in-out;
-}
 .timeline ul li.in-view::after {
-  background: var(--brown-color);
+  background: var(--cream-color);
 }
 .timeline ul li div {
   visibility: hidden;
@@ -391,7 +403,7 @@ to { border-right-color: transparent; }
   .timeline ul li div {
     width: 250px;
   }
-  .timeline ul li:nth-child(even) div{
+  .timeline ul li:nth-child(even) div {
     left: -289px;
     /*250+45-6*/
   }
@@ -441,13 +453,21 @@ to { border-right-color: transparent; }
 /* Social-Icons End */
 
 /* ----------- Technologies Start ------------ */
-
+.node-bg-img{
+  background-image: url(./component/assets/img/background/node-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
 .tecnology-card {
   width: 90%;
+  max-width: 300px;
   border-radius: 20px;
+  margin: auto;
 }
-.technology-title{
-line-break: normal;
+.technology-title {
+  line-break: normal;
 }
 .tecnology-card-logo {
   width: 70%;
@@ -455,10 +475,10 @@ line-break: normal;
   margin: 10px 0px;
   border-radius: 0px 50px 50px 0px;
 }
-.techno-logo img{
+.techno-logo img {
   height: 45px;
 }
-.tecnology-card-logo::before{
+.tecnology-card-logo::before {
   content: "";
   width: 35px;
   height: 90px;
@@ -467,7 +487,11 @@ line-break: normal;
   top: 0px;
   border-radius: 50px 0px 0px 50px;
   z-index: 1;
-  background: -moz-linear-gradient(bottom, var(--brown-color), var(--cream-color));
+  background: -moz-linear-gradient(
+    bottom,
+    var(--brown-color),
+    var(--cream-color)
+  );
 }
 
 .tecnology-card-logo::after {
@@ -482,17 +506,18 @@ line-break: normal;
 }
 img.technocardimgItem {
   width: 40%;
+  height: auto;
+  max-width: 100%;
 }
-/* GREEN CARD */
 .technology-card-bg {
   background: var(--cream-color);
   box-shadow: 4px 4px 4px var(--brown-color);
 }
 .tecnology-logo-bg {
   background: #a7947b;
-  background: -webkit-linear-gradient(right,#8c7d69, var(--brown-color));
-  background: -moz-linear-gradient(right, #8f7f69,var(--brown-color));
-  background: linear-gradient(to left, #9c8a72,var(--brown-color));
+  background: -webkit-linear-gradient(right, #8c7d69, var(--brown-color));
+  background: -moz-linear-gradient(right, #8f7f69, var(--brown-color));
+  background: linear-gradient(to left, #9c8a72, var(--brown-color));
   box-shadow: 0px 2px 2px var(--brown-color);
 }
 .tecnology-logo-bg::before {
@@ -505,11 +530,11 @@ img.technocardimgItem {
   background-color: var(--brown-color);
   border: 2px solid var(--brown-color);
   background-color: transparent;
-  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   overflow: hidden;
 }
 .techno-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   margin: auto;
@@ -519,7 +544,7 @@ img.technocardimgItem {
   scale: 0;
   z-index: -1;
   background-color: var(--brown-color);
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .techno-btn:hover::before {
   scale: 3;
@@ -535,7 +560,8 @@ img.technocardimgItem {
 /* ----------- Technologies End ------------ */
 
 /* ---------- Terminal Button Start  ------------*/
-.terminal-icon{
+
+.terminal-icon {
   font-size: 60px;
 }
 .terminal-btn {
@@ -549,7 +575,7 @@ img.technocardimgItem {
   white-space: nowrap;
   overflow: hidden !important;
 } */
-@media screen and (max-width : 2757px) and (min-width: 920px) {
+@media screen and (max-width: 2757px) and (min-width: 920px) {
   .modal-dialog {
     position: fixed;
     max-width: 600px;
@@ -560,3 +586,8 @@ img.technocardimgItem {
   }
 }
 /* Terminal Button End */
+
+/* ----------------- Couses Start ----------------- */
+/* .dropdown-bg{
+  max-width: 500px;
+} */
