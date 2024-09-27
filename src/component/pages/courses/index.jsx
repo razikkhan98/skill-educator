@@ -24,21 +24,22 @@ const Courses = () => {
                 </div>
                 <div className="header-bottom-line background-color-brown"></div>
 
-                <div className="text-color-light p-3">
-                  <h1>DEMO</h1>
+                <div className="spacing-title text-color-light p-3">
+                  <h1>Front-End Development</h1>
                   <p className="py-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusantium quas, sed, nisi expedita nam nemo ex deleniti
-                    quia natus voluptatibus at laborum reiciendis unde? Nulla
-                    consectetur similique corporis quas quod. Lorem ipsum dolor
-                    sit amet consectetur adipisicing elit. Accusantium quas,
-                    sed, nisi expedita nam nemo ex deleniti quia natus
-                    voluptatibus at laborum reiciendis unde? Nulla consectetur
-                    similique corporis quas quod. Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Accusantium quas, sed, nisi
-                    expedita nam nemo ex deleniti quia natus voluptatibus at
-                    laborum reiciendis unde? Nulla consectetur similique
-                    corporis quas quod.
+                    Frontend refers to the visual or interactive interface of a
+                    website, webpage, or an application that the user interacts
+                    with. Therefore, Front-end developers are responsible for
+                    ensuring that a website looks good on all devices and that
+                    it implements the client's vision and design concept. This
+                    course is a complete package of languages like HTML, CSS,
+                    JavaScript, React and Node and the students whether they’re
+                    on beginners’ level will be able to understand the concepts
+                    very easily as they will be given regular practice sets and
+                    will learn to work on some real-world projects. The students
+                    will be trained by expert educators who ensure to develop
+                    the basic and advanced skills in the students that will be
+                    helpful for them in their careers ahead.
                   </p>
                   <div className="background-color-cream text-color-dark d-flex align-items-center justify-content-around">
                     <p className="spacing-title fs-3 me-3">know more : ~ $ </p>
@@ -78,36 +79,37 @@ const Courses = () => {
             </Col>
             <Col lg={6}>
               <div className="dropdown-bg background-color-cream text-color-dark d-flex align-items-baseline justify-content-around mt-5">
-                <p className="spacing-title fs-3 me-3">search : ~ $ 
-                <Dropdown as={ButtonGroup}>
-                  <Button variant="light" className="px-5">
-                    Courses
-                  </Button>
+                <p className="spacing-title fs-3 me-3">
+                  search : ~ $
+                  <Dropdown as={ButtonGroup}>
+                    <Button variant="light" className="px-5">
+                      Courses
+                    </Button>
 
-                  <Dropdown.Toggle
-                    split
-                    variant="light"
-                    id="dropdown-split-basic"
-                  />
+                    <Dropdown.Toggle
+                      split
+                      variant="light"
+                      id="dropdown-split-basic"
+                    />
 
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">
-                      Font-End Development
-                    </Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">
-                      Back-End Development
-                    </Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">
-                      Full-stack Development
-                    </Dropdown.Item>
-                    <Dropdown.Item href="#/action-4">
-                      Machine Learning
-                    </Dropdown.Item>
-                    <Dropdown.Item href="#/action-4">
-                      Automation Testing
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
+                    <Dropdown.Menu>
+                      <Dropdown.Item href="#/action-1">
+                        Font-End Development
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-2">
+                        Back-End Development
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-3">
+                        Full-stack Development
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-4">
+                        Machine Learning
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-4">
+                        Automation Testing
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
                 </p>
               </div>
               <div className="header-bottom-line background-color-brown"></div>
