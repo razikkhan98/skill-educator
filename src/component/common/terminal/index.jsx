@@ -1,7 +1,8 @@
 import React from "react";
 import Logo from "../../assets/img/logo/2-nd-logo.png";
 
-import { MdOutlineTerminal } from "react-icons/md";
+// import { MdOutlineTerminal } from "react-icons/md";
+import TerminalImg from "../../assets/img/terminal/terminal-1.png";
 function Terminal() {
   return (
     <div>
@@ -12,7 +13,10 @@ function Terminal() {
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
       >
-        <MdOutlineTerminal  className="text-center terminal-icon text-color-brown"/>
+        <div>
+          <img src={TerminalImg} alt="Loading" />
+        </div>
+        {/* <MdOutlineTerminal  className="text-center terminal-icon text-color-brown"/> */}
       </button>
       {/* <!-- Modal --> */}
       <div
@@ -30,7 +34,10 @@ function Terminal() {
               <div className="techno-logo">
                 <img src={Logo} alt="Loading" />
               </div>
-              <h2 className="modal-title spacing-title fs-5" id="staticBackdropLabel">
+              <h2
+                className="modal-title animated-text-2 spacing-title fs-5"
+                id="staticBackdropLabel"
+              >
                 INTELLIGENCE EDUCATORS
               </h2>
               <button
@@ -42,7 +49,7 @@ function Terminal() {
             </div>
             <div className="modal-body background-color-dark">
               <p
-                className="modal-title spacing-title text-color-light py-3"
+                className="modal-title animated-text-2 spacing-title text-color-light py-3"
                 id="staticBackdropLabel"
               >
                 To explore us use navigation!
@@ -52,33 +59,48 @@ function Terminal() {
               <ul>
                 <li className="d-flex align-items-center my-2">
                   <div className="text-warning me-3">[1] </div>
-                  <a href="#" className="text-danger spacing-title text-decoration-none">
+                  <a
+                    href="#"
+                    className="animated-text-2 text-danger spacing-title text-decoration-none"
+                  >
                     Who are we?
                   </a>
                 </li>
                 <li className="d-flex align-items-center mb-2">
                   <div className="text-warning me-3">[2]</div>
-                  <a href="#WhatWeDo" className="text-danger spacing-title text-decoration-none">
-                 What we do ?
+                  <a
+                    href="#WhatWeDo"
+                    className="animated-text-2 text-danger spacing-title text-decoration-none"
+                  >
+                    What we do ?
                   </a>
                 </li>
                 <li className="d-flex align-items-center mb-2">
                   <div className="text-warning me-3">[3]</div>
-                    <a href="#Instructor" className="text-danger spacing-title text-decoration-none">
-                      Instructors !
-                    </a>
+                  <a
+                    href="#Instructor"
+                    className="animated-text-2 text-danger spacing-title text-decoration-none"
+                  >
+                    Instructors !
+                  </a>
                 </li>
                 <li className="d-flex align-items-center mb-2">
                   <div className="text-warning me-3">[4]</div>
                   <div>
-                    <a href="#Courses" className="text-danger spacing-title text-decoration-none">
+                    <a
+                      href="#Courses"
+                      className="animated-text-2 text-danger spacing-title text-decoration-none"
+                    >
                       Courses !
                     </a>
                   </div>
                 </li>
                 <li className="d-flex align-items-center mb-2">
                   <div className="text-warning me-3">[5]</div>
-                  <a href="/" className="text-danger text-decoration-none spacing-title">
+                  <a
+                    href="/#"
+                    className="animated-text-2 text-danger text-decoration-none spacing-title"
+                  >
                     Let us know you !
                   </a>
                 </li>
@@ -87,18 +109,18 @@ function Terminal() {
             <div class="modal-footer background-color-dark">
               <div className="input-group mb-3">
                 <div className="input-group-text spacing-title background-color-dark text-color-light">
-                  We@Educators :~ 
+                  We@Educators :~
                 </div>
-                  <div className="form-floating">
-                    <input
-                      type="text"
-                      className="form-control background-color-light-brown"
-                      id="Command"
-                      placeholder="TYPE COMMAND"
-                    ></input>
-                    <label for="Command">Type Command</label>
-                  </div>
+                <div className="form-floating">
+                  <input
+                    type="text"
+                    className="form-control background-color-light-brown"
+                    id="Command"
+                    placeholder="TYPE COMMAND"
+                  ></input>
+                  <label for="Command">Type Command</label>
                 </div>
+              </div>
             </div>
           </div>
         </div>

@@ -40,7 +40,7 @@ const Footer = () => {
       >
         <Container fluid>
           <Navbar.Brand
-            className="d-flex align-items-center text-uppercase"
+            className="d-flex footer-title align-items-center text-uppercase"
             href="#"
           >
             <img
@@ -68,31 +68,32 @@ const Footer = () => {
                 info123@gmail.com
               </Nav.Link>
             </Nav>
-
-            <a
-              class="social-btn d-flex align-items-center justify-content-center me-4"
-              href="/#"
-            >
-              <FaFacebookF className="btn-icon fs-4" />
-            </a>
-            <a
-              class="social-btn d-flex align-items-center justify-content-center me-4"
-              href="https://in.linkedin.com/in/skill-intelligence-world-ba479028b"
-            >
-              <FaLinkedinIn className="btn-icon fs-4" />
-            </a>
-            <a
-              class="social-btn d-flex align-items-center justify-content-center me-4"
-              href="https://www.instagram.com/skill_intelligence_world_9213/"
-            >
-              <FaInstagram className="btn-icon fs-4" />
-            </a>
-            <a
-              class="social-btn d-flex align-items-center justify-content-center me-4"
-              href="/#"
-            >
-              <FaWhatsapp className="btn-icon fs-4" />
-            </a>
+            <div className="d-flex">
+              <a
+                class="social-btn d-flex align-items-center justify-content-center me-4"
+                href="/#"
+              >
+                <FaFacebookF className="btn-icon fs-4" />
+              </a>
+              <a
+                class="social-btn d-flex align-items-center justify-content-center me-4"
+                href="https://in.linkedin.com/in/skill-intelligence-world-ba479028b"
+              >
+                <FaLinkedinIn className="btn-icon fs-4" />
+              </a>
+              <a
+                class="social-btn d-flex align-items-center justify-content-center me-4"
+                href="https://www.instagram.com/skill_intelligence_world_9213/"
+              >
+                <FaInstagram className="btn-icon fs-4" />
+              </a>
+              <a
+                class="social-btn d-flex align-items-center justify-content-center me-4"
+                href="/#"
+              >
+                <FaWhatsapp className="btn-icon fs-4" />
+              </a>
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>
