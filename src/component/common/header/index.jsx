@@ -16,7 +16,14 @@ const Header = () => {
       { id: "about", title: "About" },
       { id: "Technologies", title: " $technologies" },
       { id: "WhatWeDo", title: " $whatwedo" },
+<<<<<<< HEAD
       { id: "AboutUs", title: " $AboutUs" }
+=======
+      { id: "Courses", title: " $Courses" },
+      { id: "Instructor", title: " $Instructor" },
+
+
+>>>>>>> 768288e017722bba87a8ae9babad9b0c918ae212
     ];
 
     // Check which section is currently in view

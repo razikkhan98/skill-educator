@@ -30,7 +30,11 @@ const CompanyName = () => {
       } else {
         clearInterval(interval);
       }
+<<<<<<< HEAD
     }, 200); // Transition time between each character change
+=======
+    }, 100); // Transition time between each character change
+>>>>>>> 768288e017722bba87a8ae9babad9b0c918ae212
 
     return () => clearInterval(interval); // Clean up interval on unmount
   }, []);
@@ -61,9 +65,15 @@ const CompanyName = () => {
             </p>
           </div>
         </div>
+<<<<<<< HEAD
        ) : (
          <Main /> 
        )} 
+=======
+      ) : (
+        <Main />
+      )}
+>>>>>>> 768288e017722bba87a8ae9babad9b0c918ae212
 
       {/* {loading ? <Loading /> : <Main />} */}
     </React.Fragment>

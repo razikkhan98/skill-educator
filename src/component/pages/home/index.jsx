@@ -61,14 +61,23 @@ const Home = () => {
     responsive: [
       {
         breakpoint: 1024,
+<<<<<<< HEAD
         settings: { slidesToShow: 3 },
+=======
+        settings: { slidesToShow: 4 },
+>>>>>>> 768288e017722bba87a8ae9babad9b0c918ae212
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 3,
+<<<<<<< HEAD
           vertical: false, // Disable vertical mode on smaller screens
           slidesToScroll: 1, // Adjust as needed
+=======
+          vertical: false,
+          slidesToScroll: 1,
+>>>>>>> 768288e017722bba87a8ae9babad9b0c918ae212
         },
       },
       {
@@ -76,6 +85,10 @@ const Home = () => {
         settings: {
           slidesToShow: 2,
           vertical: false,
+<<<<<<< HEAD
+=======
+          centerMode: false,
+>>>>>>> 768288e017722bba87a8ae9babad9b0c918ae212
         },
       },
     ],
@@ -86,7 +99,11 @@ const Home = () => {
       {/* Menu Button Start */}
       <Menu />
       {/* Menu Button End */}
+<<<<<<< HEAD
             <Terminal/>
+=======
+      <Terminal />
+>>>>>>> 768288e017722bba87a8ae9babad9b0c918ae212
       <div className="gradient-bg" id="Home">
         <div className="row">
           <div className="col-lg-10">
