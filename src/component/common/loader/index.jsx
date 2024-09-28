@@ -1,6 +1,9 @@
 import React from "react";
 
+// Images
 import Logo from "../../assets/img/logo/2.png";
+
+
 const Loader = () => {
   window.addEventListener("load", function () {
     setTimeout(function () {
@@ -11,13 +14,13 @@ const Loader = () => {
     }, 2000); // Delay in milliseconds
   });
   return (
-    <>
-      <div class="page-loader position-fixed top-0 start-0 d-flex align-items-center justify-content-center w-100 h-100">
+    <React.Fragment>
+      <div class="page-loader bg-gif position-fixed top-0 start-0 d-flex align-items-center justify-content-center w-100 h-100">
         <div class="loader">
           <img src={Logo} alt="Loading" />
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 export default Loader;

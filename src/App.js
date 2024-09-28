@@ -1,17 +1,27 @@
-// import logo from './logo.svg';
+import React, { useEffect, useState } from "react";
 import "./App.css";
-// import Home from "./component/pages/home";
-// import WhatWeDo from "./component/pages/what-we-do";
-import Aboutuscard from "./component/pages/about";
+import CompanyName from "./component/common/company-name";
+import Loading from "./component/common/loader";
+
 
 function App() {
-  return (
-    <>
-      <Aboutuscard/>
-      {/* <Home />
-      <WhatWeDo/> */}
-    </>
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    const datat = () => {
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
+    };
+
+    datat();
+  }, []);
+
+  return (
+    <React.Fragment>
+      {loading ? <Loading /> : <CompanyName />}
+      <div>Hello</div>
+    </React.Fragment>
   );
 }
 export default App;
