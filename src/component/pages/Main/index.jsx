@@ -2,6 +2,7 @@ import React from "react";
 
 // Component
 import Home from "../home";
+import About from "../../pages/about/index";
 import Footer from "../../common/footer";
 import WhatWeDo from "../what-we-do";
 import Technologies from "../technologies";
@@ -12,6 +13,7 @@ const Main = () => {
   return (
     <React.Fragment>
       <Home />
+      <About/>
       <Header />
       <WhatWeDo />
       <Technologies />

@@ -5,6 +5,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { FaHandSparkles } from "react-icons/fa";
 import { TfiWrite } from "react-icons/tfi";
 import { FaLocationDot } from "react-icons/fa6";
+import { NavLink } from "react-bootstrap";
 
 const Menu = () => {
   const [showButtons, setShowButtons] = useState(false);
@@ -44,12 +45,14 @@ const Menu = () => {
             >
               <TfiWrite className="fs-3" />
             </a>
-            <a
-              href="mailto:example@example.com"
+            <NavLink
+              href="https://maps.app.goo.gl/PhAXJvB2xWhCKv5n8"
+              target="_blank"
+               rel="noopener noreferrer"
               className="btn p-3 additional-btn bottom background-color-dark text-color-light"
             >
               <FaLocationDot className="fs-3" />
-            </a>
+            </NavLink>
           </div>
         )}
       </div>

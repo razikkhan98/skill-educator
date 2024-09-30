@@ -139,7 +139,6 @@ body {
   .item {
     height: 100px; /* Further reduce height */
   }
-
   .scrollable-slider {
     height: auto; /* Allow height to adjust */
   }
@@ -152,6 +151,7 @@ body {
   .footer-title {
     font-size: 15px;
   }
+  
   .cursor {
     font-size: 5vw;
   }
@@ -167,6 +167,10 @@ body {
   .company-logo img {
     height: 70px;
   }
+  .about-img img{
+    height: auto;
+    max-width: 100%;
+  }
   .animated-text {
     font-size: 9vw;
   }
@@ -174,6 +178,7 @@ body {
     font-size: 4vw;
   }
 }
+
 /* =========== Company Name Start ============ */
 
 /* =============== Header Start ================= */
@@ -485,6 +490,20 @@ body {
   border-radius: 20px;
   margin: auto;
 }
+/* .technology-card:nth-child(1){
+  transform: translate3d(0.97862px, -1.28949px, 0px);
+}
+.technology-card:nth-child(2){
+  transform: translate3d(2.21331px, -1.05441px, 0px);
+}
+.technology-card:nth-child(3){
+  transform: translate3d(3.42562px, -1.02941px, 0px);
+}
+.technology-card:nth-child(4){
+  transform: translate3d(4.53207px, -1.46058px, 0px);
+} */
+
+
 .technology-title {
   line-break: normal;
 }
@@ -632,4 +651,3 @@ img.technocardimgItem {
 }
 /* Terminal Button End */
 
-/* ----------------- Couses Start ----------------- */
