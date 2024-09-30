@@ -47,6 +47,7 @@ const Courses = () => {
     setSelectedCourse(course);
   };
 
+  
   return (
     <>
       <div className="node-bg-img py-5" id="Courses">
@@ -63,11 +64,11 @@ const Courses = () => {
                 <div className="header-bottom-line background-color-brown"></div>
                 <div className="spacing-title text-color-light p-3">
                   {/* {CourseData.map((data, index) => ( */}
-                  {/* // <div id={data.id}> */}
+                    {/* <div id={data.id}>  */}
                   <h1>{selectedCourse.title}</h1>
                   <p className="py-3">{selectedCourse.description}</p>
-                  {/* // </div> */}
-                  {/* ))} */}
+                   {/* </div>  */}
+                   {/* ))}  */}
                   <div className="background-color-cream text-color-dark d-flex align-items-center justify-content-around text-center">
                     <p className="spacing-title fs-3 me-3">
                       know more : ~ ${" "}

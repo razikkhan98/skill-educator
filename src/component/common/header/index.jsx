@@ -13,7 +13,7 @@ const Header = () => {
   const handleScroll = () => {
     const scrollY = window.scrollY;
     const sections = [
-      { id: "about", title: "About" },
+      { id: "About", title: "About" },
       { id: "Technologies", title: " $technologies" },
       { id: "WhatWeDo", title: " $whatwedo" },
       { id: "Courses", title: " $Courses" },
