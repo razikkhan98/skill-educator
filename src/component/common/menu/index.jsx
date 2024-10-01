@@ -32,7 +32,7 @@ const Menu = () => {
             data-aos="fade-left"
           >
             <a
-              href="tel:+1234567890"
+              href="#Feedback"
               className="btn p-3 additional-btn top background-color-dark text-color-light"
             >
               <FaHandSparkles className="fs-3" />
