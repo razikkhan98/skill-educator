@@ -651,3 +651,170 @@ img.technocardimgItem {
 }
 /* Terminal Button End */
 
+/* =============== Team Start ================= */
+.tagline {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--dark-color);
+  letter-spacing: 4px;
+  text-align: center;
+}
+.team-card {
+  width: 250px;
+  height: 345px;
+  background: var(--cream-color);
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.5s;
+  position: relative;
+}
+.team-card:hover {
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
+  background-color: var(--cream-color);
+}
+.team-card .blob {
+  height: 10px;
+  width: 75%;
+  border-radius: 0 0 30px 30px;
+  margin: 0 auto;
+  background-color: var(--dark-color);
+  visibility: visible;
+  transition: all 0.1s;
+}
+.team-card:hover .blob {
+  height: 0;
+}
+.team-card .img img {
+  display: flex;
+  margin: 30px auto 10px auto;
+  width: 100px;
+  height: 100px;
+  background-color: var(--dark-color);
+  border-radius: 50%;
+  font-size: 11px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s;
+}
+.team-member {
+  color: #191516;
+}
+.team-card:hover .img {
+  visibility: hidden;
+  transition: all 0.1s;
+}
+.team-card h2 {
+  padding: 15px 10px;
+  font-size: 25px;
+  transition: all 0.1s;
+  line-height: 17px;
+}
+.team-card span {
+  font-size: 18px;
+}
+.team-card:hover h2 {
+  opacity: 0;
+}
+.team-card > .details {
+  opacity: 0;
+  transition: all 0.1s;
+  font-size: xx-small;
+}
+.team-card:hover > .details {
+  position: absolute;
+  opacity: 1;
+  transition: all 0.1s;
+  font-size: medium;
+}
+.team-card:hover > p {
+  opacity: 1;
+  transition: all 0.1s;
+  background-color: var(--dark-color);
+  height: 100px;
+  margin-top: 60px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.socilamedialink {
+  visibility: hidden;
+}
+.team-card:hover > a {
+  visibility: hidden;
+}
+.socialmedia {
+  opacity: 0;
+  height: 5px;
+  width: 5px;
+  visibility: hidden;
+  color: var(--dark-color);
+}
+.team-card:hover .socialmedia {
+  visibility: visible;
+  opacity: 1;
+  width: 58px;
+  height: 70px;
+  color: var(--cream-color);
+}
+
+/* =============== Team End ================= */
+/* =============== Feedback End ================= */
+.feedback-box {
+  background-color: var(--dark-color);
+  opacity: 0.5;
+}
+.profile {
+  background-color: var(--cream-color);
+  color: var(--cream-color);
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+}
+.feedback-content {
+  font-size: 20px;
+  color: #ffffff;
+}
+.feedback-btn {
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #ffffff;
+  color: var(--dark-color);
+}
+.feedback-btn:hover {
+  background-color: var(--cream-color);
+  color: var(--dark-color);
+}
+.feedback-form {
+  background-color: var(--dark-color);
+  width: max-content;
+  height: max-content;
+  border: none;
+  border-radius: 20px;
+  /* opacity: 0.7; */
+}
+.lable {
+  font-size: larger;
+  color: var(--cream-color);
+  width: 100%;
+  font-weight: 600;
+}
+.input {
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--cream-color);
+}
+.input-review {
+  height: 200px;
+  width: max-content;
+}
+.input-name {
+  height: 60px;
+  width: max-content;
+}
+/* =============== Feedback End ================= */
