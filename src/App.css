@@ -1,10 +1,17 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 :root {
   --cream-color: #b69d7f;
   --brown-color: #403133;
   --light-brown-color: #655847;
   --dark-color: #191516;
 }
+html,
 body {
+  width: 100%;
   overflow-x: hidden !important;
   padding-right: 0px !important;
 }
@@ -73,9 +80,9 @@ body {
   bottom: 0;
   background-image: linear-gradient(
     to right,
-    rgba(182, 157, 127, 0.6),
-    rgba(101, 88, 71, 0.6),
-    rgba(64, 49, 51, 0.6)
+    rgba(182, 157, 127, 0.4),
+    rgba(101, 88, 71, 0.4),
+    rgba(64, 49, 51, 0.4)
   );
   z-index: 1;
 }
@@ -129,13 +136,22 @@ body {
   h2 {
     font-size: 1rem;
   }
+  .item {
+    height: 100px; /* Further reduce height */
+  }
+  .scrollable-slider {
+    height: auto; /* Allow height to adjust */
+  }
   .company-logo img {
     height: 90px;
   }
   .animated-text {
     font-size: 10vw;
   }
-
+  .footer-title {
+    font-size: 15px;
+  }
+  
   .cursor {
     font-size: 5vw;
   }
@@ -145,8 +161,15 @@ body {
 }
 
 @media (max-width: 480px) {
+  .item {
+    height: 80px; /* Adjust height for mobile */
+  }
   .company-logo img {
     height: 70px;
+  }
+  .about-img img{
+    height: auto;
+    max-width: 100%;
   }
   .animated-text {
     font-size: 9vw;
@@ -155,6 +178,7 @@ body {
     font-size: 4vw;
   }
 }
+
 /* =========== Company Name Start ============ */
 
 /* =============== Header Start ================= */
@@ -183,12 +207,12 @@ body {
 .item img {
   height: 100%;
   border-radius: 10px;
+  object-fit: cover;
 }
 .item {
   height: 140px;
   transform: scale(0.7, 0.7);
   display: flex !important;
-  text-align: center;
   align-items: center;
   justify-content: center;
   opacity: 0.7;
@@ -329,7 +353,7 @@ body {
   margin: 0 auto;
   background-color: var(--cream-color);
 }
-.timeline ul li.in-view{
+.timeline ul li.in-view {
   background-color: var(--brown-color);
 }
 .timeline ul li::after {
@@ -453,7 +477,7 @@ body {
 /* Social-Icons End */
 
 /* ----------- Technologies Start ------------ */
-.node-bg-img{
+.node-bg-img {
   background-image: url(./component/assets/img/background/node-bg.png);
   background-position: center;
   background-size: cover;
@@ -466,6 +490,20 @@ body {
   border-radius: 20px;
   margin: auto;
 }
+/* .technology-card:nth-child(1){
+  transform: translate3d(0.97862px, -1.28949px, 0px);
+}
+.technology-card:nth-child(2){
+  transform: translate3d(2.21331px, -1.05441px, 0px);
+}
+.technology-card:nth-child(3){
+  transform: translate3d(3.42562px, -1.02941px, 0px);
+}
+.technology-card:nth-child(4){
+  transform: translate3d(4.53207px, -1.46058px, 0px);
+} */
+
+
 .technology-title {
   line-break: normal;
 }
@@ -561,6 +599,32 @@ img.technocardimgItem {
 
 /* ---------- Terminal Button Start  ------------*/
 
+.animated-text-2 {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  /* border-right: 2px solid var(--cream-color); 
+  padding-right: 5px; */
+  animation: type steps(50) 1.5s 1 normal both, cursor 1s step-end infinite;
+}
+@keyframes type {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+@keyframes cursor {
+  50% {
+    border-color: var(--cream-color);
+  }
+}
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
 .terminal-icon {
   font-size: 60px;
 }
@@ -587,7 +651,170 @@ img.technocardimgItem {
 }
 /* Terminal Button End */
 
-/* ----------------- Couses Start ----------------- */
-/* .dropdown-bg{
-  max-width: 500px;
-} */
+/* =============== Team Start ================= */
+.tagline {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--dark-color);
+  letter-spacing: 4px;
+  text-align: center;
+}
+.team-card {
+  width: 250px;
+  height: 345px;
+  background: var(--cream-color);
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.5s;
+  position: relative;
+}
+.team-card:hover {
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
+  background-color: var(--cream-color);
+}
+.team-card .blob {
+  height: 10px;
+  width: 75%;
+  border-radius: 0 0 30px 30px;
+  margin: 0 auto;
+  background-color: var(--dark-color);
+  visibility: visible;
+  transition: all 0.1s;
+}
+.team-card:hover .blob {
+  height: 0;
+}
+.team-card .img img {
+  display: flex;
+  margin: 30px auto 10px auto;
+  width: 100px;
+  height: 100px;
+  background-color: var(--dark-color);
+  border-radius: 50%;
+  font-size: 11px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s;
+}
+.team-member {
+  color: #191516;
+}
+.team-card:hover .img {
+  visibility: hidden;
+  transition: all 0.1s;
+}
+.team-card h2 {
+  padding: 15px 10px;
+  font-size: 25px;
+  transition: all 0.1s;
+  line-height: 17px;
+}
+.team-card span {
+  font-size: 18px;
+}
+.team-card:hover h2 {
+  opacity: 0;
+}
+.team-card > .details {
+  opacity: 0;
+  transition: all 0.1s;
+  font-size: xx-small;
+}
+.team-card:hover > .details {
+  position: absolute;
+  opacity: 1;
+  transition: all 0.1s;
+  font-size: medium;
+}
+.team-card:hover > p {
+  opacity: 1;
+  transition: all 0.1s;
+  background-color: var(--dark-color);
+  height: 100px;
+  margin-top: 60px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.socilamedialink {
+  visibility: hidden;
+}
+.team-card:hover > a {
+  visibility: hidden;
+}
+.socialmedia {
+  opacity: 0;
+  height: 5px;
+  width: 5px;
+  visibility: hidden;
+  color: var(--dark-color);
+}
+.team-card:hover .socialmedia {
+  visibility: visible;
+  opacity: 1;
+  width: 58px;
+  height: 70px;
+  color: var(--cream-color);
+}
+
+/* =============== Team End ================= */
+/* =============== Feedback End ================= */
+.feedback-box {
+  background-color: var(--dark-color);
+  opacity: 0.5;
+}
+.profile {
+  background-color: var(--cream-color);
+  color: var(--cream-color);
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+}
+.feedback-content {
+  font-size: 20px;
+  color: #ffffff;
+}
+.feedback-btn {
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #ffffff;
+  color: var(--dark-color);
+}
+.feedback-btn:hover {
+  background-color: var(--cream-color);
+  color: var(--dark-color);
+}
+.feedback-form {
+  background-color: var(--dark-color);
+  width: max-content;
+  height: max-content;
+  border: none;
+  border-radius: 20px;
+  /* opacity: 0.7; */
+}
+.lable {
+  font-size: larger;
+  color: var(--cream-color);
+  width: 100%;
+  font-weight: 600;
+}
+.input {
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--cream-color);
+}
+.input-review {
+  height: 200px;
+  width: max-content;
+}
+.input-name {
+  height: 60px;
+  width: max-content;
+}
+/* =============== Feedback End ================= */

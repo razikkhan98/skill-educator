@@ -61,14 +61,14 @@ const Home = () => {
     responsive: [
       {
         breakpoint: 1024,
-        settings: { slidesToShow: 3 },
+        settings: { slidesToShow: 4 },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 3,
-          vertical: false, // Disable vertical mode on smaller screens
-          slidesToScroll: 1, // Adjust as needed
+          vertical: false,
+          slidesToScroll: 1,
         },
       },
       {
@@ -76,6 +76,7 @@ const Home = () => {
         settings: {
           slidesToShow: 2,
           vertical: false,
+          centerMode: false,
         },
       },
     ],
@@ -86,7 +87,7 @@ const Home = () => {
       {/* Menu Button Start */}
       <Menu />
       {/* Menu Button End */}
-            <Terminal/>
+      <Terminal />
       <div className="gradient-bg" id="Home">
         <div className="row">
           <div className="col-lg-10">
