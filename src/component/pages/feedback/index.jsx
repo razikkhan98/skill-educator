@@ -1,7 +1,40 @@
-import React from "react";
-import Header from "../../common/header/index";
-import Container from "react-bootstrap/Container";
+import React, {useState} from "react";
+// import Header from "../../common/header/index";
+import {Container,Modal, Button} from "react-bootstrap";
 // import { Row } from "react-bootstrap";
+
+const MyVerticallyCenteredModal = ({ show, onHide }) => {
+  return (
+    <Modal show={show} size="lg" centered onHide={onHide}>
+      <Modal.Header closeButton className="background-color-light-brown">
+        <Modal.Title id="contained-modal-title-vcenter">
+          <div className="feedback-heading">FEEDBACK !!</div>
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body className="feedback-form">
+        <div>
+          <form>
+            <div className="m-3">
+              <div className="m-3">
+                <label htmlFor="" className="lable mb-1">Your Name</label>
+                <input type="text" className="input" />
+              </div>
+              <div className="m-3">
+                <label htmlFor="" className="lable mb-1">Your Thoughts</label>
+                <input type="text" className="input-review" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </Modal.Body>
+      <Modal.Footer className="feedback-form">
+        <Button className="feedback-btn" onClick={onHide}>SUBMIT</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+};
+
+
 const Feedback = () => {
   const FeedbackData = [
     {
@@ -25,14 +58,7 @@ const Feedback = () => {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     },
   ];
-  const modal = document.querySelector("#modal");
-  const openModal = document.querySelector("#openModal");
-  const closeModal = document.querySelector("#closeModal");
-  if (modal) {
-    openModal && openModal.addEventListener("click", () => modal.showModal());
-
-    closeModal && closeModal.addEventListener("click", () => modal.close());
-  }
+  const [modalShow, setModalShow] = useState(false);
   return (
     <>
       {/* <Header title="w e@e d u c a t o r : ~ $" /> */}
@@ -50,59 +76,14 @@ const Feedback = () => {
             </div>
           ))}
 
-          <div className=" my-5 d-flex justify-content-evenly">
-            <button id="openModal" className="feedback-btn px-4 py-2">
+<div className="my-5 d-flex justify-content-evenly">
+            <Button onClick={() => setModalShow(true)} className="feedback-btn px-4 py-2">
               ADD YOUR REVIEW
-            </button>
-            <dialog id="modal" className="feedback-form p-5">
-              <div className="d-flex flex-column align-items-center justify-content-center">
-                {/* <div className="mt-3 d-flex">
-                  <div>
-                    <label for="name" className="lable me-3">
-                      Your Name :
-                    </label>
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      className="input input-lable"
-                    />
-                  </div>
-                </div> */}
-                <div class="mb-3 row">
-                  <label for="inputtext" class="col-sm-2 col-form-label text-white">
-                  Name
-                  </label>
-                  <div class="col-sm-10">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="inputPassword"
-                    />
-                  </div>
-                </div>
-                <div className="mt-3 d-flex">
-                  <div>
-                    <label for="name" className="lable">
-                      Your Review:
-                    </label>
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      className="input input-review"
-                    />
-                  </div>
-                </div>
-              </div>
-              <button id="closeModal" className="feedback-btn mt-3 py-2 px-4">
-                SUBMIT REVIEW
-              </button>
-            </dialog>
+            </Button>
+            <MyVerticallyCenteredModal
+              show={modalShow}
+              onHide={() => setModalShow(false)}
+            />
           </div>
         </Container>
       </div>

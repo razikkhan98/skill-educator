@@ -3,20 +3,29 @@ import Logo from "../../assets/img/logo/2-nd-logo.png";
 
 // import { MdOutlineTerminal } from "react-icons/md";
 import TerminalImg from "../../assets/img/terminal/terminal-1.png";
-function Terminal() {
+import "animate.css";
+const Terminal = () => {
+  const TerminalData = [
+    { id: 1, text: "Who are we?", href: "#" },
+    { id: 2, text: "What we do?", href: "#WhatWeDo" },
+    { id: 3, text: "Tecnologies!", href: "#Technologies" },
+    { id: 4, text: "Instructors!", href: "#Team" },
+    { id: 5, text: "Courses!", href: "#Courses" },
+    { id: 6, text: "Let us know you!", href: "#Feedback" },
+  ];
+
   return (
     <div>
       {/* <!-- Button trigger modal --> */}
       <button
         type="button"
-        className="terminal-btn d-flex align-items-center rounded-3 justify-content-center z-3"
+        className="terminal-btn d-flex align-items-center rounded-3 justify-content-center z-3 animate__animated animate__infinite animate__pulse"
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
       >
         <div>
           <img src={TerminalImg} alt="Loading" />
         </div>
-        {/* <MdOutlineTerminal  className="text-center terminal-icon text-color-brown"/> */}
       </button>
       {/* <!-- Modal --> */}
       <div
@@ -57,53 +66,17 @@ function Terminal() {
                 to begin, type :
               </p>
               <ul>
-                <li className="d-flex align-items-center my-2">
-                  <div className="text-warning me-3">[1] </div>
-                  <a
-                    href="#"
-                    className="animated-text-2 text-danger spacing-title text-decoration-none"
-                  >
-                    Who are we?
-                  </a>
-                </li>
-                <li className="d-flex align-items-center mb-2">
-                  <div className="text-warning me-3">[2]</div>
-                  <a
-                    href="#WhatWeDo"
-                    className="animated-text-2 text-danger spacing-title text-decoration-none"
-                  >
-                    What we do ?
-                  </a>
-                </li>
-                <li className="d-flex align-items-center mb-2">
-                  <div className="text-warning me-3">[3]</div>
-                  <a
-                    href="#Instructor"
-                    className="animated-text-2 text-danger spacing-title text-decoration-none"
-                  >
-                    Instructors !
-                  </a>
-                </li>
-                <li className="d-flex align-items-center mb-2">
-                  <div className="text-warning me-3">[4]</div>
-                  <div>
+              {TerminalData.map((item , index)=> (
+                  <li className="d-flex align-items-center mb-2" key={item.id}>
+                    <div className="text-warning me-3">[{item.id}]</div>
                     <a
-                      href="#Courses"
+                      href={item.href}
                       className="animated-text-2 text-danger spacing-title text-decoration-none"
                     >
-                      Courses !
+                      {item.text}
                     </a>
-                  </div>
-                </li>
-                <li className="d-flex align-items-center mb-2">
-                  <div className="text-warning me-3">[5]</div>
-                  <a
-                    href="/#"
-                    className="animated-text-2 text-danger text-decoration-none spacing-title"
-                  >
-                    Let us know you !
-                  </a>
-                </li>
+                  </li>
+                ))}
               </ul>
             </div>
             <div class="modal-footer background-color-dark">
@@ -127,5 +100,5 @@ function Terminal() {
       </div>
     </div>
   );
-}
+};
 export default Terminal;
