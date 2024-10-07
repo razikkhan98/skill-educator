@@ -1,108 +1,80 @@
-// import React, { useState } from "react";
-import Header from "../../common/header/index";
-import TeamImage1 from "../../assets/img/team/1.png";
-import TeamImage2 from "../../assets/img/team/2.png";
-import github from "../../assets/img/team/github.png";
-import mail from "../../assets/img/team/mail.png";
-import linkedin from "../../assets/img/team/linkedin.png";
-import insta from "../../assets/img/team/insta.png";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-
+import React, { useState } from "react";
+import image1 from "../../assets/img/team/avatar1.jpg";
+import image2 from "../../assets/img/team/avatar10.jpeg";
+import image3 from "../../assets/img/team/avatar13.jpg";
+import image4 from "../../assets/img/team/avatar12.jpg";
+import image5 from "../../assets/img/team/avatar16.jpg";
+ 
+const items = [
+  {
+    header: "SAYYED FAIZAN ALI",
+    image: image1,
+    text: `Specialization :- Automation, Python, Cloud, Machine Learning, Data Science, Cryptocurrencies, Financial Assistant & Business Analyst.`,
+  },
+ 
+  {
+    header: "SHOEB KHAN",
+    image: image2,
+    text: `Image description`,
+  },
+ 
+  {
+    header: "SHUMAIYLA KHAN",
+    image: image3,
+    text: `Image description`,
+  },
+  {
+    header: "ADIBA KHAN",
+    image: image4,
+    text: "Sections 1.10.32 and 1.10.33 from by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+  },
+  {
+    header: "RAZIK KHAN",
+    image: image5,
+    text: `Image description`,
+  },
+];
+ 
 const Team = () => {
-  const TeamCard = [
-    {
-      img: TeamImage1,
-      title:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.  Fugiat Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat",
-    },
-    {
-      img: TeamImage2,
-      title:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.  Fugiat Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat",
-    },
-    {
-      img: TeamImage1,
-      title:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.  Fugiat Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat",
-    },
-    {
-      img: TeamImage2,
-      title:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.  Fugiat Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat",
-    },
-  ];
-  const details = [
-    {
-      role: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    },
-  ];
-
+  const [activeIndex, setActiveId] = useState(null);
+ 
+  const toggleActive = (index) => {
+    setActiveId(activeIndex === index ? null : index);
+  };
+ 
   return (
     <>
-      {/* <Header title="w e@e d u c a t o r : ~ $" /> */}
-      <div className="background-color-light-brown py-5" id="Team">
-        <div className="tagline">
+      <div
+        className="node-bg-img py-5 d-flex flex-column justify-content-center"
+        id="Team"
+      >
+        <div className="tagline fs-1 text-color-dark text-center">
           IF , AT FIRST YOU DO NOT SUCCEED , CALL IT VERSION 1.0
         </div>
-        <div className="mt-5">
-          <Container className="d-flex justify-content-evenly ">
-            {TeamCard.map((link, index) => (
-              <div key={index}>
-                <Row>
-                  <Col>
-                    <div className="d-flex">
-                      <div class="team-card">
-                        <div class="blob"></div>
-                        <span class="img">
-                          <img src={TeamImage2} alt="Loading" />
-                        </span>
-                        <h2 className="team-member">
-                          John
-                          <br />
-                          <span>Doe</span>
-                        </h2>
-                        <div className="details">
-                          {details.map((link, index) => (
-                            <div>
-                              {link.name}
-                              <br /> {link.role}
-                            </div>
-                          ))}
-                        </div>
-                        <p>
-                          <a href="#" className="socilamedialink">
-                            {" "}
-                            <img src={github} alt="" className="socialmedia" />
-                          </a>
-                          <a href="#" className="socilamedialink">
-                            {" "}
-                            <img src={mail} alt="" className="socialmedia" />
-                          </a>
-                          <a href="#" className="socilamedialink">
-                            {" "}
-                            <img
-                              src={linkedin}
-                              alt=""
-                              className="socialmedia"
-                            />
-                          </a>
-                          <a href="#" className="socilamedialink">
-                            {" "}
-                            <img src={insta} alt="" className="socialmedia" />
-                          </a>
-                        </p>
-                      </div>
-                    </div>
-                  </Col>
-                </Row>
-              </div>
-            ))}
-          </Container>
+        <div className="container mt-5 pt-2 z-1">
+          <div className="row image-accordion gap-3 d-flex justify-content-around">
+            {items.map((item, index) => {
+              const isActive = activeIndex === index ? "active" : "";
+ 
+              return (
+                <div
+                  key={item.id}
+                  className={`image-accordion-item ${isActive}`}
+                  onClick={() => toggleActive(index)}
+                >
+                  <img src={item.image} alt={item.header} />
+                  <div className="content">
+                    <h2>{item.header}</h2>
+                    <p>{item.text}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </>
   );
 };
+ 
 export default Team;

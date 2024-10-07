@@ -484,6 +484,7 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh;
 }
+
 .tecnology-card {
   width: 90%;
   max-width: 300px;
@@ -650,114 +651,84 @@ img.technocardimgItem {
   }
 }
 /* Terminal Button End */
+/* ============= Course Start ================= */
+.course-card{
+  min-height: 600px;
+}
+
+/* ============= Course End ================= */
 
 /* =============== Team Start ================= */
 .tagline {
-  font-size: 30px;
-  font-weight: 600;
-  color: var(--dark-color);
+  font-size: 20px;
   letter-spacing: 4px;
-  text-align: center;
 }
-.team-card {
-  width: 250px;
-  height: 345px;
-  background: var(--cream-color);
-  border-radius: 10px;
-  text-align: center;
-  transition: all 0.5s;
+.image-accordion {
   position: relative;
+  z-index: 2;
+  gap: 16px;
+  cursor: pointer;
+  font-family: "Euclid Circular A", "Poppins";
 }
-.team-card:hover {
-  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
-  background-color: var(--cream-color);
-}
-.team-card .blob {
-  height: 10px;
-  width: 75%;
-  border-radius: 0 0 30px 30px;
-  margin: 0 auto;
-  background-color: var(--dark-color);
-  visibility: visible;
-  transition: all 0.1s;
-}
-.team-card:hover .blob {
-  height: 0;
-}
-.team-card .img img {
-  display: flex;
-  margin: 30px auto 10px auto;
-  width: 100px;
-  height: 100px;
-  background-color: var(--dark-color);
-  border-radius: 50%;
-  font-size: 11px;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.1s;
-}
-.team-member {
-  color: #191516;
-}
-.team-card:hover .img {
-  visibility: hidden;
-  transition: all 0.1s;
-}
-.team-card h2 {
-  padding: 15px 10px;
-  font-size: 25px;
-  transition: all 0.1s;
-  line-height: 17px;
-}
-.team-card span {
-  font-size: 18px;
-}
-.team-card:hover h2 {
-  opacity: 0;
-}
-.team-card > .details {
-  opacity: 0;
-  transition: all 0.1s;
-  font-size: xx-small;
-}
-.team-card:hover > .details {
-  position: absolute;
-  opacity: 1;
-  transition: all 0.1s;
-  font-size: medium;
-}
-.team-card:hover > p {
-  opacity: 1;
-  transition: all 0.1s;
-  background-color: var(--dark-color);
-  height: 100px;
-  margin-top: 60px;
+ 
+.image-accordion-item {
+  position: relative;
   overflow: hidden;
+  width: 180px;
+  height: 300px;
+  border-radius: 36px;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  align-items: flex-end;
+  opacity: 0.9;
+  transition: 0.5s;
 }
-.socilamedialink {
-  visibility: hidden;
+ 
+.image-accordion-item:hover {
+  opacity: 0.75;
 }
-.team-card:hover > a {
-  visibility: hidden;
+ 
+.image-accordion-item h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(255 255 255 / 96%);
 }
-.socialmedia {
-  opacity: 0;
-  height: 5px;
-  width: 5px;
-  visibility: hidden;
-  color: var(--dark-color);
+ 
+.image-accordion-item p {
+  color: rgb(255 255 255 / 66%);
 }
-.team-card:hover .socialmedia {
-  visibility: visible;
+ 
+.image-accordion-item.active {
+  width: 300px;
   opacity: 1;
-  width: 58px;
-  height: 70px;
-  color: var(--cream-color);
 }
-
+ 
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  padding: 20px;
+  background: linear-gradient(to bottom, rgb(0 0 0 / 10%), rgb(0 0 0 / 100%));
+  transition: 0.25s;
+}
+ 
+.image-accordion-item.active .content {
+  opacity: 1;
+  visibility: visible;
+}
+ 
+.image-accordion-item img {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  height: 100%;
+  filter: grayscale(0.3);
+}
 /* =============== Team End ================= */
 /* =============== Feedback End ================= */
 .feedback-box {
@@ -782,20 +753,18 @@ img.technocardimgItem {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 600;
-  background-color: #ffffff;
-  color: var(--dark-color);
+  background-color: var(--dark-color);
+  color: var(--cream-color);
 }
 .feedback-btn:hover {
   background-color: var(--cream-color);
   color: var(--dark-color);
 }
+.feedback-heading {
+  color: var(--dark-color);
+}
 .feedback-form {
   background-color: var(--dark-color);
-  width: max-content;
-  height: max-content;
-  border: none;
-  border-radius: 20px;
-  /* opacity: 0.7; */
 }
 .lable {
   font-size: larger;
@@ -805,16 +774,17 @@ img.technocardimgItem {
 }
 .input {
   width: 100%;
-  border: none;
-  border-radius: 30px;
   background-color: var(--cream-color);
+  border: none;
+  border-radius: 20px;
+  font-size: large;
 }
 .input-review {
   height: 200px;
-  width: max-content;
-}
-.input-name {
-  height: 60px;
-  width: max-content;
+  width: 100%;
+  background-color: var(--cream-color);
+  border: none;
+  border-radius: 20px;
+  font-size: large;
 }
 /* =============== Feedback End ================= */

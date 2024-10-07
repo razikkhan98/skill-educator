@@ -61,7 +61,15 @@ const Home = () => {
     responsive: [
       {
         breakpoint: 1024,
-        settings: { slidesToShow: 4 },
+        settings: { slidesToShow: 3 },
+      },
+      {
+        breakpoint: 968,
+        settings: {
+          slidesToShow: 3,
+          vertical: false,
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 768,
@@ -69,6 +77,14 @@ const Home = () => {
           slidesToShow: 3,
           vertical: false,
           slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          vertical: false,
+          centerMode: false,
         },
       },
       {
