@@ -32,7 +32,7 @@ const Aboutuscard = () => {
                 <Card.Text className="align-left text-color-light">
                   <h5> AIM & MISSION</h5>
                   We aim to Craft A person in such a way that he/ she shall be
-                  able to master the desired skills. These courses involve
+                  able to master the desired skills. Our courses involve
                   outlining key topics, skills, and tools that learners will
                   need to master.
                   <h5>Values</h5>
