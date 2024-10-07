@@ -37,11 +37,7 @@ const Technologies = () => {
   return (
     <>
       <div
-<<<<<<< HEAD
-        className="gradient-bg py-5 d-flex align-items-center justify-content-center"
-=======
         className="node-bg-img py-5 d-flex align-items-center justify-content-center"
->>>>>>> 768288e017722bba87a8ae9babad9b0c918ae212
         id="Technologies"
       >
         <Container>

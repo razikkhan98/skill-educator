@@ -53,16 +53,9 @@ const WhatWeDo = () => {
 
   return (
     <div className="timeline gradient-bg" id="WhatWeDo">
-<<<<<<< HEAD
-      {/* <Header title="w e@e d u c a t o r : ~ $ w h a t w e d o" /> */}
-      <div className="side-img-bg">
-        <Container fluid className="py-5">
-          <ul className="list-unstyled">
-=======
       <div className="side-img-bg">
         <Container fluid className="py-5 px-1">
           <ul className="list-unstyled pt-5">
->>>>>>> 768288e017722bba87a8ae9babad9b0c918ae212
             {CardsData.map((item, index) => (
               <li
                 key={index}
