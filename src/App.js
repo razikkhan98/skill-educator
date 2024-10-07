@@ -1,16 +1,23 @@
-// import logo from './logo.svg';
+import React, { useEffect, useState } from "react";
 import "./App.css";
-// import Home from "./component/pages/home";
-import Team from "./component/pages/team/team";
-// import Feedback from "./component/pages/feedback/feedback";
+import CompanyName from "./component/common/company-name";
+import Loading from "./component/common/loader";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const datat = () => {
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
+    };
+
+    datat();
+  }, []);
+
   return (
-    <>
-      {/* <Home /> */}
-      <Team />
-      {/* <Feedback /> */}
-    </>
+    <React.Fragment>{loading ? <Loading /> : <CompanyName />}</React.Fragment>
   );
 }
 
