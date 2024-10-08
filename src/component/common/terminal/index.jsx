@@ -9,8 +9,8 @@ const Terminal = () => {
     { id: 1, text: "Who are we?", href: "#" },
     { id: 2, text: "What we do?", href: "#WhatWeDo" },
     { id: 3, text: "Tecnologies!", href: "#Technologies" },
-    { id: 4, text: "Instructors!", href: "#Team" },
-    { id: 5, text: "Courses!", href: "#Courses" },
+    { id: 4, text: "Courses!", href: "#Courses" },
+    { id: 5, text: "Instructors!", href: "#Team" },
     { id: 6, text: "Let us know you!", href: "#Feedback" },
   ];
 

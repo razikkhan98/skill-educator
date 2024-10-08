@@ -10,20 +10,21 @@ import { Container } from "react-bootstrap";
 const WhatWeDo = () => {
   const CardsData = [
     {
-      text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi,  efficitur vel neque vitae, rhoncus commodo mi",
+      text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi,  efficitur vel neque vitae, rhoncus commodo miAt vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi,  efficitur vel neque vitae, rhoncus commodo mi",
     },
     {
-      text: "Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi, Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi  efficitur vel neque vitae, rhoncus commodo mi",
+      text: "Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi, Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi  efficitur vel neque vitae, rhoncus commodo miAt vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi,  efficitur vel neque vitae, rhoncus commodo mi",
     },
     {
-      text: "Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi  efficitur vel neque vitae, rhoncus commodo mi",
+      text: "Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi  efficitur vel neque vitae, rhoncus commodo miAt vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi,  efficitur vel neque vitae, rhoncus commodo mi",
     },
     {
-      text: "In mattis elit vitae odio posuere, nec maximus massa varius. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi",
+      text: "In mattis elit vitae odio posuere, nec maximus massa varius. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo miAt vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi,  efficitur vel neque vitae, rhoncus commodo mi",
     },
     {
-      text: "In mattis elit vitae odio posuere, nec maximus massa varius. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi",
+      text: "In mattis elit vitae odio posuere, nec maximus massa varius. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo miAt vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi,  efficitur vel neque vitae, rhoncus commodo mi",
     },
+
   ];
 
   useEffect(() => {
@@ -38,7 +39,7 @@ const WhatWeDo = () => {
     const isElementInViewport = (el) => {
       const rect = el.getBoundingClientRect();
       return (
-        rect.top >= 0 &&
+        rect.top >= 20 &&
         rect.left >= 0 &&
         rect.bottom <=
           (window.innerHeight || document.documentElement.clientHeight) &&
@@ -52,8 +53,8 @@ const WhatWeDo = () => {
   }, []);
 
   return (
-    <div className="timeline gradient-bg" id="WhatWeDo">
-      <div className="side-img-bg">
+    <div className="timeline node-bg-img" id="WhatWeDo">
+      <div className="">
         <Container fluid className="py-5 px-1">
           <ul className="list-unstyled pt-5">
             {CardsData.map((item, index) => (

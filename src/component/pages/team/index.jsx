@@ -4,20 +4,20 @@ import image2 from "../../assets/img/team/avatar10.jpeg";
 import image3 from "../../assets/img/team/avatar13.jpg";
 import image4 from "../../assets/img/team/avatar12.jpg";
 import image5 from "../../assets/img/team/avatar16.jpg";
- 
+
 const items = [
   {
     header: "SAYYED FAIZAN ALI",
     image: image1,
     text: `Specialization :- Automation, Python, Cloud, Machine Learning, Data Science, Cryptocurrencies, Financial Assistant & Business Analyst.`,
   },
- 
+
   {
     header: "SHOEB KHAN",
     image: image2,
-    text: `Image description`,
+    text: `Specialization :- Human Resource Development, Training & Placement, Marketing Accounting.`,
   },
- 
+
   {
     header: "SHUMAIYLA KHAN",
     image: image3,
@@ -31,17 +31,17 @@ const items = [
   {
     header: "RAZIK KHAN",
     image: image5,
-    text: `Image description`,
+    text: `Specialization :- React js, tailwind Css, Css, Html, Js, Node js, React Native`,
   },
 ];
- 
+
 const Team = () => {
   const [activeIndex, setActiveId] = useState(null);
- 
+
   const toggleActive = (index) => {
     setActiveId(activeIndex === index ? null : index);
   };
- 
+
   return (
     <>
       <div
@@ -55,12 +55,15 @@ const Team = () => {
           <div className="row image-accordion gap-3 d-flex justify-content-around">
             {items.map((item, index) => {
               const isActive = activeIndex === index ? "active" : "";
- 
+
               return (
                 <div
                   key={item.id}
                   className={`image-accordion-item ${isActive}`}
                   onClick={() => toggleActive(index)}
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
                 >
                   <img src={item.image} alt={item.header} />
                   <div className="content">
@@ -76,5 +79,5 @@ const Team = () => {
     </>
   );
 };
- 
+
 export default Team;
