@@ -150,7 +150,7 @@ const Contact = () => {
               data-aos-duration="2000"
             >
               <div className="bg-white p-3 rounded-3">
-                <ul class="footer-contact list-unstyled">
+                <ul className="footer-contact list-unstyled">
                   <li className="mb-3 ">
                     <a
                       href="tel:+21236547898"
@@ -217,7 +217,10 @@ const Contact = () => {
                 <h1 className="mb-5">Registration Form</h1>
 
                 <div className="bg-card1 py-4 px-2 rounded-3">
-                  <form onSubmit={handleSubmit} className="text-center d-flex flex-column justify-content-center align-items-center ">
+                  <form
+                    onSubmit={handleSubmit}
+                    className="text-center d-flex flex-column justify-content-center align-items-center "
+                  >
                     {/* Step 1: First and Last Name */}
                     {currentStep === 1 && (
                       <>

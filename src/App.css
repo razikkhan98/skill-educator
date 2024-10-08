@@ -151,7 +151,7 @@ body {
   .footer-title {
     font-size: 15px;
   }
-  
+
   .cursor {
     font-size: 5vw;
   }
@@ -167,7 +167,7 @@ body {
   .company-logo img {
     height: 70px;
   }
-  .about-img img{
+  .about-img img {
     height: auto;
     max-width: 100%;
   }
@@ -242,6 +242,8 @@ body {
 /* =============== Home Page End ============ */
 
 /* =========== Footer Start   ============ */
+/* @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap"); */
+
 .logo img {
   height: 70px;
 }
@@ -503,7 +505,6 @@ body {
 .technology-card:nth-child(4){
   transform: translate3d(4.53207px, -1.46058px, 0px);
 } */
-
 
 .technology-title {
   line-break: normal;
