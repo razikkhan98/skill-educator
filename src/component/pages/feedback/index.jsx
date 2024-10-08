@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 // import Header from "../../common/header/index";
-import {Container,Modal, Button} from "react-bootstrap";
+import { Container, Modal, Button } from "react-bootstrap";
 // import { Row } from "react-bootstrap";
 
 const MyVerticallyCenteredModal = ({ show, onHide }) => {
@@ -14,26 +14,29 @@ const MyVerticallyCenteredModal = ({ show, onHide }) => {
       <Modal.Body className="feedback-form">
         <div>
           <form>
-            <div className="m-3">
               <div className="m-3">
-                <label htmlFor="" className="lable mb-1">Your Name</label>
-                <input type="text" className="input" />
+                <label htmlFor="" className="lable mb-1">
+                  Your Name
+                </label>
+                <input type="text" className="input py-2"/>
               </div>
               <div className="m-3">
-                <label htmlFor="" className="lable mb-1">Your Thoughts</label>
-                <input type="text" className="input-review" />
+                <label htmlFor="" className="lable mb-1">
+                  Your Thoughts
+                </label>
+                <input type="text" className="input-review"/>
               </div>
-            </div>
           </form>
         </div>
       </Modal.Body>
       <Modal.Footer className="feedback-form">
-        <Button className="feedback-btn" onClick={onHide}>SUBMIT</Button>
+        <Button className="feedback-btn" onClick={onHide}>
+          SUBMIT
+        </Button>
       </Modal.Footer>
     </Modal>
   );
 };
-
 
 const Feedback = () => {
   const FeedbackData = [
@@ -76,8 +79,12 @@ const Feedback = () => {
             </div>
           ))}
 
-<div className="my-5 d-flex justify-content-evenly">
-            <Button onClick={() => setModalShow(true)} className="feedback-btn px-4 py-2">
+          <div className="my-5 d-flex justify-content-evenly">
+            <Button
+            varient="dark"
+              onClick={() => setModalShow(true)}
+              className="feedback-btn px-4 py-2"
+            >
               ADD YOUR REVIEW
             </Button>
             <MyVerticallyCenteredModal

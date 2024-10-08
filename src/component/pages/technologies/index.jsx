@@ -1,64 +1,114 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import Slider from "react-slick";
 
 // Images
 import Logo from "../../assets/img/logo/2-nd-logo.png";
-import MachineLearninig from "../../assets/img/tecnologies/machine-learning (1).png";
-import Testing from "../../assets/img/tecnologies/testing.png";
+import MachineLearning from "../../assets/img/tecnologies/machine-learning (1).png";
+import Testing from "../../assets/img/tecnologies/testing.png"; // Automation Testing image
 import Js from "../../assets/img/tecnologies/developer.png";
+import Reactjs from "../../assets/img/tecnologies/react.png";
 import Python from "../../assets/img/tecnologies/python (1).png";
 
 // Icons
 import { FaArrowRight } from "react-icons/fa";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const Technologies = () => {
   const TechnologiesData = [
+    
     {
       logo_img: Logo,
       title: "Machine Learning",
-      image: MachineLearninig,
+      image: MachineLearning,
+      style: { position: "relative", right: "123px",},
     },
     {
       logo_img: Logo,
       title: "Automation Testing",
       image: Testing,
+      style: { position: "relative", bottom: "50px" },
     },
     {
       logo_img: Logo,
       title: "JS",
       image: Js,
+      style: { position: "absolute", bottom: "100px" },
     },
     {
       logo_img: Logo,
       title: "PYTHON",
       image: Python,
+      style: { position: "absolute", bottom: "50px" },
+    },
+    {
+      logo_img: Logo,
+      title: "REACTJS",
+      image: Reactjs,
+      style: { position: "absolute", bottom: "100px" },
     },
   ];
+
+  // Slick slider settings
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4, // Show three cards
+    slidesToScroll: 1, // Slide one card at a time
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <>
       <div
-        className="node-bg-img py-5 d-flex align-items-center justify-content-center"
+        className="gradient-bg d-flex align-items-center justify-content-center"
         id="Technologies"
       >
-        <Container>
-          <Row className="g-4">
-            {TechnologiesData.map((items, index) => (
-              <Col lg={3} md={6} sm={12}>
-                <div class="tecnology-card technology-card-bg py-4 d-flex flex-column align-items-baseline justify-content-start">
-                  <div class="tecnology-card-logo tecnology-logo-bg d-flex align-items-center justify-content-end position-relative techno-logo">
-                    <img src={items.logo_img} alt="Loading" />
+        <Container fluid>
+          {/* Slider for Technologies */}
+          <Slider {...settings}>
+            {TechnologiesData.map((tech, index) => (
+              <div key={index}>
+                <div
+                  className="tecnology-card technology-card-bg py-3 d-flex flex-column align-items-baseline justify-content-start"
+                  data-aos="zoom-in-up"
+                   data-aos-duration="3000"
+                     data-aos-easing="ease-in-back"
+                  style={{
+                    ...tech.style, // Use the style defined for each technology
+                  }}
+                >
+                  <div className="tecnology-card-logo tecnology-logo-bg d-flex align-items-center justify-content-end position-relative techno-logo">
+                    {/* <img src={tech.logo_img} alt="Loading" /> */}
+                    <img src={tech.logo_img} alt={`${tech.title} logo`} />
+
                   </div>
-                  <div class="d-flex align-items-center w-100 justify-content-center technology-title text-uppercase pt-2 fw-bold fs-5">
-                    {items.title}
+                  <div className="d-flex align-items-center w-100 justify-content-center technology-title text-uppercase pt-2 fw-bold fs-6">
+                    {tech.title}
                   </div>
-                  <div class="d-flex align-items-center w-100 justify-content-center flexcardImg py-4">
-                    <img
-                      class="technocardimgItem"
-                      src={items.image}
-                      alt="Loading"
-                    />
+                  <div className="d-flex align-items-center w-100 justify-content-center flexcardImg py-4">
+                    {/* <img className="technocardimgItem" src={tech.image} alt={tech.title} /> */}
+                    <img className="technocardimgItem" src={tech.image} alt={`img of ${tech.title}`} />
+
                   </div>
-                  <div className="d-flex align-items-center w-100 justify-content-center">
+                  <div className="d-flex align-items-center w-100 justify-content-center py-2">
                     <a
                       className="techno-btn position-relative fw-bold py-2 px-3 rounded-pill text-decoration-none text-color-dark"
                       href="/"
@@ -67,12 +117,15 @@ const Technologies = () => {
                     </a>
                   </div>
                 </div>
-              </Col>
+              </div>
             ))}
-          </Row>
+          
+            
+          </Slider>
         </Container>
       </div>
     </>
   );
 };
+
 export default Technologies;

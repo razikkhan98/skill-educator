@@ -48,7 +48,7 @@ const CompanyName = () => {
   return (
     <React.Fragment>
       {isActive === false ? (
-        <div className="bg-gif position-relative d-flex justify-content-center align-items-center">
+        <div className="company-back position-relative d-flex justify-content-center align-items-center">
           <div className="company-logo z-3 mb-5 mx-2">
             <img src={Logo} alt="Loading" />
           </div>

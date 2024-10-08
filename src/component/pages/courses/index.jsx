@@ -43,7 +43,7 @@ const Courses = () => {
     },
   ];
 
-  const [selectedCourse, setSelectedCourse] = useState(CourseData[0]);
+  const [selectedCourse, setSelectedCourse] = useState("");
   const [typedText, setTypedText] = useState("");
 
   const handleSelect = (course) => {
@@ -62,14 +62,20 @@ const Courses = () => {
       } else {
         clearInterval(interval);
       }
-    }, 20)  };
+    }, 20);
+  };
 
   return (
     <div className="background-color-light-brown py-5" id="Courses">
       <Container fluid>
         <Row className="my-5">
-          <Col lg={7}>
-            <div className="background-color-dark course-card position-relative">
+          <Col lg={6}>
+            <div
+              className="background-color-dark course-card position-relative"
+              data-aos="flip-right"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
               <div className="background-color-cream py-1 px-2 d-flex align-items-center justify-content-between">
                 <RxCross2 className="fs-2" />
                 <div className="techno-logo">
@@ -79,17 +85,18 @@ const Courses = () => {
               <div className="header-bottom-line background-color-brown"></div>
               <div className="spacing-title text-color-light px-4">
                 <h1>{selectedCourse.title}</h1>
-                <p className="py-3 text-justify">{typedText}</p> {/* Show typed text here */}
+                <p className="py-2 text-justify">{typedText}</p>{" "}
+                {/* Show typed text here */}
                 <div className="background-color-cream position-absolute bottom-0 end-0 text-color-dark d-flex flex-column justify-content-around align-items-center text-center">
-                  <p className="spacing-title fs-4 me-3">
+                  <p className="spacing-title fs-4 me-3 pt-1">
                     know more : ~ ${" "}
                     <Dropdown as={ButtonGroup}>
-                      <Button variant="light" className="px-5">
+                      <Button variant="dark" className="px-5">
                         Courses
                       </Button>
                       <Dropdown.Toggle
                         split
-                        variant="light"
+                        variant="dark"
                         id="dropdown-split-basic"
                       />
                       <Dropdown.Menu>
@@ -110,7 +117,7 @@ const Courses = () => {
               </div>
             </div>
           </Col>
-          <Col lg={5}>
+          <Col lg={6}>
             <div className="dropdown-bg background-color-cream text-color-dark d-flex align-items-center text-center justify-content-around mt-5">
               <p className="spacing-title fs-3 me-3">
                 search : ~ $

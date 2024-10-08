@@ -15,7 +15,7 @@ const Loader = () => {
   });
   return (
     <React.Fragment>
-      <div class="page-loader bg-gif position-fixed top-0 start-0 d-flex align-items-center justify-content-center w-100 h-100">
+      <div class="page-loader company-back position-fixed top-0 start-0 d-flex align-items-center justify-content-center w-100 h-100">
         <div class="loader">
           <img src={Logo} alt="Loading" />
         </div>
