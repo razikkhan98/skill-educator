@@ -212,9 +212,6 @@ body {
 /* =============== Header End ================= */
 
 /* =============== Home Page Start ============ */
-.home-sec {
-  height: 100vh;
-}
 .item img {
   height: 100%;
   border-radius: 10px;
@@ -222,6 +219,7 @@ body {
 }
 .item {
   height: 140px;
+  margin-top: 2px;
   transform: scale(0.7, 0.7);
   display: flex !important;
   align-items: center;
@@ -237,9 +235,12 @@ body {
 .slick-slide {
   height: 140px;
 }
+.image-container{
+  height: 100vh;
+}
 .image-container img {
   width: 100%;
-  height: auto;
+  height: 100%;
   opacity: 1;
   transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -252,6 +253,8 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+ 
+ 
 
 /* =============== Home Page End ============ */
 
@@ -439,6 +442,7 @@ body {
 }
 /* GENERAL MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* media query */
 @media screen and (max-width: 1024px) {
   .home-sec{
     width: 100%;
@@ -447,10 +451,11 @@ body {
   }
   .image-container{
     width: 100%;
-    height: auto;
+    height: 100%;
   }
+
   .scrollable-slider{
-    height: 33vh;
+    height: 50vh;
     padding: 10px;
   }
   .timeline ul li div {
@@ -460,7 +465,9 @@ body {
     left: -289px;
     /*250+45-6*/
   }
-} 
+}
+ 
+ 
 @media screen and (max-width: 998px) {
   .home-sec{
     width: 100%;
@@ -476,6 +483,7 @@ body {
     padding: 10px;
   }
 }
+ 
  
 @media screen and (max-width: 600px) {
   .home-sec{
@@ -506,7 +514,7 @@ body {
     border-color: transparent var(--brown-color) transparent transparent;
   }
 }
-
+ 
 /* ============ What-We-Do End =========== */
 
 /* SOcial-Icons Start */
@@ -545,7 +553,6 @@ body {
   width: 75%;
   max-width: 230px;
   border-radius: 20px;
-  /* margin: auto; */
 }
 
 .technology-title {
@@ -553,7 +560,6 @@ body {
 }
 .tecnology-card-logo {
   width: 65%;
-  /* height: 50px; */
   margin: 10px 0px;
   border-radius: 0px 50px 50px 0px;
 }
@@ -771,7 +777,7 @@ img.technocardimgItem {
 }
 .terminal-btn {
   position: fixed;
-  bottom: 10%;
+  bottom: 12%;
   right: 4%;
 }
 /* .form-floating > {
@@ -900,32 +906,12 @@ img.technocardimgItem {
   background-color: var(--cream-color);
   color: var(--dark-color);
 }
-.feedback-heading {
-  color: var(--dark-color);
-}
-.feedback-form {
-  background-color: var(--dark-color);
-}
-.lable {
-  font-size: larger;
-  color: var(--cream-color);
-  width: 100%;
-  font-weight: 600;
-}
-.input {
-  width: 100%;
-  background-color: var(--cream-color);
-  border: none;
-  border-radius: 20px;
-
-  font-size: large;
-}
-.input-review {
-  height: 200px;
-  width: 100%;
-  background-color: var(--cream-color);
-  border: none;
-  border-radius: 20px;
-  font-size: large;
-}
 /* =============== Feedback End ================= */
+/* Course Start */
+.course-video{
+  background: url(./component/assets/img/course/Digital\ marketing\ Video.gif) no-repeat center center;
+  height: 85vh;
+  width: auto;
+  background-size: contain;
+  overflow: hidden;
+}

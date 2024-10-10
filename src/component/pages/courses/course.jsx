@@ -5,7 +5,6 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Dropdown from "react-bootstrap/Dropdown";
 // Image
 import Logo from "../../assets/img/logo/2-nd-logo.png";
-
 // Icons
 import { RxCross2 } from "react-icons/rx";
 
@@ -43,8 +42,8 @@ const Courses = () => {
     },
   ];
 
-  const [selectedCourse, setSelectedCourse] = useState("");
-  const [typedText, setTypedText] = useState("");
+  const [selectedCourse, setSelectedCourse] = useState(CourseData[0]);
+  const [typedText, setTypedText] = useState(CourseData[0].description);
 
   const handleSelect = (course) => {
     setSelectedCourse(course);
@@ -62,14 +61,14 @@ const Courses = () => {
       } else {
         clearInterval(interval);
       }
-    }, 20);
+    }, 15);
   };
 
   return (
     <div className="background-color-light-brown py-5" id="Courses">
       <Container fluid>
-        <Row className="my-5">
-          <Col lg={6}>
+        <Row className="my-5 g-5">
+          <Col lg={7}>
             <div
               className="background-color-dark course-card position-relative"
               data-aos="flip-right"
@@ -117,8 +116,8 @@ const Courses = () => {
               </div>
             </div>
           </Col>
-          <Col lg={6}>
-            <div className="dropdown-bg background-color-cream text-color-dark d-flex align-items-center text-center justify-content-around mt-5">
+          <Col lg={5}>
+            {/* <div className="dropdown-bg background-color-cream text-color-dark d-flex align-items-center text-center justify-content-around mt-5">
               <p className="spacing-title fs-3 me-3">
                 search : ~ $
                 <Dropdown as={ButtonGroup}>
@@ -135,7 +134,7 @@ const Courses = () => {
                       <Dropdown.Item
                         key={course.id}
                         eventKey={index}
-                        onClick={() => handleSelect(course)} // Call handleSelect on click
+                        onClick={() => handleSelect(course)}
                       >
                         {course.title}
                       </Dropdown.Item>
@@ -144,7 +143,11 @@ const Courses = () => {
                 </Dropdown>
               </p>
             </div>
-            <div className="header-bottom-line background-color-brown"></div>
+            <div className="header-bottom-line background-color-brown"></div> */}
+            <div className="video">
+              <div className="course-video"></div>
+              {/* <video src={Digitalvideo}></video> */}
+            </div>
           </Col>
         </Row>
       </Container>
