@@ -44,7 +44,7 @@ const Aboutuscard = () => {
                 </Card.Header>
                 <div className="header-bottom-line background-color-brown"></div>
                 <Card.Body className="background-color-dark ">
-                  <Card.Text className="align-left text-color-light">
+                  <Card.Text className="align-left text-color-light ">
                     <h5> AIM & MISSION</h5>
                     We aim to Craft A person in such a way that he/ she shall be
                     able to master the desired skills. These courses involve

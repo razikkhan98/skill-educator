@@ -44,7 +44,7 @@ const Terminal = () => {
                 <img src={Logo} alt="Loading" />
               </div>
               <h2
-                className="modal-title animated-text-2 spacing-title fs-5"
+                className="modal-title animated-text-2 fs-5"
                 id="staticBackdropLabel"
               >
                 INTELLIGENCE EDUCATORS

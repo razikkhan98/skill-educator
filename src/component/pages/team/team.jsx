@@ -61,9 +61,9 @@ const Team = () => {
                   key={item.id}
                   className={`image-accordion-item ${isActive}`}
                   onClick={() => toggleActive(index)}
-                  data-aos="fade-down"
-                  data-aos-easing="linear"
-                  data-aos-duration="1500"
+                  // data-aos="fade-down"
+                  // data-aos-easing="linear"
+                  // data-aos-duration="1500"
                 >
                   <img src={item.image} alt={item.header} />
                   <div className="content">

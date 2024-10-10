@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Logo from "../../assets/img/logo/2-nd-logo.png";
 
 // Components
-import Main from "../../pages/Main";
+import Main from "../../pages/Main/main";
 
 const CompanyName = () => {
   const binary = "010101010101010101";

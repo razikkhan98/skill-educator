@@ -81,7 +81,7 @@ const Technologies = () => {
         className="gradient-bg d-flex align-items-center justify-content-center"
         id="Technologies"
       >
-        <Container fluid>
+        <Container fluid className="pt-5">
           {/* Slider for Technologies */}
           <Slider {...settings}>
             {TechnologiesData.map((tech, index) => (

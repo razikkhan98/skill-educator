@@ -63,32 +63,32 @@ const Footer = () => {
                 <IoCall className="social-icon rounded-circle fs-2 me-2" />
                 +2 123 654 7898
               </Nav.Link>
-              <Nav.Link class="nav-link fs-5" href="mailto:info@example.com">
+              <Nav.Link className="nav-link fs-5" href="mailto:info@example.com">
                 <IoIosMail className="social-icon rounded-circle fs-2 me-2" />
                 info123@gmail.com
               </Nav.Link>
             </Nav>
             <div className="d-flex">
               <a
-                class="social-btn d-flex align-items-center justify-content-center me-4"
+                className="social-btn d-flex align-items-center justify-content-center me-4"
                 href="/#"
               >
                 <FaFacebookF className="btn-icon fs-4" />
               </a>
               <a
-                class="social-btn d-flex align-items-center justify-content-center me-4"
+                className="social-btn d-flex align-items-center justify-content-center me-4"
                 href="https://in.linkedin.com/in/skill-intelligence-world-ba479028b"
               >
                 <FaLinkedinIn className="btn-icon fs-4" />
               </a>
               <a
-                class="social-btn d-flex align-items-center justify-content-center me-4"
+                className="social-btn d-flex align-items-center justify-content-center me-4"
                 href="https://www.instagram.com/skill_intelligence_world_9213/"
               >
                 <FaInstagram className="btn-icon fs-4" />
               </a>
               <a
-                class="social-btn d-flex align-items-center justify-content-center me-4"
+                className="social-btn d-flex align-items-center justify-content-center me-4"
                 href="/#"
               >
                 <FaWhatsapp className="btn-icon fs-4" />

@@ -150,7 +150,7 @@ const Contact = () => {
               data-aos-duration="2000"
             >
               <div className="bg-white p-3 rounded-3">
-                <ul class="footer-contact list-unstyled">
+                <ul className="footer-contact list-unstyled">
                   <li className="mb-3 ">
                     <a
                       href="tel:+21236547898"
