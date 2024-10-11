@@ -14,31 +14,57 @@ const Courses = () => {
       id: "action-1",
       title: "Front-End Development",
       description:
-        " Frontend refers to the visual or interactive interface of a website, webpage, or an application that the user interacts with. Therefore, Front-end developers are responsible for ensuring that a website looks good on all devices and that it implements the client's vision and design concept. This course is a complete package of languages like HTML, CSS, JavaScript, React and Node and the students whether they’re on beginners’ level will be able to understand the concepts very easily as they will be given regular practice sets and will learn to work on some real-world projects. The students will be trained by expert educators who ensure to develop the basic and advanced skills in the students that will be helpful for them in their careers ahead.",
+        " If you’re interested in building your career in front-end development, then this course may help you in mastering the basic and advanced skills required for your career ahead. The technologies included in this course are html, CSS, JavaScript, ReactJS and NodeJS. The students will be trained by experienced educators who are passionate about their students, growing in the IT industry.",
+      video: "front-end-video",
     },
     {
       id: "action-2",
       title: "Back-End Development",
       description:
-        " Back-end means the server side of software , which focuses on everything you can't see on a website. Back-end developers ensure the website performs correctly, focusing on databases, back-end logic, application programming interface (APIs), architecture, and servers.This course includes programming languages such as C, C++, python, JavaScript, Java. The students will be trained by expert educators who ensure to develop the basic and advanced skills in the students that will be helpful for them in their careers ahead.",
+        " This course provides an in-depth introduction to backend development, including server-side programming, database management, and API design. This course may help you in mastering the basic and advanced skills required for your career ahead. The technologies included in this course are Node.js, Python, Ruby, Java. The students will be trained by experienced educators who are passionate about their students growing in the IT industry.",
+      video: "back-end-video",
     },
     {
       id: "action-3",
       title: "Full-Stack Development",
       description:
-        " Full stack development means being able to build both the front end (what users see and interact with) and the back end (the server, database, and application logic) of a website or application. This course will help developers to build both the front end and back end, making them capable of creating a complete web application from start to finish.",
+        " This course covers the complete in-depth introduction of full stack web development, enabling students to build dynamic web applications from scratch. Participants will learn both frontend backend and technologies, mastering the skills needed to create, deploy, and maintain applications",
+      video: "full-stack-video",
     },
     {
       id: "action-4",
-      title: "Machine Learning",
+      title: "AI & Machine Learning",
       description:
-        " Machine learning is a branch of artificial intelligence (AI) that focuses on creating systems that can learn from data and improve their performance over time without being explicitly programmed. From predicting customer behavior to powering self-driving cars, machine learning is at the heart of modern innovation.This course is designed to introduce you to the fascinating world of machine learning, a field that is revolutionizing industries and shaping the future of technology. Whether you're new to programming or an experienced developer, this course will equip you with the skills and knowledge to build intelligent systems that can learn and make decisions.",
+        " Artificial intelligence means the idea of a machine that can mimic human intelligence whereas, Machine learning aims to teach a machine how to perform a specific task and provide accurate results by identifying patterns. This course gives an in-depth introduction to artificial intelligence (AI) and machine learning (ML), including the fundamental concepts, techniques, and applications that are shaping the future of technology. Students will gain hands-on experience in developing AI and ML models and understand how to apply these technologies to solve real-world problems.",
+      video: "machine-learning-video",
     },
     {
       id: "action-5",
       title: "Automation Testing",
       description:
-        " Automation is like having a robot or software do repetitive tasks for you, so you don’t have to do them yourself. It makes life easier by handling routine tasks efficiently. This course is designed to introduce you to the exciting field of automation, whether you’re a beginner looking to understand the basics or a professional aiming to enhance your skills. We will explore a wide range of topics, from the fundamental concepts of automation to hands-on projects that will equip you with the practical knowledge needed to implement automation in various settings.",
+        " This course provides an in-depth introduction to automation testing, equipping students with the knowledge and skills to effectively automate testing processes for software applications. Students will learn various testing frameworks, tools, and best practices to ensure high-quality software delivery. The students will be trained by experienced educators who are passionate about their students growing in the IT industry.",
+      video: "automation-video",
+    },
+    {
+      id: "action-6",
+      title: "Ethical Hacking",
+      description:
+        " Ethical hacking is an authorized attempt to gain unauthorized access to a computer system, application, or data using the strategies and actions of malicious attackers. This practice helps identify security vulnerabilities that can then be resolved before a malicious attacker can exploit them. This course provides a thorough introduction to ethical hacking and cybersecurity principles, equipping students with the skills to identify vulnerabilities in systems and protect against cyber threats. Participants will learn the methodologies and tools used by ethical hackers to assess and enhance security measures.",
+      video: "ethical-hacking-video",
+    },
+    {
+      id: "action-7",
+      title: "Data Analysis",
+      description:
+        " Enter the world of data analysis and learn how to transform raw data into actionable insights. This course is designed to guide students through the entire data analysis process, from data collection to interpretation, using industry-standard tools and techniques. Participants will learn to use various tools and techniques to extract insights from data, making informed decisions in business, research, and other fields.",
+      video: "data-analysis-video",
+    },
+    {
+      id: "action-8",
+      title: "Digital Marketing",
+      description:
+        "  A digital marketing course helps students to promote and advertise their products and services online efficiently via multiple digital channels. This course provides a comprehensive introduction to digital marketing, equipping students with the tools and strategies needed to effectively promote products and services online. From social media to search engine optimization, participants will learn how to create, implement, and measure successful digital marketing campaigns.",
+      video: "digital-marketing-video",
     },
   ];
 
@@ -145,8 +171,7 @@ const Courses = () => {
             </div>
             <div className="header-bottom-line background-color-brown"></div> */}
             <div className="video">
-              <div className="course-video"></div>
-              {/* <video src={Digitalvideo}></video> */}
+              <div className={`course-video ${selectedCourse.video}`}></div>
             </div>
           </Col>
         </Row>

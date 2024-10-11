@@ -909,9 +909,34 @@ img.technocardimgItem {
 /* =============== Feedback End ================= */
 /* Course Start */
 .course-video{
-  background: url(./component/assets/img/course/Digital\ marketing\ Video.gif) no-repeat center center;
   height: 85vh;
   width: auto;
-  background-size: contain;
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.automation-video{
+  background-image: url(./component/assets/img/course/Automation\ testing\ Video.gif);
+}
+.digital-marketing-video{
+  background-image: url(./component/assets/img/course/Digital\ marketing\ Video\ \(1\).gif);
+}
+.full-stack-video{
+  background-image: url(./component/assets/img/course/FUll\ Stack\ Development\ Video.gif);
+}
+.front-end-video{
+  background-image: url(./component/assets/img/course/Frontend\ Development\ Video.gif);
+}
+.back-end-video{
+  background-image: url(./component/assets/img/course/Backend\ Development\ Video.gif);
+}
+.machine-learning-video{
+  background-image: url(./component/assets//img/course/_AI\ and\ Machine\ learning\ Video.gif);
+}
+.data-analysis-video{
+  background-image: url(./component/assets/img/course/Data\ analysis\ Video.gif);
+}
+.ethical-hacking-video{
+  background-image: url(./component/assets/img/course/Ethical\ Hacking\ video.gif);
 }
