@@ -235,7 +235,7 @@ body {
 .slick-slide {
   height: 140px;
 }
-.image-container{
+.image-container {
   height: 100vh;
 }
 .image-container img {
@@ -253,12 +253,12 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
- 
- 
 
 /* =============== Home Page End ============ */
 
 /* =========== Footer Start   ============ */
+/* @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap"); */
+
 .logo img {
   height: 70px;
 }
@@ -444,17 +444,17 @@ body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* media query */
 @media screen and (max-width: 1024px) {
-  .home-sec{
+  .home-sec {
     width: 100%;
     height: auto;
     flex-direction: column;
   }
-  .image-container{
+  .image-container {
     width: 100%;
     height: 100%;
   }
 
-  .scrollable-slider{
+  .scrollable-slider {
     height: 50vh;
     padding: 10px;
   }
@@ -466,36 +466,34 @@ body {
     /*250+45-6*/
   }
 }
- 
- 
+
 @media screen and (max-width: 998px) {
-  .home-sec{
+  .home-sec {
     width: 100%;
     height: auto;
     flex-direction: column;
   }
-  .image-container{
+  .image-container {
     width: 100%;
     height: auto;
   }
-  .scrollable-slider{
+  .scrollable-slider {
     height: auto;
     padding: 10px;
   }
 }
- 
- 
+
 @media screen and (max-width: 600px) {
-  .home-sec{
+  .home-sec {
     width: 100%;
     height: auto;
     flex-direction: column;
   }
-  .image-container{
+  .image-container {
     width: 100%;
     height: auto;
   }
-  .scrollable-slider{
+  .scrollable-slider {
     height: auto;
     padding: 10px;
   }
@@ -514,7 +512,7 @@ body {
     border-color: transparent var(--brown-color) transparent transparent;
   }
 }
- 
+
 /* ============ What-We-Do End =========== */
 
 /* SOcial-Icons Start */
@@ -908,7 +906,7 @@ img.technocardimgItem {
 }
 /* =============== Feedback End ================= */
 /* Course Start */
-.course-video{
+.course-video {
   height: 85vh;
   width: auto;
   overflow: hidden;
@@ -916,27 +914,29 @@ img.technocardimgItem {
   background-position: center;
   background-size: contain;
 }
-.automation-video{
+.automation-video {
   background-image: url(./component/assets/img/course/Automation\ testing\ Video.gif);
 }
-.digital-marketing-video{
-  background-image: url(./component/assets/img/course/Digital\ marketing\ Video\ \(1\).gif);
+.digital-marketing-video {
+  background-image: url(./component/assets/img/course/Digital\marketing\Video\\(
+      1\
+    ).gif);
 }
-.full-stack-video{
+.full-stack-video {
   background-image: url(./component/assets/img/course/FUll\ Stack\ Development\ Video.gif);
 }
-.front-end-video{
+.front-end-video {
   background-image: url(./component/assets/img/course/Frontend\ Development\ Video.gif);
 }
-.back-end-video{
+.back-end-video {
   background-image: url(./component/assets/img/course/Backend\ Development\ Video.gif);
 }
-.machine-learning-video{
+.machine-learning-video {
   background-image: url(./component/assets//img/course/_AI\ and\ Machine\ learning\ Video.gif);
 }
-.data-analysis-video{
+.data-analysis-video {
   background-image: url(./component/assets/img/course/Data\ analysis\ Video.gif);
 }
-.ethical-hacking-video{
+.ethical-hacking-video {
   background-image: url(./component/assets/img/course/Ethical\ Hacking\ video.gif);
 }

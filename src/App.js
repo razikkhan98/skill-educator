@@ -3,7 +3,6 @@ import "./App.css";
 import CompanyName from "./component/common/company-name";
 import Loading from "./component/common/loader";
 
-
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -18,9 +17,7 @@ function App() {
   }, []);
 
   return (
-    <React.Fragment>
-      {loading ? <Loading /> : <CompanyName />}
-    </React.Fragment>
+    <React.Fragment>{loading ? <Loading /> : <CompanyName />}</React.Fragment>
   );
 }
 
