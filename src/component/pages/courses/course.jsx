@@ -7,7 +7,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import Logo from "../../assets/img/logo/2-nd-logo.png";
 // Icons
 import { RxCross2 } from "react-icons/rx";
-
+import { FaUserEdit, FaBookOpen, FaCalendarAlt } from "react-icons/fa";
 const Courses = () => {
   const CourseData = [
     {
@@ -87,7 +87,7 @@ const Courses = () => {
       } else {
         clearInterval(interval);
       }
-    }, 15);
+    }, 10);
   };
 
   return (
@@ -113,8 +113,8 @@ const Courses = () => {
                 <p className="py-2 text-justify">{typedText}</p>{" "}
                 {/* Show typed text here */}
                 <div className="background-color-cream position-absolute bottom-0 end-0 text-color-dark d-flex flex-column justify-content-around align-items-center text-center">
-                  <p className="spacing-title fs-4 me-3 pt-1">
-                    know more : ~ ${" "}
+                  <p className="spacing-title fs-4 mx-3 pt-1">
+                    Search : ~ ${" "}
                     <Dropdown as={ButtonGroup}>
                       <Button variant="dark" className="px-5">
                         Courses
@@ -169,9 +169,22 @@ const Courses = () => {
                 </Dropdown>
               </p>
             </div>
-            <div className="header-bottom-line background-color-brown"></div> */}
+            // <div className="header-bottom-line background-color-brown"></div> */}
             <div className="video">
               <div className={`course-video ${selectedCourse.video}`}></div>
+            </div>
+            <div className="d-flex justify-content-center pt-2 gap-3">
+              <button className="techno-btn position-relative d-flex align-items-center fw-bold py-2 px-3 rounded-pill text-color-dark">
+                <FaUserEdit /> Details
+              </button>
+              <button className="techno-btn position-relative d-flex align-items-center fw-bold py-2 px-3 rounded-pill text-color-dark">
+                <FaBookOpen /> Enroll
+              </button>
+              <button className="techno-btn position-relative d-flex align-items-center fw-bold py-2 px-3 rounded-pill text-color-darks">
+                {" "}
+                <FaCalendarAlt />
+                Batches
+              </button>
             </div>
           </Col>
         </Row>

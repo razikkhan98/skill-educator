@@ -18,24 +18,20 @@ const Feedback = () => {
   };
   const FeedbackData = [
     {
-      heading: "NAME",
-      comment:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      heading: "SAKSHEE",
+      comment: "Great experience! The instructors were knowledgeable, and the hands-on labs were super helpful. I landed a job soon after completing my course."
     },
     {
-      heading: "NAME",
-      comment:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      heading: "AREEBA",
+      comment:"Good course structure with experienced instructors. Some sessions felt rushed, but overall, I learned a lot and feel more confident in my skills."
     },
     {
-      heading: "NAME",
-      comment:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      heading: "JUNED ABBASI",
+      comment: "Decent training, perfect for beginners to reach advance. Practical projects have made learning easy."
     },
     {
-      heading: "NAME",
-      comment:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      heading: "SHUMAILA KHAN",
+      comment: "Learning from INTELLIGENCE EDUCATORS Training Institute was a great experience. The instructors were very knowledgeable, and the curriculum was up-to-date with industry standards."
     },
   ];
   return (
@@ -54,7 +50,6 @@ const Feedback = () => {
               </div>
             </div>
           ))}
-
           <div className="my-5 d-flex justify-content-evenly">
             {/* <!-- Button trigger modal --> */}
             <button

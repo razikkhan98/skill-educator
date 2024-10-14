@@ -10,19 +10,24 @@ import { Container } from "react-bootstrap";
 const WhatWeDo = () => {
   const CardsData = [
     {
-      text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi,  efficitur vel neque vitae, rhoncus commodo miAt vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi,  efficitur vel neque vitae, rhoncus commodo mi",
+      heading: "Skilled Instructors –",
+      text: "Intelligence educators have best skilled and professional instructors or educators that help students in their learning in an easy and effective way. we create and administer assessments to measure learning progress. By this, the educators will be able to know about the weaknesses of each student so that they will focus on those things individually for each student.",
     },
     {
-      text: "Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi, Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi  efficitur vel neque vitae, rhoncus commodo miAt vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi,  efficitur vel neque vitae, rhoncus commodo mi",
+      heading: "Modes Of Classes –",
+      text: "Classes are conducted in various modes including offline, online over the internet and a combination of online and offline allowing for flexibility and diverse learning experiences. Each mode has its own strengths and can be chosen based on the learning objectives, the subject matter, and the needs of the students.",
     },
     {
-      text: "Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi  efficitur vel neque vitae, rhoncus commodo miAt vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi,  efficitur vel neque vitae, rhoncus commodo mi",
+      heading: "Personalized Support & Guidance –",
+      text: "Your success is our priority. We offer personalized support through dedicated advisors, career counselors, and tutors to help you stay on track, overcome challenges, and achieve your goals.",
     },
     {
-      text: "In mattis elit vitae odio posuere, nec maximus massa varius. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo miAt vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi,  efficitur vel neque vitae, rhoncus commodo mi",
+      heading: "Career Service –",
+      text: "Helping students with career planning, resume building, and interview preparation. Also, Connecting students with internship or job opportunities. Additional help for students struggling with course content.",
     },
     {
-      text: "In mattis elit vitae odio posuere, nec maximus massa varius. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo miAt vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi.  efficitur vel neque vitae, rhoncus commodo mi,  efficitur vel neque vitae, rhoncus commodo mi",
+      heading: "Lifelong Learning Commitment –",
+      text: "Education doesn’t stop at graduation. We offer lifelong learning opportunities, including advanced courses, professional development, and alumni resources, to help you stay ahead in your career and continue your personal growth. Choose Intelligence Educators for a learning experience that is not only educational but also empowering, engaging, and transformative. Your future starts here, and we’re excited to be a part of your journey!",
     },
 
   ];
@@ -63,6 +68,7 @@ const WhatWeDo = () => {
                 className="position-relative text-color-light pt-4"
               >
                 <div className="position-relative bottom-0 background-color-brown p-3">
+                  <p className="fw-bold fs-5">{item.heading}</p>
                   <p> {item.text}</p>
                 </div>
               </li>
