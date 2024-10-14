@@ -63,15 +63,15 @@ body {
 /* =============== Loader End ==================== */
 
 /* =========== Company Name Start ============ */
-.bg-gif {
+/* .bg-gif {
   height: 100vh;
   width: auto;
   background-image: url(./component/assets/img/background/backgroung-img.gif);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.bg-gif::before {
+} */
+/* .bg-gif::before {
   content: "";
   position: absolute;
   top: 0;
@@ -85,6 +85,14 @@ body {
     rgba(64, 49, 51, 0.4)
   );
   z-index: 1;
+} */
+.company-back {
+  height: 100vh;
+  width: auto;
+  background-image: url(./component/assets/img/background/back-ground.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .company-logo img {
   height: 120px;
@@ -211,6 +219,7 @@ body {
 }
 .item {
   height: 140px;
+  margin-top: 2px;
   transform: scale(0.7, 0.7);
   display: flex !important;
   align-items: center;
@@ -226,17 +235,23 @@ body {
 .slick-slide {
   height: 140px;
 }
+.image-container {
+  height: 100vh;
+}
 .image-container img {
   width: 100%;
-  height: auto;
+  height: 100%;
   opacity: 1;
   transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .scrollable-slider {
-  height: 100%;
+  height: 100vh;
   overflow-y: auto;
   position: relative;
   cursor: pointer;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 /* =============== Home Page End ============ */
@@ -343,11 +358,14 @@ body {
     #655847,
     #403133
   );
-}
-.side-img-bg {
-  background-image: url(././component/assets/img/about/14.png);
+
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
+
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .timeline ul li {
@@ -424,8 +442,22 @@ body {
 }
 /* GENERAL MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* media query */
+@media screen and (max-width: 1024px) {
+  .home-sec {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  .image-container {
+    width: 100%;
+    height: 100%;
+  }
 
-@media screen and (max-width: 900px) {
+  .scrollable-slider {
+    height: 50vh;
+    padding: 10px;
+  }
   .timeline ul li div {
     width: 250px;
   }
@@ -435,7 +467,36 @@ body {
   }
 }
 
+@media screen and (max-width: 998px) {
+  .home-sec {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  .image-container {
+    width: 100%;
+    height: auto;
+  }
+  .scrollable-slider {
+    height: auto;
+    padding: 10px;
+  }
+}
+
 @media screen and (max-width: 600px) {
+  .home-sec {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  .image-container {
+    width: 100%;
+    height: auto;
+  }
+  .scrollable-slider {
+    height: auto;
+    padding: 10px;
+  }
   .timeline ul li {
     margin-left: 20px;
   }
@@ -480,37 +541,23 @@ body {
 
 /* ----------- Technologies Start ------------ */
 .node-bg-img {
-  background-image: url(./component/assets/img/background/node-bg.png);
+  background-image: url(./component/assets/img/about/about-background.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
 }
 .tecnology-card {
-  width: 90%;
-  max-width: 300px;
+  width: 75%;
+  max-width: 230px;
   border-radius: 20px;
-  margin: auto;
 }
-/* .technology-card:nth-child(1){
-  transform: translate3d(0.97862px, -1.28949px, 0px);
-}
-.technology-card:nth-child(2){
-  transform: translate3d(2.21331px, -1.05441px, 0px);
-}
-.technology-card:nth-child(3){
-  transform: translate3d(3.42562px, -1.02941px, 0px);
-}
-.technology-card:nth-child(4){
-  transform: translate3d(4.53207px, -1.46058px, 0px);
-} */
 
 .technology-title {
   line-break: normal;
 }
 .tecnology-card-logo {
-  width: 70%;
-  height: 50px;
+  width: 65%;
   margin: 10px 0px;
   border-radius: 0px 50px 50px 0px;
 }
@@ -596,6 +643,103 @@ img.technocardimgItem {
 .techno-btn:active {
   scale: 1;
 }
+.slick-list {
+  overflow: visible !important;
+}
+
+/* General styling for all screen sizes */
+.tecnology-card {
+  position: relative !important;
+  transition: all 0.3s ease !important;
+}
+
+.tecnology-card-logo img {
+  max-width: 100px !important; /* Adjust size as needed */
+}
+
+.technocardimgItem {
+  max-width: 200px !important; /* Adjust image size based on content */
+}
+
+/* For small devices (phones) */
+@media (max-width: 576px) {
+  .tecnology-card:nth-child(1) {
+    right: 0 !important;
+  }
+
+  .tecnology-card:nth-child(2) {
+    right: 0 !important;
+    bottom: 20px !important;
+  }
+
+  .tecnology-card:nth-child(3) {
+    left: 0 !important;
+    bottom: 40px !important;
+  }
+
+  .tecnology-card:nth-child(4) {
+    left: 0 !important;
+    bottom: 60px !important;
+  }
+
+  .tecnology-card:nth-child(5) {
+    left: 0 !important;
+    bottom: 80px !important;
+  }
+}
+
+/* For medium devices (tablets) */
+@media (min-width: 576px) and (max-width: 992px) {
+  .tecnology-card:nth-child(1) {
+    right: 60px !important;
+  }
+
+  .tecnology-card:nth-child(2) {
+    right: 40px !important;
+    bottom: 50px !important;
+  }
+
+  .tecnology-card:nth-child(3) {
+    left: 45px !important;
+    bottom: 100px !important;
+  }
+
+  .tecnology-card:nth-child(4) {
+    left: 120px !important;
+    bottom: 50px !important;
+  }
+
+  .tecnology-card:nth-child(5) {
+    left: 190px !important;
+  }
+}
+
+/* For large devices (desktops) */
+@media (min-width: 992px) {
+  .tecnology-card:nth-child(1) {
+    right: 123px !important;
+  }
+
+  .tecnology-card:nth-child(2) {
+    right: 40px !important;
+    bottom: 50px !important;
+  }
+
+  .tecnology-card:nth-child(3) {
+    left: 45px !important;
+    bottom: 110px !important;
+  }
+
+  .tecnology-card:nth-child(4) {
+    left: 120px !important;
+    bottom: 50px !important;
+  }
+
+  .tecnology-card:nth-child(5) {
+    left: 190px !important;
+  }
+}
+
 /* ----------- Technologies End ------------ */
 
 /* ---------- Terminal Button Start  ------------*/
@@ -631,7 +775,7 @@ img.technocardimgItem {
 }
 .terminal-btn {
   position: fixed;
-  bottom: 10%;
+  bottom: 12%;
   right: 4%;
 }
 /* .form-floating > {
@@ -651,114 +795,84 @@ img.technocardimgItem {
   }
 }
 /* Terminal Button End */
+/* ============= Course Start ================= */
+.course-card {
+  min-height: 600px;
+}
+
+/* ============= Course End ================= */
 
 /* =============== Team Start ================= */
 .tagline {
-  font-size: 30px;
-  font-weight: 600;
-  color: var(--dark-color);
+  font-size: 20px;
   letter-spacing: 4px;
-  text-align: center;
 }
-.team-card {
-  width: 250px;
-  height: 345px;
-  background: var(--cream-color);
-  border-radius: 10px;
-  text-align: center;
-  transition: all 0.5s;
+.image-accordion {
   position: relative;
-}
-.team-card:hover {
-  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
-  background-color: var(--cream-color);
-}
-.team-card .blob {
-  height: 10px;
-  width: 75%;
-  border-radius: 0 0 30px 30px;
-  margin: 0 auto;
-  background-color: var(--dark-color);
-  visibility: visible;
-  transition: all 0.1s;
-}
-.team-card:hover .blob {
-  height: 0;
-}
-.team-card .img img {
-  display: flex;
-  margin: 30px auto 10px auto;
-  width: 100px;
-  height: 100px;
-  background-color: var(--dark-color);
-  border-radius: 50%;
-  font-size: 11px;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.1s;
-}
-.team-member {
-  color: #191516;
-}
-.team-card:hover .img {
-  visibility: hidden;
-  transition: all 0.1s;
-}
-.team-card h2 {
-  padding: 15px 10px;
-  font-size: 25px;
-  transition: all 0.1s;
-  line-height: 17px;
-}
-.team-card span {
-  font-size: 18px;
-}
-.team-card:hover h2 {
-  opacity: 0;
-}
-.team-card > .details {
-  opacity: 0;
-  transition: all 0.1s;
-  font-size: xx-small;
-}
-.team-card:hover > .details {
-  position: absolute;
-  opacity: 1;
-  transition: all 0.1s;
-  font-size: medium;
-}
-.team-card:hover > p {
-  opacity: 1;
-  transition: all 0.1s;
-  background-color: var(--dark-color);
-  height: 100px;
-  margin-top: 60px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.socilamedialink {
-  visibility: hidden;
-}
-.team-card:hover > a {
-  visibility: hidden;
-}
-.socialmedia {
-  opacity: 0;
-  height: 5px;
-  width: 5px;
-  visibility: hidden;
-  color: var(--dark-color);
-}
-.team-card:hover .socialmedia {
-  visibility: visible;
-  opacity: 1;
-  width: 58px;
-  height: 70px;
-  color: var(--cream-color);
+  z-index: 2;
+  gap: 16px;
+  cursor: pointer;
+  font-family: "Euclid Circular A", "Poppins";
 }
 
+.image-accordion-item {
+  position: relative;
+  overflow: hidden;
+  width: 180px;
+  height: 300px;
+  border-radius: 36px;
+  display: flex;
+  align-items: flex-end;
+  opacity: 0.9;
+  transition: 0.5s;
+}
+
+.image-accordion-item:hover {
+  opacity: 0.75;
+}
+
+.image-accordion-item h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(255 255 255 / 96%);
+}
+
+.image-accordion-item p {
+  color: rgb(255 255 255 / 66%);
+}
+
+.image-accordion-item.active {
+  width: 300px;
+  opacity: 1;
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  padding: 20px;
+  background: linear-gradient(to bottom, rgb(0 0 0 / 10%), rgb(0 0 0 / 100%));
+  transition: 0.25s;
+}
+
+.image-accordion-item.active .content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.image-accordion-item img {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  height: 100%;
+  filter: grayscale(0.3);
+}
 /* =============== Team End ================= */
 /* =============== Feedback End ================= */
 .feedback-box {
@@ -783,39 +897,46 @@ img.technocardimgItem {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 600;
-  background-color: #ffffff;
-  color: var(--dark-color);
+  background-color: var(--dark-color);
+  color: var(--cream-color);
 }
 .feedback-btn:hover {
   background-color: var(--cream-color);
   color: var(--dark-color);
 }
-.feedback-form {
-  background-color: var(--dark-color);
-  width: max-content;
-  height: max-content;
-  border: none;
-  border-radius: 20px;
-  /* opacity: 0.7; */
-}
-.lable {
-  font-size: larger;
-  color: var(--cream-color);
-  width: 100%;
-  font-weight: 600;
-}
-.input {
-  width: 100%;
-  border: none;
-  border-radius: 30px;
-  background-color: var(--cream-color);
-}
-.input-review {
-  height: 200px;
-  width: max-content;
-}
-.input-name {
-  height: 60px;
-  width: max-content;
-}
 /* =============== Feedback End ================= */
+/* Course Start */
+.course-video {
+  height: 85vh;
+  width: auto;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.automation-video {
+  background-image: url(./component/assets/img/course/Automation\ testing\ Video.gif);
+}
+.digital-marketing-video {
+  background-image: url(./component/assets/img/course/Digital\marketing\Video\\(
+      1\
+    ).gif);
+}
+.full-stack-video {
+  background-image: url(./component/assets/img/course/FUll\ Stack\ Development\ Video.gif);
+}
+.front-end-video {
+  background-image: url(./component/assets/img/course/Frontend\ Development\ Video.gif);
+}
+.back-end-video {
+  background-image: url(./component/assets/img/course/Backend\ Development\ Video.gif);
+}
+.machine-learning-video {
+  background-image: url(./component/assets//img/course/_AI\ and\ Machine\ learning\ Video.gif);
+}
+.data-analysis-video {
+  background-image: url(./component/assets/img/course/Data\ analysis\ Video.gif);
+}
+.ethical-hacking-video {
+  background-image: url(./component/assets/img/course/Ethical\ Hacking\ video.gif);
+}
