@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
- 
+
 // Images
 import Home1 from "../../assets/img/home/1.jpg";
 import Home2 from "../../assets/img/home/2.jpg";
@@ -18,7 +18,15 @@ import Home6 from "../../assets/img/home/6.jpg";
 import Home7 from "../../assets/img/home/7.jpg";
 import Home8 from "../../assets/img/home/8.jpg";
 import Terminal from "../../common/terminal/terminal";
- 
+import Aboutuscard from "../about/about";
+import Header from "../../common/header/header";
+import WhatWeDo from "../what-we-do/whatWeDo";
+import Technologies from "../technologies/technologies";
+import Courses from "../courses/course";
+import Team from "../team/team";
+import Footer from "../../common/footer/footer";
+import Feedback from "../feedback/feedback";
+
 const slides = [
   { src: Home1, alt: "Slide 0" },
   { src: Home2, alt: "Slide 1" },
@@ -29,9 +37,9 @@ const slides = [
   { src: Home7, alt: "Slide 6" },
   { src: Home8, alt: "Slide 7" },
 ];
- 
+
 // import 'bootstrap/dist/css/bootstrap.min.css';
- 
+
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [animationKey, setAnimationKey] = useState(0);
@@ -97,7 +105,7 @@ const Home = () => {
       },
     ],
   };
- 
+
   return (
     <React.Fragment>
       {/* Menu Button Start */}
@@ -139,6 +147,15 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <Aboutuscard />
+      <Header />
+      <WhatWeDo />
+      <Technologies />
+      <Courses />
+      <Team />
+      <Feedback />
+      <Footer />
     </React.Fragment>
   );
 };
