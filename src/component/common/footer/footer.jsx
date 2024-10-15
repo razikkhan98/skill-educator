@@ -61,11 +61,15 @@ const Footer = () => {
             >
               <Nav.Link className="nav-link fs-5" href="tel:+21236547898">
                 <IoCall className="social-icon rounded-circle fs-2 me-2" />
-                +2 123 654 7898
+                9238882696
+              </Nav.Link>
+              <Nav.Link className="nav-link fs-5" href="tel:+21236547898">
+                <IoCall className="social-icon rounded-circle fs-2 me-2" />
+                9179150494
               </Nav.Link>
               <Nav.Link className="nav-link fs-5" href="mailto:info@example.com">
                 <IoIosMail className="social-icon rounded-circle fs-2 me-2" />
-                info123@gmail.com
+              fusion.with@skillintelligence.tech
               </Nav.Link>
             </Nav>
             <div className="d-flex">

@@ -48,11 +48,14 @@ const Team = () => {
         className="node-bg-img py-5 d-flex flex-column justify-content-center"
         id="Team"
       >
-        <div className="tagline fs-1 text-color-dark text-center">
-          IF , AT FIRST YOU DO NOT SUCCEED , CALL IT VERSION 1.0
+        <div className="tagline text-center text-color-dark fs-2">
+        <p>
+          "IF , AT FIRST YOU DO NOT SUCCEED , CALL IT VERSION 1.0"
+        </p>
+        <p className="fw-semibold">~ khayri R.R Woulfe</p>
         </div>
         <div className="container mt-5 pt-2 z-1">
-          <div className="row image-accordion gap-3 d-flex justify-content-around">
+          <div className="row image-accordion gap-5 d-flex justify-content-end">
             {items.map((item, index) => {
               const isActive = activeIndex === index ? "active" : "";
 
