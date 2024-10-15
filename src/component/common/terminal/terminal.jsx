@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/img/logo/2-nd-logo.png";
+import Logo from "../../assets/img/logo/Intelligence Educator1.png";
 
 // import { MdOutlineTerminal } from "react-icons/md";
 import TerminalImg from "../../assets/img/terminal/terminal-1.png";
@@ -39,7 +39,7 @@ const Terminal = () => {
       >
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
-            <div className="modal-header background-color-cream d-flex justify-content-evenly">
+            <div className="modal-header background-color-cream d-flex justify-content-evenly align-items-center">
               <div className="techno-logo">
                 <img src={Logo} alt="Loading" />
               </div>

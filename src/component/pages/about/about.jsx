@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
-import Logo from "../../assets/img/logo/2-nd-logo.png";
+import Logo from "../../assets/img/logo/Intelligence Educator1.png";
 import about from "../../assets/img/about/15.png";
 
 // Icons
@@ -14,7 +14,7 @@ const Aboutuscard = () => {
           <Row className="my-5">
             <Col
               lg={6}
-              className="d-flex align-items-center justify-content-center"
+              className="d-flex align-items-center justify-content-end"
             >
               <div
                 className="about-img"
@@ -46,10 +46,10 @@ const Aboutuscard = () => {
                 <Card.Body className="background-color-dark ">
                   <Card.Text className="align-left text-color-light ">
                     <h5> AIM & MISSION</h5>
-                    We aim to Craft A person in such a way that he/ she shall be
+                   <p> We aim to Craft A person in such a way that he/ she shall be
                     able to master the desired skills. These courses involve
                     outlining key topics, skills, and tools that learners will
-                    need to master.
+                    need to master.</p>
                     <h5 className="mt-3">Values</h5>
                     <ul>
                       <li>

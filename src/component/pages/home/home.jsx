@@ -12,13 +12,13 @@ import "aos/dist/aos.css";
 import Home1 from "../../assets/img/home/1.jpg";
 import Home2 from "../../assets/img/home/2.jpg";
 import Home3 from "../../assets/img/home/3.jpg";
-import Home4 from "../../assets/img/home/4.jpg";
+import Home4 from "../../assets/img/home/Blue Futuristic Technology Presentation.png";
 import Home5 from "../../assets/img/home/5.jpg";
 import Home6 from "../../assets/img/home/6.jpg";
 import Home7 from "../../assets/img/home/7.jpg";
 import Home8 from "../../assets/img/home/8.jpg";
 import Terminal from "../../common/terminal/terminal";
-import Aboutuscard from "../about/about";
+import Aboutus from "../about/about";
 import Header from "../../common/header/header";
 import WhatWeDo from "../what-we-do/whatWeDo";
 import Technologies from "../technologies/technologies";
@@ -148,7 +148,7 @@ const Home = () => {
         </div>
       </div>
 
-      <Aboutuscard />
+      <Aboutus/>
       <Header />
       <WhatWeDo />
       <Technologies />

@@ -95,7 +95,7 @@ body {
   background-size: cover;
 }
 .company-logo img {
-  height: 120px;
+  height: 150px;
   filter: drop-shadow(15px 10px 4px var(--cream-color));
 }
 .animated-text {
@@ -253,9 +253,6 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
- 
- 
-
 /* =============== Home Page End ============ */
 
 /* =========== Footer Start   ============ */
@@ -543,7 +540,7 @@ body {
 
 /* ----------- Technologies Start ------------ */
 .node-bg-img {
-  background-image: url(./component/assets/img/about/about-background.png);
+  background-image: url(./component/assets/img/background/Intelligence\ Educator\ \(3\).svg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -939,4 +936,16 @@ img.technocardimgItem {
 }
 .ethical-hacking-video{
   background-image: url(./component/assets/img/course/Ethical\ Hacking\ video.gif);
+}
+.detail-page{
+  background-image: linear-gradient(
+    to bottom right,
+    hwb(33 50% 29%),
+    #655847,
+    #403133
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
 }

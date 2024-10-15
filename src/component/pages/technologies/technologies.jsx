@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import Slider from "react-slick";
 
 // Images
-import Logo from "../../assets/img/logo/2-nd-logo.png";
+import Logo from "../../assets/img/logo/Intelligence Educator1.png";
 import MachineLearning from "../../assets/img/tecnologies/machine-learning (1).png";
 import Testing from "../../assets/img/tecnologies/testing.png"; // Automation Testing image
 import Js from "../../assets/img/tecnologies/developer.png";
@@ -119,8 +119,6 @@ const Technologies = () => {
                 </div>
               </div>
             ))}
-          
-            
           </Slider>
         </Container>
       </div>

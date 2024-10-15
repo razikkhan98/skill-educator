@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 // Image
-import Logo from "../../assets/img/logo/2-nd-logo.png";
+import Logo from "../../assets/img/logo/Intelligence Educator1.png";
 
 // Components
 import Main from "../../pages/Main/main";
