@@ -917,11 +917,11 @@ img.technocardimgItem {
 .automation-video {
   background-image: url(./component/assets/img/course/Automation\ testing\ Video.gif);
 }
-.digital-marketing-video {
+/* .digital-marketing-video {
   background-image: url(./component/assets/img/course/Digital\marketing\Video\\(
       1\
     ).gif);
-}
+} */
 .full-stack-video {
   background-image: url(./component/assets/img/course/FUll\ Stack\ Development\ Video.gif);
 }
@@ -940,3 +940,30 @@ img.technocardimgItem {
 .ethical-hacking-video {
   background-image: url(./component/assets/img/course/Ethical\ Hacking\ video.gif);
 }
+/* -----------------------technologies details page start */
+.detail-page {
+  background-image: linear-gradient(
+    to bottom right,
+    hwb(33 50% 29%),
+    #655847,
+    #403133
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.heading-text {
+  color: var(--cream-color);
+  font-size: 50px;
+  font-weight: 500;
+  background-color: var(--dark-color);
+  text-align: center;
+}
+.describe {
+  color: var(--cream-color);
+  font-size: 20px;
+  text-align: justify;
+}
+/* -----------------------technologies details page end */

@@ -17,12 +17,11 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Technologies = () => {
   const TechnologiesData = [
-    
     {
       logo_img: Logo,
       title: "Machine Learning",
       image: MachineLearning,
-      style: { position: "relative", right: "123px",},
+      style: { position: "relative", right: "123px" },
     },
     {
       logo_img: Logo,
@@ -89,8 +88,8 @@ const Technologies = () => {
                 <div
                   className="tecnology-card technology-card-bg py-3 d-flex flex-column align-items-baseline justify-content-start"
                   data-aos="zoom-in-up"
-                   data-aos-duration="3000"
-                     data-aos-easing="ease-in-back"
+                  data-aos-duration="3000"
+                  data-aos-easing="ease-in-back"
                   style={{
                     ...tech.style, // Use the style defined for each technology
                   }}
@@ -98,15 +97,17 @@ const Technologies = () => {
                   <div className="tecnology-card-logo tecnology-logo-bg d-flex align-items-center justify-content-end position-relative techno-logo">
                     {/* <img src={tech.logo_img} alt="Loading" /> */}
                     <img src={tech.logo_img} alt={`${tech.title} logo`} />
-
                   </div>
                   <div className="d-flex align-items-center w-100 justify-content-center technology-title text-uppercase pt-2 fw-bold fs-6">
                     {tech.title}
                   </div>
                   <div className="d-flex align-items-center w-100 justify-content-center flexcardImg py-4">
                     {/* <img className="technocardimgItem" src={tech.image} alt={tech.title} /> */}
-                    <img className="technocardimgItem" src={tech.image} alt={`img of ${tech.title}`} />
-
+                    <img
+                      className="technocardimgItem"
+                      src={tech.image}
+                      alt={`img of ${tech.title}`}
+                    />
                   </div>
                   <div className="d-flex align-items-center w-100 justify-content-center py-2">
                     <a
@@ -119,8 +120,6 @@ const Technologies = () => {
                 </div>
               </div>
             ))}
-          
-            
           </Slider>
         </Container>
       </div>
