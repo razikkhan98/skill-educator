@@ -59,23 +59,7 @@ const Automation = () => {
                 </p>
               </div>
             </div>
-            <div className="col-lg-12">
-              <div className="shadow border border-0 background-color-cream rounded-3 p-3">
-                <p>
-                  {" "}
-                  HTML is the standard markup language for creating web pages.
-                  It describes the structure of a document, including the text,
-                  images, links, and other elements. HTML is the standard markup
-                  language for creating web pages. It describes the structure of
-                  a document, including the text, images, links, and other
-                  elements.the structure of a document, including the text,
-                  images, links, and other elements. HTML is the standard markup
-                  language for creating web pages. It describes the structure of
-                  a document, including the text, images, links, and other
-                  elements.
-                </p>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>

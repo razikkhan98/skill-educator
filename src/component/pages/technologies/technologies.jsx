@@ -14,6 +14,7 @@ import Python from "../../assets/img/tecnologies/python (1).png";
 import { FaArrowRight } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { NavLink } from "react-router-dom";
 
 const Technologies = () => {
   const TechnologiesData = [
@@ -23,30 +24,39 @@ const Technologies = () => {
       title: "Machine Learning",
       image: MachineLearning,
       style: { position: "relative", right: "123px",},
+      page: "mldetails",
     },
     {
       logo_img: Logo,
       title: "Automation Testing",
       image: Testing,
       style: { position: "relative", bottom: "50px" },
+      page: "/atdetails",
+
     },
     {
       logo_img: Logo,
       title: "JS",
       image: Js,
       style: { position: "absolute", bottom: "100px" },
+      page: "/jsdetails",
+
     },
     {
       logo_img: Logo,
       title: "PYTHON",
       image: Python,
       style: { position: "absolute", bottom: "50px" },
+      page: "/pydetails",
+
     },
     {
       logo_img: Logo,
       title: "REACTJS",
       image: Reactjs,
       style: { position: "absolute", bottom: "100px" },
+      page: "/rjsdetails",
+
     },
   ];
 
@@ -109,12 +119,13 @@ const Technologies = () => {
 
                   </div>
                   <div className="d-flex align-items-center w-100 justify-content-center py-2">
-                    <a
-                      className="techno-btn position-relative fw-bold py-2 px-3 rounded-pill text-decoration-none text-color-dark"
-                      href="/"
+                    <NavLink to={tech.page} className="text-decoration-none">
+                    <button
+                      className="techno-btn position-relative fw-bold py-2 px-3 rounded-pill text-color-dark"
                     >
                       Read More <FaArrowRight className="ms-2" />
-                    </a>
+                    </button>
+                    </NavLink>
                   </div>
                 </div>
               </div>

@@ -87,7 +87,7 @@ const Footer = () => {
               </a>
               <a
                 className="social-btn d-flex align-items-center justify-content-center me-4"
-                href="https://www.instagram.com/skill_intelligence_world_9213/"
+                href="https://www.instagram.com/intelligence_educator/"
               >
                 <FaInstagram className="btn-icon fs-4" />
               </a>

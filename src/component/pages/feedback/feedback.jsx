@@ -19,19 +19,23 @@ const Feedback = () => {
   const FeedbackData = [
     {
       heading: "SAKSHEE",
-      comment: "Great experience! The instructors were knowledgeable, and the hands-on labs were super helpful. I landed a job soon after completing my course."
+      comment:
+        "Great experience! The instructors were knowledgeable, and the hands-on labs were super helpful. I landed a job soon after completing my course.",
     },
     {
       heading: "AREEBA",
-      comment:"Good course structure with experienced instructors. Some sessions felt rushed, but overall, I learned a lot and feel more confident in my skills."
+      comment:
+        "Good course structure with experienced instructors. Some sessions felt rushed, but overall, I learned a lot and feel more confident in my skills.",
     },
     {
       heading: "JUNED ABBASI",
-      comment: "Decent training, perfect for beginners to reach advance. Practical projects have made learning easy."
+      comment:
+        "Decent training, perfect for beginners to reach advance. Practical projects have made learning easy.",
     },
     {
       heading: "SHUMAILA KHAN",
-      comment: "Learning from INTELLIGENCE EDUCATORS Training Institute was a great experience. The instructors were very knowledgeable, and the curriculum was up-to-date with industry standards."
+      comment:
+        "Learning from INTELLIGENCE EDUCATORS Training Institute was a great experience. The instructors were very knowledgeable, and the curriculum was up-to-date with industry standards.",
     },
   ];
   return (
@@ -56,7 +60,7 @@ const Feedback = () => {
               type="button"
               className="feedback-btn px-4 py-2"
               data-bs-toggle="modal"
-              data-bs-target="#staticBackdropModal"
+              data-bs-target="#exampleModal"
             >
               ADD YOUR REVIEW
             </button>
@@ -67,19 +71,17 @@ const Feedback = () => {
       {/* <!-- Modal --> */}
       <div
         className="modal fade"
-        id="staticBackdropModal"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
+        id="exampleModal"
         tabindex="-1"
-        aria-labelledby="staticBackdropLabelModal"
+        aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div className="modal-dialog modal-lg modal-dialog-centered">
+        <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
             <div className="modal-header background-color-light-brown">
               <h5
-                className="modal-title spacing-title text-color-dark"
-                id="staticBackdropLabelModal"
+                className="modal-title spacing-title animated-text-2 text-color-dark"
+                id="exampleModalLabel"
               >
                 FEEDBACK
               </h5>
@@ -93,7 +95,10 @@ const Feedback = () => {
             <div className="modal-body background-color-dark px-5">
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="my-3">
-                  <label htmlFor="name" className="form-label text-color-light">
+                  <label
+                    htmlFor="name"
+                    className="form-label text-color-light animated-text-2"
+                  >
                     Your Name
                   </label>
                   <input
@@ -112,7 +117,7 @@ const Feedback = () => {
                 <div className="my-3">
                   <label
                     htmlFor="thought"
-                    className="form-label text-color-light"
+                    className="form-label text-color-light animated-text-2"
                   >
                     Your Thoughts
                   </label>

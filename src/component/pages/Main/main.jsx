@@ -20,7 +20,6 @@ import Automation from "../../common/course-details/automation";
 import DigitalMarketing from "../../common/course-details/dg-marketing";
 import DataAnalysis from "../../common/course-details/data-analysis";
 
-// import FrontEndDetails from "../../pages/front-end-course/front-end";
 import JSdetails from "../../pages/technodetails/javascript";
 import PYdetails from "../../pages/technodetails/python";
 import ReactJS from "../../pages/technodetails/reactjs";
@@ -40,8 +39,6 @@ const Main = () => {
           <Route path="/automation" element={<Automation />} />
           <Route path="/digitalMarketing" element={<DigitalMarketing/>} />
           <Route path="/dataAnalysis" element={<DataAnalysis/>} />
-
-          {/* <Route path="/frontEndDetails" element={<FrontEnd />} /> */}
           <Route path="/jsdetails" element={<JSdetails />} />
           <Route path="/pydetails" element={<PYdetails />} />
           <Route path="/rjsdetails" element={<ReactJS />} />
