@@ -18,7 +18,7 @@ import Home6 from "../../assets/img/home/6.jpg";
 import Home7 from "../../assets/img/home/7.jpg";
 import Home8 from "../../assets/img/home/8.jpg";
 import Terminal from "../../common/terminal/terminal";
-import Aboutus from "../about/about";
+import AboutUs from "../about/about";
 import Header from "../../common/header/header";
 import WhatWeDo from "../what-we-do/whatWeDo";
 import Technologies from "../technologies/technologies";
@@ -148,7 +148,7 @@ const Home = () => {
         </div>
       </div>
 
-      <Aboutus/>
+      <AboutUs/>
       <Header />
       <WhatWeDo />
       <Technologies />

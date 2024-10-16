@@ -784,11 +784,11 @@ img.technocardimgItem {
   overflow: hidden !important;
 } */
 @media screen and (max-width: 2757px) and (min-width: 920px) {
-  .modal-dialog {
+  .modal {
     position: fixed;
     max-width: 600px;
     top: calc(8%);
-    left: calc(60%);
+    left: calc(56%);
     margin-right: 30px;
     background-color: none !important;
   }
@@ -920,13 +920,13 @@ img.technocardimgItem {
   background-image: url(./component/assets/img/course/Digital\ marketing\ Video\ \(1\).gif);
 }
 .full-stack-video{
-  background-image: url(./component/assets/img/course/FUll\ Stack\ Development\ Video.gif);
+  background-image: url(./component/assets/img/course/FUll\ Stack\ Development\ Video\ \(1\).gif);
 }
 .front-end-video{
-  background-image: url(./component/assets/img/course/Frontend\ Development\ Video.gif);
+  background-image: url(./component/assets/img/course/Frontend\ Development\ Video\ \(1\).gif);
 }
 .back-end-video{
-  background-image: url(./component/assets/img/course/Backend\ Development\ Video.gif);
+  background-image: url(./component/assets/img/course/Backend\ Development\ Video\ \(1\).gif);
 }
 .machine-learning-video{
   background-image: url(./component/assets//img/course/_AI\ and\ Machine\ learning\ Video.gif);
@@ -937,6 +937,7 @@ img.technocardimgItem {
 .ethical-hacking-video{
   background-image: url(./component/assets/img/course/Ethical\ Hacking\ video.gif);
 }
+/* -----------------------technologies details page start */
 .detail-page{
   background-image: linear-gradient(
     to bottom right,
@@ -949,3 +950,11 @@ img.technocardimgItem {
   background-repeat: no-repeat;
   position: relative;
 }
+
+.heading-text {
+  /* font-size: 40px; */
+  font-weight: 500;
+  text-align: center;
+}
+
+/* ----------------technologies details page end */

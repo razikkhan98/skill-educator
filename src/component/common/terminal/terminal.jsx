@@ -6,7 +6,7 @@ import TerminalImg from "../../assets/img/terminal/terminal-1.png";
 import "animate.css";
 const Terminal = () => {
   const TerminalData = [
-    { id: 1, text: "Who are we?", href: "#" },
+    { id: 1, text: "Who are we?", href: "#About" },
     { id: 2, text: "What we do?", href: "#WhatWeDo" },
     { id: 3, text: "Tecnologies!", href: "#Technologies" },
     { id: 4, text: "Courses!", href: "#Courses" },

@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 // import features from "../../assets/img/technodetails/JSfeatures.png";
-import Logo from "../../assets/img/logo/1.png";
+import Logo from "../../assets/img/logo/Intelligence Educator1.png";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image1 from "../../assets/img/technodetails/2.png";
@@ -14,7 +14,7 @@ const Automationdetails = () => {
         <Container>
           {/* ḥeading */}
           <Row>
-            <div className="heading-text">AUTOMATION TESTING</div>
+            <div className="heading-text mt-5 text-color-light fs-2 background-color-dark">AUTOMATION TESTING</div>
             <div className="header-bottom-line background-color-brown"></div>
           </Row>
           <div className="mt-5 pb-5">
@@ -29,11 +29,11 @@ const Automationdetails = () => {
               <div className="background-color-dark d-flex justify-content-center align-items-center">
                 <Col>
                   <div>
-                    <img src={Image1} alt="" className="w-100" />
+                    <img src={Image1} alt="Loading" className="w-100" />
                   </div>
                 </Col>
                 <Col>
-                  <div className="describe d-flex p-3">
+                  <div className="describe text-justify text-color-light d-flex p-3">
                     <div className="p-3">
                       <div className="mb-3">
                         <strong>HISTORY AND EVOLUTION:</strong>
@@ -66,7 +66,7 @@ const Automationdetails = () => {
             <Row>
               <div className="background-color-dark d-flex justify-content-center align-items-center">
                 <Col>
-                  <div className="describe d-flex p-3">
+                  <div className="describe text-justify text-color-light d-flex p-3">
                     <div className="p-3">
                       <div className="mb-3">
                         <strong>ABOUT:</strong>
@@ -91,7 +91,7 @@ const Automationdetails = () => {
                 </Col>
                 <Col>
                   <div>
-                    <img src={Image1} alt="" className="w-100" />
+                    <img src={Image1} alt="Loading" className="w-100" />
                   </div>
                 </Col>
               </div>
@@ -101,11 +101,11 @@ const Automationdetails = () => {
               <div className="background-color-dark d-flex justify-content-center align-items-center">
                 <Col>
                   <div>
-                    <img src={Image1} alt="" className="w-100" />
+                    <img src={Image1} alt="Loading" className="w-100" />
                   </div>
                 </Col>
                 <Col>
-                  <div className="describe d-flex p-3">
+                  <div className="describe text-justify text-color-light d-flex p-3">
                     <div className="p-3">
                       <div className="mb-3">
                         <strong>FEATURES:</strong>
@@ -153,7 +153,7 @@ const Automationdetails = () => {
             <Row>
               <div className="background-color-dark d-flex justify-content-center align-items-center">
                 <Col>
-                  <div className="describe d-flex p-3">
+                  <div className="describe text-justify text-color-light d-flex p-3">
                     <div className="p-3">
                       <div className="mb-3">
                         <strong>USES:</strong>
@@ -206,7 +206,7 @@ const Automationdetails = () => {
                 </Col>
                 <Col>
                   <div>
-                    <img src={Image1} alt="" className="w-100" />
+                    <img src={Image1} alt="Loading" className="w-100" />
                   </div>
                 </Col>
               </div>
