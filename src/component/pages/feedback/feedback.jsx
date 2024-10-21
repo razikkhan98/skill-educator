@@ -32,9 +32,10 @@ const Feedback = () => {
   }, []);
 
   const onSubmit = async (data) => {
+    console.log(data);
     try {
       const res = await axios.post(
-        "https://008d-2401-4900-8820-e05b-fe55-cf6f-6a68-248e.ngrok-free.app/api/c/create/feedback",
+        "https://4c2f-2401-4900-8822-ed6-1631-2d73-3e03-a2ed.ngrok-free.app/api/c/create/feedback",
         data
       );
       if (res.status === 201) {
@@ -42,6 +43,7 @@ const Feedback = () => {
         // Optionally fetch feedback again to include the new entry
         const updatedFeedback = [...feedbackData, data]; // Add the new feedback locally
         setFeedbackData(updatedFeedback);
+        console.log(res.data.message);
       } else {
         toast.error(res.data.message);
       }
