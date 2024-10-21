@@ -1,47 +1,42 @@
 import React from "react";
 const FrontEnd = () => {
+  const FrontEndData = [
+    {
+      question: "Who this course is for?",
+      list1:
+        "Manual testers, non-programming aware testers interested in learning Automation.",
+      list2: "Any Software engineer who are interested in Mobile Technologies",
+      list3: "Freshers/Graduates/ Software Testers",
+    },
+    {
+      question: "Why take this course?",
+      list1:
+        " You'll learn essential skills like HTML, CSS, and JavaScript, which are fundamental for building user interfaces",
+      list2:
+        "It allows you to express your creativity by designing visually appealing and interactive websites.",
+      list3:
+        "This course offer practical projects that can build your portfolio, showcasing your skills to potential employers.",
+    },
+  ];
   return (
     <React.Fragment>
       <div className="detail-page py-5" id="FrontEnd">
         <div className="container">
           <h1 className="text-center">Front-End Development</h1>
           <div className="row py-5 g-3">
-            <div className="col-lg-6">
-              <div className="shadow border border-0 background-color-cream rounded-3 p-3">
-                <h2>Who this course is for?</h2>
-                <ul>
-                  <li>
-                    Manual testers, non-programming aware testers interested in
-                    learning Automation.
-                  </li>
-                  <li>
-                    Any Software engineer who are interested in Mobile
-                    Technologies
-                  </li>
-                  <li>Freshers/Graduates/ Software Testers</li>
-                </ul>
+            {FrontEndData.map((items, index) => (
+              <div className="col-lg-6">
+                <div className="shadow border border-0 background-color-cream rounded-3 p-3">
+                  <h2>{items.question}</h2>
+                  <ul>
+                    <li>{items.list1}</li>
+                    <li>{items.list2}</li>
+                    <li>{items.list3}</li>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="shadow border border-0 background-color-cream rounded-3 p-3">
-                <h2>Why take this course?</h2>
-                <ul>
-                  <li>
-                    You'll learn essential skills like HTML, CSS, and
-                    JavaScript, which are fundamental for building user
-                    interfaces
-                  </li>
-                  <li>
-                    It allows you to express your creativity by designing
-                    visually appealing and interactive websites.
-                  </li>
-                  <li>
-                    This course offer practical projects that can build your
-                    portfolio, showcasing your skills to potential employers.
-                  </li>
-                </ul>
-              </div>
-            </div>
+            ))}
+
             <div className="col-lg-12">
               <div className="shadow border border-0 background-color-cream rounded-3 p-3">
                 <h2>What you will learn?</h2>
@@ -98,15 +93,15 @@ const FrontEnd = () => {
                 </ul>
                 <ul className="list-unstyled">
                   <li className="fw-bold">React</li>
-                <li>
-                <ul>
-                    <li>Component-based architecture</li>
-                    <li>Props and state management</li>
-                    <li>Lifecycle methods and hooks</li>
-                    <li>Managing side effects with useEffect</li>
-                    <li>Routing (React Router)</li>
-                  </ul>
-                </li>
+                  <li>
+                    <ul>
+                      <li>Component-based architecture</li>
+                      <li>Props and state management</li>
+                      <li>Lifecycle methods and hooks</li>
+                      <li>Managing side effects with useEffect</li>
+                      <li>Routing (React Router)</li>
+                    </ul>
+                  </li>
                 </ul>
                 <ul className="list-unstyled">
                   <li className="fw-bold">State Management</li>
@@ -165,8 +160,13 @@ const FrontEnd = () => {
                     <li>Gathering and implementing feedback</li>
                   </ul>
                 </ul>
-                <p className="fw-bold">Continuous Learning and Best Practices</p>
-                <p>Practice sets will be given after completion of every topic for stet by step growth</p>
+                <p className="fw-bold">
+                  Continuous Learning and Best Practices
+                </p>
+                <p>
+                  Practice sets will be given after completion of every topic
+                  for stet by step growth
+                </p>
               </div>
             </div>
           </div>

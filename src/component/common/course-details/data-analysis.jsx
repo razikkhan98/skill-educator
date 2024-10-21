@@ -1,48 +1,43 @@
 import React from "react";
 
 const DataAnalysis = () => {
+  const DataAnalysisData = [
+    {
+      question: "Who this course is for?",
+      list1:
+        " This course is suitable for beginners looking to start a career in data analysis, as well as professionals.",
+      list2: "Anyone interested in seeking to enhance their data skills.",
+      list3: "Freshers/Graduates/ Software Testers",
+    },
+    {
+      question: "Why take this course?",
+      list1:
+        "  You’ll learn how to interpret and analyze data, enabling you to make informed decisions based on evidence rather than intuition.",
+      list2:
+        "Data analysis opens doors to various roles, such as datas analyst, business analyst, or data scientist.",
+      list3:
+        "Courses often cover essential tools and languages like Excel, SQL, Python, and data visualization software, equipping you with practical skills",
+    },
+  ];
   return (
     <>
       <div className="detail-page py-5" id="DataAnalysis">
         <div className="container">
           <h1 className="text-center">Data Analysis</h1>
           <div className="row py-5 g-3">
-            <div className="col-lg-6">
-              <div className="shadow border border-0 background-color-cream rounded-3 p-3">
-                <h2>Who this course is for?</h2>
-                <ul>
-                  <li>
-                    This course is suitable for beginners looking to start a
-                    career in data analysis, as well as professionals.
-                  </li>
-                  <li>
-                    Anyone interested in seeking to enhance their data skills.
-                  </li>
-                  <li>Freshers/Graduates/ Software Testers</li>
-                </ul>
+            {DataAnalysisData.map((items, index) => (
+              <div className="col-lg-6">
+                <div className="shadow border border-0 background-color-cream rounded-3 p-3">
+                  <h2>{items.question}</h2>
+                  <ul>
+                    <li>{items.list1}</li>
+                    <li>{items.list2}</li>
+                    <li>{items.list3}</li>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="shadow border border-0 background-color-cream rounded-3 p-3">
-                <h2>Why take this course?</h2>
-                <ul>
-                  <li>
-                    You’ll learn how to interpret and analyze data, enabling you
-                    to make informed decisions based on evidence rather than
-                    intuition.
-                  </li>
-                  <li>
-                    Data analysis opens doors to various roles, such as data
-                    analyst, business analyst, or data scientist.
-                  </li>
-                  <li>
-                    Courses often cover essential tools and languages like
-                    Excel, SQL, Python, and data visualization software,
-                    equipping you with practical skills
-                  </li>
-                </ul>
-              </div>
-            </div>
+            ))}
+
             <div className="col-lg-12">
               <div className="shadow border border-0 background-color-cream rounded-3 p-3">
                 <h2>What you will learn?</h2>
@@ -57,7 +52,6 @@ const DataAnalysis = () => {
                 </p>
               </div>
             </div>
-           
           </div>
         </div>
       </div>

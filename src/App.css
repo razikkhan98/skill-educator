@@ -917,7 +917,7 @@ img.technocardimgItem {
   background-image: url(./component/assets/img/course/Automation\ testing\ Video.gif);
 }
 .digital-marketing-video{
-  background-image: url(./component/assets/img/course/Digital\ marketing\ Video\ \(1\).gif);
+  background-image: url(./component/assets/img/course/Digital\ marketing\ Video.gif);
 }
 .full-stack-video{
   background-image: url(./component/assets/img/course/FUll\ Stack\ Development\ Video\ \(1\).gif);
@@ -958,3 +958,13 @@ img.technocardimgItem {
 }
 
 /* ----------------technologies details page end */
+@media screen and (max-width: 2757px) and (min-width: 920px) {
+  .modal-dialog-left {
+    position: fixed;
+    max-width: 600px;
+    top: calc(8%);
+    left: calc(35%);
+    margin-right: 30px;
+    background-color: none !important;
+  }
+}

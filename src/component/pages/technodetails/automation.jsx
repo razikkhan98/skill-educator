@@ -14,7 +14,9 @@ const Automationdetails = () => {
         <Container>
           {/* ḥeading */}
           <Row>
-            <div className="heading-text mt-5 text-color-light fs-2 background-color-dark">AUTOMATION TESTING</div>
+            <div className="heading-text mt-5 text-color-light fs-2 background-color-dark">
+              AUTOMATION TESTING
+            </div>
             <div className="header-bottom-line background-color-brown"></div>
           </Row>
           <div className="mt-5 pb-5">
