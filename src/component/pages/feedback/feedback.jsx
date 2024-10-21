@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 // import Header from "../../common/header/index";
 import { Container } from "react-bootstrap";
-// import { toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useForm } from "react-hook-form";
-// import axios from "axios";
+import axios from "axios";
 const Feedback = () => {
+  const [feedbackData, setFeedbackData] = useState([]);
   const {
     register,
     handleSubmit,
@@ -13,44 +14,80 @@ const Feedback = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data, 121234);
+  useEffect(() => {
+    // Fetch all feedback on component mount
+    const fetchFeedback = async () => {
+      try {
+        const res = await axios.get(
+          "https://008d-2401-4900-8820-e05b-fe55-cf6f-6a68-248e.ngrok-free.app/api/c/getAllFeedback"
+        );
+        setFeedbackData(res.data); // Adjust according to your response structure
+      } catch (error) {
+        toast.error("Failed to fetch feedback");
+      }
+    };
+    
+
+    fetchFeedback();
+  }, []);
+
+  const onSubmit = async (data) => {
+    try {
+      const res = await axios.post(
+        "https://008d-2401-4900-8820-e05b-fe55-cf6f-6a68-248e.ngrok-free.app/api/c/create/feedback",
+        data
+      );
+      if (res.status === 201) {
+        toast.success("Feedback submitted successfully!");
+        // Optionally fetch feedback again to include the new entry
+        const updatedFeedback = [...feedbackData, data]; // Add the new feedback locally
+        setFeedbackData(updatedFeedback);
+      } else {
+        toast.error(res.data.message);
+      }
+    } catch (error) {
+      if (error.response) {
+        toast.error(error.response.data.message);
+      } else {
+        toast.error("An unexpected error occurred");
+      }
+    }
   };
-  const FeedbackData = [
-    {
-      heading: "SAKSHEE",
-      comment:
-        "Great experience! The instructors were knowledgeable, and the hands-on labs were super helpful. I landed a job soon after completing my course.",
-    },
-    {
-      heading: "AREEBA",
-      comment:
-        "Good course structure with experienced instructors. Some sessions felt rushed, but overall, I learned a lot and feel more confident in my skills.",
-    },
-    {
-      heading: "JUNED ABBASI",
-      comment:
-        "Decent training, perfect for beginners to reach advance. Practical projects have made learning easy.",
-    },
-    {
-      heading: "SHUMAILA KHAN",
-      comment:
-        "Learning from INTELLIGENCE EDUCATORS Training Institute was a great experience. The instructors were very knowledgeable, and the curriculum was up-to-date with industry standards.",
-    },
-  ];
+  // const FeedbackData = [
+  //   {
+  //     fullName: "SAKSHEE",
+  //     thoughts:
+  //       "Great experience! The instructors were knowledgeable, and the hands-on labs were super helpful. I landed a job soon after completing my course.",
+  //   },
+  //   {
+  //     fullName: "AREEBA",
+  //     thoughts:
+  //       "Good course structure with experienced instructors. Some sessions felt rushed, but overall, I learned a lot and feel more confident in my skills.",
+  //   },
+  //   {
+  //     fullName: "JUNED ABBASI",
+  //     thoughts:
+  //       "Decent training, perfect for beginners to reach advance. Practical projects have made learning easy.",
+  //   },
+  //   {
+  //     fullName: "SHUMAILA KHAN",
+  //     thoughts:
+  //       "Learning from INTELLIGENCE EDUCATORS Training Institute was a great experience. The instructors were very knowledgeable, and the curriculum was up-to-date with industry standards.",
+  //   },
+  // ];
   return (
     <>
       {/* <Header title="w e@e d u c a t o r : ~ $" /> */}
       <div className="background-color-light-brown py-5" id="Feedback">
         <Container className="pt-5">
-          {FeedbackData.map((link, index) => (
+          {feedbackData.map((link, index) => (
             <div key={index}>
               <div className="feedback-box p-4">
                 <div className="d-flex">
                   <div className="profile me-2">.</div>
-                  <div className="feedback-content">{link.heading}</div>
+                  <div className="feedback-content">{link.fullName}</div>
                 </div>
-                <div className="feedback-content">{link.comment}</div>
+                <div className="feedback-content">{link.thoughts}</div>
               </div>
             </div>
           ))}
@@ -111,8 +148,8 @@ const Feedback = () => {
                     })}
                   />
                 </div>
-                {errors.name && (
-                  <div className="text-danger">{errors.name.message}</div>
+                {errors.fullName && (
+                  <div className="text-danger">{errors.fullName.message}</div>
                 )}
                 <div className="my-3">
                   <label
@@ -130,8 +167,8 @@ const Feedback = () => {
                     })}
                   ></textarea>
                 </div>
-                {errors.name && (
-                  <div className="text-danger">{errors.thought.message}</div>
+                {errors.thoughts && (
+                  <div className="text-danger">{errors.thoughts.message}</div>
                 )}
 
                 <button

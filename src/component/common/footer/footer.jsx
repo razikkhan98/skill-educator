@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 
 // Images
-import Logo from "../../assets/img/logo/2-nd-logo.png";
+import Logo from "../../assets/img/logo/Intelligence Educator1.png";
 
 // Icons
 import { IoCall } from "react-icons/io5";
