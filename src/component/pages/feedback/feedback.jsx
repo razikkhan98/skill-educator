@@ -26,6 +26,7 @@ const Feedback = () => {
         toast.error("Failed to fetch feedback");
       }
     };
+    
 
     fetchFeedback();
   }, []);
